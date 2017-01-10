@@ -1,0 +1,244 @@
+.dialogue {
+  position   : fixed;
+  top        : 0;
+  left       : 0;
+  right      : 0;
+  bottom     : 0;
+  display    : none;
+  overflow-y : scroll;
+
+  &.dialogue--open {
+    display : block;
+    z-index : 10;
+  }
+
+  .warning {
+    color : $color-red;
+  }
+}
+.dialogue__wrapper {
+  position : relative;
+  z-index  : 999;
+  padding  : $spacing-unit--small;
+
+  @include media-query('>tablet') {
+    padding : $spacing-unit--large;
+  }
+
+  @include media-query('>1440') {
+    padding : $spacing-unit--huge;
+  }
+}
+.dialogue__container {
+  @include media-query('>tablet') {
+    width : $ten-twelfths;
+  }
+
+  @include media-query('>1024') {
+    width : $nine-twelfths;
+  }
+
+  @include media-query('>1200') {
+    width : $eight-twelfths;
+  }
+}
+.dialogue__container--tiny {
+  @include media-query('>tablet') {
+    width : $six-twelfths;
+  }
+
+  @include media-query('>1024') {
+    width : $five-twelfths;
+  }
+
+  @include media-query('>1200') {
+    width : $four-twelfths;
+  }
+}
+.dialogue__window {
+  background : $color-white;
+  border     : 1px solid $color-ui;
+  min-height : 100px;
+  @include vendor(transform, scale(.5));
+  @include vendor(transition, all .15s);
+  padding    : $spacing-unit--small;
+
+  @include media-query('>tablet') {
+    padding : $spacing-unit--small $spacing-unit;
+  }
+
+  @include media-query('>1024') {
+    padding : $spacing-unit;
+  }
+
+  .dialogue--open & {
+    @include vendor(transform, scale(1));
+    opacity : 1;
+  }
+
+  .dialogue__recorder {
+    margin : 0 auto;
+  }
+}
+.dialogue__header {
+  padding : $spacing-unit--tiny 0;
+
+  @include media-query('>tablet') {
+    padding : $spacing-unit--small 0;
+  }
+
+  .heading {
+    display : inline-block;
+  }
+
+  .second--heading {
+    margin-left : 15%;
+    display     : inline-block;
+  }
+
+  .close {
+    float : right;
+  }
+}
+.dialogue__actions {
+  text-align : right;
+
+  .btn {
+    margin-top    : 0;
+    margin-bottom : 0;
+  }
+}
+.dialogue__body {
+  max-height : 300px;
+  overflow-y : scroll;
+  position   : relative;
+
+  .picker {
+    width : initial;
+    top   : $spacing-unit--small;
+    left  : $spacing-unit--small;
+    right : $spacing-unit--small;
+    // margin-bottom: $spacing-unit--large;
+  }
+  .picker__holder {
+    max-width : initial;
+  }
+}
+.dialogue__nav {
+  background : #e4e9ed;
+  margin     : $spacing-unit--small negative($spacing-unit--small) negative($spacing-unit--small);
+  padding    : $spacing-unit--tiny 0;
+
+  @include media-query('>tablet') {
+    margin  : $spacing-unit--small negative($spacing-unit) negative($spacing-unit--small);
+    padding : $spacing-unit--small 0;
+  }
+
+  @include media-query('>1024') {
+    margin : $spacing-unit negative($spacing-unit) negative($spacing-unit);
+    // padding: $spacing-unit 0;
+  }
+
+  a {
+    color   : $brand-color--dark;
+    display : block;
+    padding : $spacing-unit--tiny $spacing-unit--small;
+
+    @include media-query('>tablet') {
+      padding : $spacing-unit--tiny $spacing-unit;
+    }
+
+    @include media-query('>1024') {
+      padding : $spacing-unit--small $spacing-unit;
+    }
+
+    .icon {
+      float    : right;
+      position : relative;
+      top      : 3px;
+    }
+  }
+}
+.dialogue__overlay {
+  @include vendor(transition, background .15s ease-in);
+  position   : fixed;
+  top        : 0;
+  left       : 0;
+  width      : 100%;
+  height     : 100%;
+  z-index    : 998;
+  overflow   : hidden;
+  z-index    : 1;
+  background : transparent;
+
+  .dialogue--open & {
+    background : rgba(0, 0, 0, 0.85);
+  }
+}
+// Specific
+
+.dialogue--booking {
+  .layout__item--student,
+  .layout__item--subject {
+    @include media-query('>tablet') {
+      width : $one-half;
+    }
+  }
+
+  .layout__item--start {
+    @include media-query('>tablet') {
+      width : $eight-twelfths;
+    }
+  }
+
+  .layout__item--total-price {
+    width : $one-whole;
+
+    @include media-query('>tablet') {
+      width : $four-twelfths;
+    }
+  }
+
+  .layout__item--date,
+  .layout__item--time {
+    @include media-query('>tablet') {
+      width : $one-half;
+    }
+  }
+
+  .layout__item--duration,
+  .layout__item--rate {
+    @include media-query('>tablet') {
+      width : $one-half;
+    }
+  }
+
+  .layout__item--price {
+    .box {
+      text-align       : center;
+      font-weight      : 700;
+      font-size        : 40px;
+      background-color : #232f49;
+      color            : #fff;
+
+      @include media-query('>tablet') {
+        padding : 38px 0px 38px 0px;
+      }
+    }
+  }
+}
+.dialogue--qualifications {
+  .layout__item--location,
+  .layout__item--subject {
+    @include media-query('>tablet') {
+      width : $five-eighths;
+    }
+  }
+
+  .layout__item--level,
+  .layout__item--still-studying {
+    @include media-query('>tablet') {
+      width : $three-eighths;
+    }
+  }
+}

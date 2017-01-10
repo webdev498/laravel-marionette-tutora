@@ -1,0 +1,93 @@
+.pagination {
+    width: 100%;
+    padding: $spacing-unit 0;
+}
+    .pagination__previous,
+    .pagination__next {
+        width: $one-half;
+
+        @include media-query('>1024') {
+            width: $three-twelfths;
+        }
+    }
+
+    .pagination__previous {
+        .pagination__link {
+            &:before {
+                @extend .icon--nav-left;
+                content: '';
+                display: inline-block;
+                margin-right: $spacing-unit--small;
+                position: relative;
+                top: 4px;
+            }
+
+            &:hover:before {
+                @extend .icon--nav-left--brand;
+            }
+        }
+    }
+
+    .pagination__next {
+        text-align: right;
+
+        .pagination__link {
+            &:after {
+                @extend .icon--nav-right;
+                content: '';
+                display: inline-block;
+                margin-left: $spacing-unit--small;
+                position: relative;
+                top: 4px;
+            }
+
+            &:hover:after {
+                @extend .icon--nav-right--brand;
+            }
+        }
+    }
+
+    .pagination__pages {
+        display: none;
+        text-align: center;
+
+        @include media-query('>1024') {
+            display: inline-block;
+            width: $six-twelfths;
+        }
+    }
+
+        .pagination__list {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+
+            .pagination__item {
+                float: left;
+            }
+
+                .pagination__link {
+                    display: inline-block;
+                    padding: $spacing-unit--small;
+                    border-radius: 50px;
+                }
+
+                    .pagination__link--active {
+                        background: $brand-color;
+                        color: $color-white;
+
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+        }
+
+        .pagination__link {
+            color: $color-text;
+
+           &:hover {
+               color: $brand-color;
+           }
+        }

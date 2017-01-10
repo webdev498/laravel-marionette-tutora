@@ -1,0 +1,30 @@
+.kb {
+    margin-top: $spacing-unit;
+
+    @include media-query('>1024') {
+        margin-top: $spacing-unit--large;
+    }
+}
+    .kb__links {
+        @include media-query('>1024') {
+            width: $four-twelfths;
+        }
+
+        @include media-query('>1200') {
+            width: $three-twelfths;
+        }
+    }
+        .kb__link {}
+            .kb__link--active {
+                color: $brand-color--dark;
+            }
+
+    .kb__content {
+        @include media-query('>1024') {
+            width: $eight-twelfths;
+        }
+
+        @include media-query('>1200') {
+            width: $seven-twelfths;
+        }
+    }

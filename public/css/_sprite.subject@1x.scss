@@ -1,0 +1,158 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$biology-1x-name: 'biology-1x';
+$biology-1x-x: 0px;
+$biology-1x-y: 0px;
+$biology-1x-offset-x: 0px;
+$biology-1x-offset-y: 0px;
+$biology-1x-width: 180px;
+$biology-1x-height: 180px;
+$biology-1x-total-width: 540px;
+$biology-1x-total-height: 540px;
+$biology-1x-image: '../img/sprite--subject@1x.png';
+$biology-1x: (0px, 0px, 0px, 0px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'biology-1x', );
+$chemistry-1x-name: 'chemistry-1x';
+$chemistry-1x-x: 180px;
+$chemistry-1x-y: 0px;
+$chemistry-1x-offset-x: -180px;
+$chemistry-1x-offset-y: 0px;
+$chemistry-1x-width: 180px;
+$chemistry-1x-height: 180px;
+$chemistry-1x-total-width: 540px;
+$chemistry-1x-total-height: 540px;
+$chemistry-1x-image: '../img/sprite--subject@1x.png';
+$chemistry-1x: (180px, 0px, -180px, 0px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'chemistry-1x', );
+$english-1x-name: 'english-1x';
+$english-1x-x: 0px;
+$english-1x-y: 180px;
+$english-1x-offset-x: 0px;
+$english-1x-offset-y: -180px;
+$english-1x-width: 180px;
+$english-1x-height: 180px;
+$english-1x-total-width: 540px;
+$english-1x-total-height: 540px;
+$english-1x-image: '../img/sprite--subject@1x.png';
+$english-1x: (0px, 180px, 0px, -180px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'english-1x', );
+$humanities-1x-name: 'humanities-1x';
+$humanities-1x-x: 180px;
+$humanities-1x-y: 180px;
+$humanities-1x-offset-x: -180px;
+$humanities-1x-offset-y: -180px;
+$humanities-1x-width: 180px;
+$humanities-1x-height: 180px;
+$humanities-1x-total-width: 540px;
+$humanities-1x-total-height: 540px;
+$humanities-1x-image: '../img/sprite--subject@1x.png';
+$humanities-1x: (180px, 180px, -180px, -180px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'humanities-1x', );
+$maths-1x-name: 'maths-1x';
+$maths-1x-x: 360px;
+$maths-1x-y: 0px;
+$maths-1x-offset-x: -360px;
+$maths-1x-offset-y: 0px;
+$maths-1x-width: 180px;
+$maths-1x-height: 180px;
+$maths-1x-total-width: 540px;
+$maths-1x-total-height: 540px;
+$maths-1x-image: '../img/sprite--subject@1x.png';
+$maths-1x: (360px, 0px, -360px, 0px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'maths-1x', );
+$other-1x-name: 'other-1x';
+$other-1x-x: 360px;
+$other-1x-y: 180px;
+$other-1x-offset-x: -360px;
+$other-1x-offset-y: -180px;
+$other-1x-width: 180px;
+$other-1x-height: 180px;
+$other-1x-total-width: 540px;
+$other-1x-total-height: 540px;
+$other-1x-image: '../img/sprite--subject@1x.png';
+$other-1x: (360px, 180px, -360px, -180px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'other-1x', );
+$physics-1x-name: 'physics-1x';
+$physics-1x-x: 0px;
+$physics-1x-y: 360px;
+$physics-1x-offset-x: 0px;
+$physics-1x-offset-y: -360px;
+$physics-1x-width: 180px;
+$physics-1x-height: 180px;
+$physics-1x-total-width: 540px;
+$physics-1x-total-height: 540px;
+$physics-1x-image: '../img/sprite--subject@1x.png';
+$physics-1x: (0px, 360px, 0px, -360px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'physics-1x', );
+$sport-1x-name: 'sport-1x';
+$sport-1x-x: 180px;
+$sport-1x-y: 360px;
+$sport-1x-offset-x: -180px;
+$sport-1x-offset-y: -360px;
+$sport-1x-width: 180px;
+$sport-1x-height: 180px;
+$sport-1x-total-width: 540px;
+$sport-1x-total-height: 540px;
+$sport-1x-image: '../img/sprite--subject@1x.png';
+$sport-1x: (180px, 360px, -180px, -360px, 180px, 180px, 540px, 540px, '../img/sprite--subject@1x.png', 'sport-1x', );
+$spritesheet-width: 540px;
+$spritesheet-height: 540px;
+$spritesheet-image: '../img/sprite--subject@1x.png';
+$spritesheet-sprites: ($biology-1x, $chemistry-1x, $english-1x, $humanities-1x, $maths-1x, $other-1x, $physics-1x, $sport-1x, );
+$spritesheet: (540px, 540px, '../img/sprite--subject@1x.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

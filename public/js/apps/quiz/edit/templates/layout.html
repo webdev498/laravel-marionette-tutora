@@ -1,0 +1,29 @@
+<div class="dialogue__wrapper wrapper quiz quiz__questions">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.quiz.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross [ js-close ]"></a>
+                </header>
+
+                <form class="js-form" novalidate>
+                    <div class="fieldset__content field">
+                        <div class="[ js-questions ]"></div>
+                    </div>
+
+                    <form class="js-form" novalidate>
+                        <div class="tal block-50 dialog-buttons-top-padding-1">
+                            <button type="button" class="btn btn--back">Back</button>
+                        </div>
+                        <div class="tar block-50 dialog-buttons-top-padding-1">
+                            <button class="btn">Submit Answers.</button>
+                        </div>
+                    </form>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay [ js-close ]"></div>

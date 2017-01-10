@@ -1,0 +1,55 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container dialogue__container--tiny">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.auth.login.heading') %></h4>
+                    <a href="#" class="close icon icon--cross [ js-close ]"></a>
+                </header>
+
+                <form class="layout js-form" novalidate><!--
+                    --><div class="layout__item field">
+                        <input type="email" class="field__input input input--full input--squared input--bordered js-email" name="email" placeholder="Email">
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item field">
+                        <input type="password" class="field__input input input--full input--squared input--bordered js-password" name="password" placeholder="Password">
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item field">
+                        <div class="field__checkbox checkbox checkbox--checked">
+                            <div class="checkbox__box">
+                                <div class="checkbox__tick"></div>
+                                <input type="checkbox" name="remember_me" id="remember_me" value="1" class="checkbox__input js-remember-me" checked="checked">
+                            </div>
+                            <label class="checkbox__label">Remember me</label>
+                        </div>
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item u-mt-">
+                        <button class="btn btn--full [ js-submit ]">Log In</button>
+                    </div><!--
+
+                    --><div class="layout__item u-mt tac">
+                        <a href="<%= laroute.route('password.index') %>" class="tiny">Lost Password?</a>
+                    </div><!--
+                --></form>
+
+                <nav class="dialogue__nav">
+                    <a href="<%= laroute.route('register.student') %>" data-js class="epsilon">
+                        <%= _.lang('dialogue.register.student.heading.default') %><span class="icon icon--nav-right--dark"></span>
+                    </a>
+
+                    <a href="<%= laroute.route('register.tutor') %>" data-js class="epsilon">
+                        <%= _.lang('dialogue.register.tutor.heading') %><span class="icon icon--nav-right--dark"></span>
+                    </a>
+                </nav>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay [ js-close ]"></div>

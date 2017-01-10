@@ -1,0 +1,15 @@
+.feature-blocks {
+    @include media-query('>1200') {
+        width: $ten-twelfths;
+        margin: 0 auto;
+    }
+}
+    .feature-blocks__block {
+        margin-bottom: $spacing-unit;
+
+        .feature-blocks--two & {
+            @include media-query('>tablet') {
+                width: $one-half;
+            }
+        }
+    }

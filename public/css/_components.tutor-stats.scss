@@ -1,0 +1,26 @@
+
+	.tutor-stats__stat {
+		
+		span {
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+
+
+	}
+
+	.tutor-stats__stat--large {
+		margin-bottom: 12px;
+		position: relative;
+
+		.text-aligned {
+			position: absolute;
+			left: 45px;
+			top: 4px;
+		}
+	}
+
+	.tutor-stats
+	{
+		margin-bottom: 1.7em;
+	}

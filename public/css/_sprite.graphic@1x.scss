@@ -1,0 +1,279 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$binoculars-1x-name: 'binoculars-1x';
+$binoculars-1x-x: 0px;
+$binoculars-1x-y: 0px;
+$binoculars-1x-offset-x: 0px;
+$binoculars-1x-offset-y: 0px;
+$binoculars-1x-width: 256px;
+$binoculars-1x-height: 256px;
+$binoculars-1x-total-width: 745px;
+$binoculars-1x-total-height: 592px;
+$binoculars-1x-image: '../img/sprite--graphic@1x.png';
+$binoculars-1x: (0px, 0px, 0px, 0px, 256px, 256px, 745px, 592px, '../img/sprite--graphic@1x.png', 'binoculars-1x', );
+$book-hiw-1x-name: 'book-hiw-1x';
+$book-hiw-1x-x: 536px;
+$book-hiw-1x-y: 0px;
+$book-hiw-1x-offset-x: -536px;
+$book-hiw-1x-offset-y: 0px;
+$book-hiw-1x-width: 129px;
+$book-hiw-1x-height: 114px;
+$book-hiw-1x-total-width: 745px;
+$book-hiw-1x-total-height: 592px;
+$book-hiw-1x-image: '../img/sprite--graphic@1x.png';
+$book-hiw-1x: (536px, 0px, -536px, 0px, 129px, 114px, 745px, 592px, '../img/sprite--graphic@1x.png', 'book-hiw-1x', );
+$certificate-1x-name: 'certificate-1x';
+$certificate-1x-x: 256px;
+$certificate-1x-y: 0px;
+$certificate-1x-offset-x: -256px;
+$certificate-1x-offset-y: 0px;
+$certificate-1x-width: 280px;
+$certificate-1x-height: 224px;
+$certificate-1x-total-width: 745px;
+$certificate-1x-total-height: 592px;
+$certificate-1x-image: '../img/sprite--graphic@1x.png';
+$certificate-1x: (256px, 0px, -256px, 0px, 280px, 224px, 745px, 592px, '../img/sprite--graphic@1x.png', 'certificate-1x', );
+$coins-1x-name: 'coins-1x';
+$coins-1x-x: 536px;
+$coins-1x-y: 114px;
+$coins-1x-offset-x: -536px;
+$coins-1x-offset-y: -114px;
+$coins-1x-width: 104px;
+$coins-1x-height: 113px;
+$coins-1x-total-width: 745px;
+$coins-1x-total-height: 592px;
+$coins-1x-image: '../img/sprite--graphic@1x.png';
+$coins-1x: (536px, 114px, -536px, -114px, 104px, 113px, 745px, 592px, '../img/sprite--graphic@1x.png', 'coins-1x', );
+$graph-1x-name: 'graph-1x';
+$graph-1x-x: 536px;
+$graph-1x-y: 307px;
+$graph-1x-offset-x: -536px;
+$graph-1x-offset-y: -307px;
+$graph-1x-width: 97px;
+$graph-1x-height: 70px;
+$graph-1x-total-width: 745px;
+$graph-1x-total-height: 592px;
+$graph-1x-image: '../img/sprite--graphic@1x.png';
+$graph-1x: (536px, 307px, -536px, -307px, 97px, 70px, 745px, 592px, '../img/sprite--graphic@1x.png', 'graph-1x', );
+$line-book-1x-name: 'line-book-1x';
+$line-book-1x-x: 536px;
+$line-book-1x-y: 227px;
+$line-book-1x-offset-x: -536px;
+$line-book-1x-offset-y: -227px;
+$line-book-1x-width: 101px;
+$line-book-1x-height: 80px;
+$line-book-1x-total-width: 745px;
+$line-book-1x-total-height: 592px;
+$line-book-1x-image: '../img/sprite--graphic@1x.png';
+$line-book-1x: (536px, 227px, -536px, -227px, 101px, 80px, 745px, 592px, '../img/sprite--graphic@1x.png', 'line-book-1x', );
+$line-computer-1x-name: 'line-computer-1x';
+$line-computer-1x-x: 382px;
+$line-computer-1x-y: 417px;
+$line-computer-1x-offset-x: -382px;
+$line-computer-1x-offset-y: -417px;
+$line-computer-1x-width: 138px;
+$line-computer-1x-height: 80px;
+$line-computer-1x-total-width: 745px;
+$line-computer-1x-total-height: 592px;
+$line-computer-1x-image: '../img/sprite--graphic@1x.png';
+$line-computer-1x: (382px, 417px, -382px, -417px, 138px, 80px, 745px, 592px, '../img/sprite--graphic@1x.png', 'line-computer-1x', );
+$line-mountains-1x-name: 'line-mountains-1x';
+$line-mountains-1x-x: 0px;
+$line-mountains-1x-y: 512px;
+$line-mountains-1x-offset-x: 0px;
+$line-mountains-1x-offset-y: -512px;
+$line-mountains-1x-width: 156px;
+$line-mountains-1x-height: 80px;
+$line-mountains-1x-total-width: 745px;
+$line-mountains-1x-total-height: 592px;
+$line-mountains-1x-image: '../img/sprite--graphic@1x.png';
+$line-mountains-1x: (0px, 512px, 0px, -512px, 156px, 80px, 745px, 592px, '../img/sprite--graphic@1x.png', 'line-mountains-1x', );
+$logo-dark-1x-name: 'logo--dark-1x';
+$logo-dark-1x-x: 156px;
+$logo-dark-1x-y: 512px;
+$logo-dark-1x-offset-x: -156px;
+$logo-dark-1x-offset-y: -512px;
+$logo-dark-1x-width: 186px;
+$logo-dark-1x-height: 60px;
+$logo-dark-1x-total-width: 745px;
+$logo-dark-1x-total-height: 592px;
+$logo-dark-1x-image: '../img/sprite--graphic@1x.png';
+$logo-dark-1x: (156px, 512px, -156px, -512px, 186px, 60px, 745px, 592px, '../img/sprite--graphic@1x.png', 'logo--dark-1x', );
+$logo-full-1x-name: 'logo--full-1x';
+$logo-full-1x-x: 536px;
+$logo-full-1x-y: 447px;
+$logo-full-1x-offset-x: -536px;
+$logo-full-1x-offset-y: -447px;
+$logo-full-1x-width: 123px;
+$logo-full-1x-height: 40px;
+$logo-full-1x-total-width: 745px;
+$logo-full-1x-total-height: 592px;
+$logo-full-1x-image: '../img/sprite--graphic@1x.png';
+$logo-full-1x: (536px, 447px, -536px, -447px, 123px, 40px, 745px, 592px, '../img/sprite--graphic@1x.png', 'logo--full-1x', );
+$logo-1x-name: 'logo-1x';
+$logo-1x-x: 665px;
+$logo-1x-y: 80px;
+$logo-1x-offset-x: -665px;
+$logo-1x-offset-y: -80px;
+$logo-1x-width: 35px;
+$logo-1x-height: 40px;
+$logo-1x-total-width: 745px;
+$logo-1x-total-height: 592px;
+$logo-1x-image: '../img/sprite--graphic@1x.png';
+$logo-1x: (665px, 80px, -665px, -80px, 35px, 40px, 745px, 592px, '../img/sprite--graphic@1x.png', 'logo-1x', );
+$magnifying-glass-1x-name: 'magnifying-glass-1x';
+$magnifying-glass-1x-x: 175px;
+$magnifying-glass-1x-y: 417px;
+$magnifying-glass-1x-offset-x: -175px;
+$magnifying-glass-1x-offset-y: -417px;
+$magnifying-glass-1x-width: 207px;
+$magnifying-glass-1x-height: 85px;
+$magnifying-glass-1x-total-width: 745px;
+$magnifying-glass-1x-total-height: 592px;
+$magnifying-glass-1x-image: '../img/sprite--graphic@1x.png';
+$magnifying-glass-1x: (175px, 417px, -175px, -417px, 207px, 85px, 745px, 592px, '../img/sprite--graphic@1x.png', 'magnifying-glass-1x', );
+$mortar-board-1x-name: 'mortar-board-1x';
+$mortar-board-1x-x: 315px;
+$mortar-board-1x-y: 256px;
+$mortar-board-1x-offset-x: -315px;
+$mortar-board-1x-offset-y: -256px;
+$mortar-board-1x-width: 174px;
+$mortar-board-1x-height: 123px;
+$mortar-board-1x-total-width: 745px;
+$mortar-board-1x-total-height: 592px;
+$mortar-board-1x-image: '../img/sprite--graphic@1x.png';
+$mortar-board-1x: (315px, 256px, -315px, -256px, 174px, 123px, 745px, 592px, '../img/sprite--graphic@1x.png', 'mortar-board-1x', );
+$ring-1x-name: 'ring-1x';
+$ring-1x-x: 665px;
+$ring-1x-y: 0px;
+$ring-1x-offset-x: -665px;
+$ring-1x-offset-y: 0px;
+$ring-1x-width: 80px;
+$ring-1x-height: 80px;
+$ring-1x-total-width: 745px;
+$ring-1x-total-height: 592px;
+$ring-1x-image: '../img/sprite--graphic@1x.png';
+$ring-1x: (665px, 0px, -665px, 0px, 80px, 80px, 745px, 592px, '../img/sprite--graphic@1x.png', 'ring-1x', );
+$seal-1x-name: 'seal-1x';
+$seal-1x-x: 0px;
+$seal-1x-y: 256px;
+$seal-1x-offset-x: 0px;
+$seal-1x-offset-y: -256px;
+$seal-1x-width: 175px;
+$seal-1x-height: 256px;
+$seal-1x-total-width: 745px;
+$seal-1x-total-height: 592px;
+$seal-1x-image: '../img/sprite--graphic@1x.png';
+$seal-1x: (0px, 256px, 0px, -256px, 175px, 256px, 745px, 592px, '../img/sprite--graphic@1x.png', 'seal-1x', );
+$shield-1x-name: 'shield-1x';
+$shield-1x-x: 175px;
+$shield-1x-y: 256px;
+$shield-1x-offset-x: -175px;
+$shield-1x-offset-y: -256px;
+$shield-1x-width: 140px;
+$shield-1x-height: 161px;
+$shield-1x-total-width: 745px;
+$shield-1x-total-height: 592px;
+$shield-1x-image: '../img/sprite--graphic@1x.png';
+$shield-1x: (175px, 256px, -175px, -256px, 140px, 161px, 745px, 592px, '../img/sprite--graphic@1x.png', 'shield-1x', );
+$star-large-1x-name: 'star--large-1x';
+$star-large-1x-x: 700px;
+$star-large-1x-y: 80px;
+$star-large-1x-offset-x: -700px;
+$star-large-1x-offset-y: -80px;
+$star-large-1x-width: 28px;
+$star-large-1x-height: 28px;
+$star-large-1x-total-width: 745px;
+$star-large-1x-total-height: 592px;
+$star-large-1x-image: '../img/sprite--graphic@1x.png';
+$star-large-1x: (700px, 80px, -700px, -80px, 28px, 28px, 745px, 592px, '../img/sprite--graphic@1x.png', 'star--large-1x', );
+$star-1x-name: 'star-1x';
+$star-1x-x: 665px;
+$star-1x-y: 120px;
+$star-1x-offset-x: -665px;
+$star-1x-offset-y: -120px;
+$star-1x-width: 22px;
+$star-1x-height: 22px;
+$star-1x-total-width: 745px;
+$star-1x-total-height: 592px;
+$star-1x-image: '../img/sprite--graphic@1x.png';
+$star-1x: (665px, 120px, -665px, -120px, 22px, 22px, 745px, 592px, '../img/sprite--graphic@1x.png', 'star-1x', );
+$till-1x-name: 'till-1x';
+$till-1x-x: 536px;
+$till-1x-y: 377px;
+$till-1x-offset-x: -536px;
+$till-1x-offset-y: -377px;
+$till-1x-width: 96px;
+$till-1x-height: 70px;
+$till-1x-total-width: 745px;
+$till-1x-total-height: 592px;
+$till-1x-image: '../img/sprite--graphic@1x.png';
+$till-1x: (536px, 377px, -536px, -377px, 96px, 70px, 745px, 592px, '../img/sprite--graphic@1x.png', 'till-1x', );
+$spritesheet-width: 745px;
+$spritesheet-height: 592px;
+$spritesheet-image: '../img/sprite--graphic@1x.png';
+$spritesheet-sprites: ($binoculars-1x, $book-hiw-1x, $certificate-1x, $coins-1x, $graph-1x, $line-book-1x, $line-computer-1x, $line-mountains-1x, $logo-dark-1x, $logo-full-1x, $logo-1x, $magnifying-glass-1x, $mortar-board-1x, $ring-1x, $seal-1x, $shield-1x, $star-large-1x, $star-1x, $till-1x, );
+$spritesheet: (745px, 592px, '../img/sprite--graphic@1x.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

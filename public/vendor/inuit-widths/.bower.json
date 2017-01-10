@@ -1,0 +1,29 @@
+{
+  "name": "inuit-widths",
+  "version": "0.4.2",
+  "homepage": "https://github.com/inuitcss/trumps.widths",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "Width helper classes in the inuitcss framework",
+  "main": "_trumps.widths.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "inuit-defaults": "~0.2.0",
+    "inuit-tools-widths": "~0.1.0"
+  },
+  "_release": "0.4.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.2",
+    "commit": "4a7b3ec1be87879f1077db4a2eab2c6da8c5957c"
+  },
+  "_source": "git://github.com/inuitcss/trumps.widths.git",
+  "_target": "~0.4.0",
+  "_originalSource": "inuit-widths"
+}

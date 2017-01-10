@@ -1,0 +1,49 @@
+.page--account,
+.dialogue--background_check,
+.dialogue--pay {
+    .verification {
+        @include media-query('>1024') {
+            margin-top: $spacing-unit;
+        }
+    }
+
+    .kb__content {
+        @include media-query('>1024') {
+            width: $seven-twelfths;
+            margin-right: $one-twelfth;
+        }
+
+        @include media-query('>1200') {
+            margin-left: $one-twelfth;
+            width: $six-twelfths;
+            margin-right: $two-twelfths;
+        }
+    }
+
+    .field--label {
+        margin-top: $spacing-unit--small;
+    }
+
+    .field--dob-day,
+    .field--dob-month {
+        width: $three-twelfths + halve($one-twelfth);
+    }
+
+    .field--dob-year {
+        width: $five-twelfths;
+    }
+
+    .field--card-cvc {
+        @include media-query('>tablet') {
+            width: $one-third;
+            margin-right: $two-thirds;
+        }
+    }
+
+    .field--card-exp-month,
+    .field--card-exp-year {
+        @include media-query('>tablet') {
+            width: $one-third;
+        }
+    }
+}

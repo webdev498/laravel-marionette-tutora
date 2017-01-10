@@ -1,0 +1,14 @@
+/bootstrap/compiled.php
+/vendor
+/.sass-cache
+/node_modules
+/storage/behat.html
+/storage/acceptance.sqlite
+/storage/images
+composer.phar
+.env
+.env.*
+.DS_Store
+Thumbs.db
+npm-debug.log
+/.idea

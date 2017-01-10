@@ -1,0 +1,28 @@
+{
+  "name": "cocktail",
+  "version": "0.5.9",
+  "homepage": "https://github.com/onsi/cocktail",
+  "authors": [
+    "Onsi Fakhouri <onsijoe@gmail.com>"
+  ],
+  "description": "DRY up your Backbone code with mixins",
+  "main": "Cocktail.js",
+  "keywords": [
+    "backbone",
+    "mixin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "spec/",
+    "externals/",
+    "example/",
+    "Gruntfile.js",
+    ".npmignore",
+    ".gitignore",
+    ".tm_properties"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.0",
+    "underscore": ">=1.5.1"
+  }
+}

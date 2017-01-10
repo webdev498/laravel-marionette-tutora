@@ -1,0 +1,23 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+        <div class="dialogue__window">
+            <header class="dialogue__header">
+                <h4 class="heading"><%= _.lang('dialogue.tutors.'+op+'.heading') %></h4>
+                <a href="#" class="close icon icon--cross [ js-close ]"></a>
+            </header>
+
+            <p><%= _.lang('dialogue.tutors.'+op+'.description') %></p>
+
+            <form class="js-form" novalidate>
+                <div class="tar">
+                    <a href="#" class="u-mr [ js-close ]">Cancel</a>
+                    <button class="btn btn--error">Confirm <%= op %></button>
+                </div>
+            </form>
+        </div>
+    </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay [ js-close ]"></div>

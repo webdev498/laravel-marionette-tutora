@@ -1,0 +1,45 @@
+.toasts {
+    max-width: 350px;
+    position: fixed;
+    top: $spacing-unit--large;
+    right: $spacing-unit--small;
+    z-index: 10001;
+    list-style: none;
+    margin: 0;
+    padding: $spacing-unit--small;
+}
+    .toasts__item {
+        @extend %clearfix;
+        margin-bottom: $spacing-unit--small;
+        width: 100%;
+    }
+        .toasts__content {
+            display: inline-block;
+            float: right;
+            background: $color-white;
+            border: 1px solid $color-ui;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+            padding: $spacing-unit--small $spacing-unit;
+            border-radius: $brand-round;
+        }
+
+            .toasts__content--error {
+                background: $color-red;
+                border-color: $color-red;
+                color: $color-white;
+
+                a {
+                    color: $brand-color--dark;
+                }
+            }
+
+            .toasts__content--success {
+                background: $color-green;
+                border-color: $color-green;
+                color: $color-white;
+            }
+
+            .toasts__content--warning {
+                background: $color-khaki;
+                border-color: $color-khaki;
+            }

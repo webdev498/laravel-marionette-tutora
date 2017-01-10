@@ -1,0 +1,77 @@
+.box {
+    margin-bottom: $spacing-unit;
+
+    .heading {
+        margin-bottom: $spacing-unit--small;
+    }
+
+    .heading--iconed {
+         .icon {
+             position: relative;
+             top: 4px;
+             margin-right: $spacing-unit--small;
+         }
+     }
+}
+    .box--small {
+        @include font-size(16px);
+    }
+
+    .box--fill {
+        width: 100%;
+    }
+
+    .box--clickable {
+        cursor: pointer;
+    }
+
+    .box--bordered {
+        border: 1px solid $color-ui;
+    }
+
+    .box--brand {
+        background: $brand-color;
+
+        &,
+        .heading {
+            color: $color-white;
+        }
+    }
+
+    .box--dark {
+        background: $brand-color--dark;
+
+        &,
+        .heading {
+            color: $color-white;
+        }
+    }
+
+    .box--ui {
+        background: lighten($color-gainsboro, 7.5%);
+    }
+
+    .box--light {
+        background: $color-alice;
+    }
+
+    .box--info {
+        background: $color-khaki;
+    }
+
+    .box--neutral {
+        background: rgba(250, 245, 245, 1);
+    }
+
+    .box--disabled,
+    .box--snow {
+        background: $color-snow;
+    }
+
+    .box__close {
+        float: right;
+        margin-top: $spacing-unit--tiny;
+        margin-left: $spacing-unit;
+        margin-bottom: $spacing-unit--tiny;
+        cursor: pointer;
+    }

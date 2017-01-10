@@ -1,0 +1,12 @@
+.search-results {
+  @at-root &__pic {
+    @include media-query("phone") {
+      display : none;
+    }
+  }
+  @at-root &__body {
+    @include media-query("phone") {
+      padding : 35px 0;
+    }
+  }
+}

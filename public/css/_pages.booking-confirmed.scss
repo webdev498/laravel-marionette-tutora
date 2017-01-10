@@ -1,0 +1,17 @@
+.page--booking-confirmed {
+    .message {
+        margin-top: $spacing-unit;
+
+        @include media-query('>tablet') {
+            width: $two-thirds;
+        }
+
+        @include media-query('>1024') {
+            width: $one-half;
+        }
+
+        @include media-query('>1366') {
+            margin-top: $spacing-unit--huge;
+        }
+    }
+}

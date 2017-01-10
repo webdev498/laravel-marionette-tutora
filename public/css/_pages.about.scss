@@ -1,0 +1,61 @@
+.icon--bulb {
+    display: none;
+
+    @include media-query('>1200') {
+        display: block;
+        position: absolute;
+        top: 36px;
+        left: 23px;
+        z-index: 2;
+    }
+}
+
+.header {
+    @include media-query('>1024') {
+        padding-left: $two-twelfths;
+        padding-right: $one-twelfth;
+    }
+}
+
+.team {
+    @include media-query('>1024') {
+        padding-left: $two-twelfths;
+        padding-right: $one-twelfth;
+    }
+}
+    .team__member {
+        @include media-query('>tablet') {
+            width: $six-twelfths;
+        }
+    }
+
+.contact {
+
+}
+    .contact__icon {
+        display: none;
+        text-align: right;
+
+        @include media-query('>1024') {
+            display: inline-block;
+            width: $two-twelfths;
+        }
+    }
+
+    .contact__content {
+        @include media-query('>1024') {
+            width: $nine-twelfths;
+            padding-top: 25px;
+        }
+    }
+        .telephone {
+            @include font-size(24px);
+            color: $brand-color--dark;
+        }
+
+    .field--name,
+    .field--email {
+        @include media-query('>tablet') {
+            width: $one-half;
+        }
+    }

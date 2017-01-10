@@ -1,0 +1,6 @@
+<p>So you are looking for a Maths Tutor in London? We can help! </p>
+<h5>Useful Resources for Learning Maths in London</h5>
+<p>The first thing to find out is what you actually need to know for your exam. For GCSE and A-Level, this will depend on the board your school uses. The major ones are <a href="http://www.aqa.org.uk/">AQA</a>, <a href="https://qualifications.pearson.com/en/home.html">Edexcel</a> and <a href="http://www.ocr.org.uk/">OCR</a>. Their websites normally have a syllabus which will help guide you on what to learn, along with a selection of past papers and mark schemes.</p>
+<p>There are also some great websites offering resources. For all levels, we recommend checking out <a href="https://www.tes.com/teaching-resources">TES</a>. TES has thousands of useful resources for all subjects and levels. <a href="http://www.mrbartonmaths.com/">Mr Barton Maths</a> is another fantastic resource, offering free maths materials at GCSE, A-Level, Primary and Key Stage 3.</p>
+<h5>Areas we cover</h5>
+We cover all areas of London, including Camden, Westminster, Ealing, Barnet, Bexley, Brent, Bromley, Camden, Croydon, Ealing, Enfield, Greenwich, Hackney, Hammersmith, Fulham and many other areas. 

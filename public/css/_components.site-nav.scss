@@ -1,0 +1,292 @@
+$site-nav-burger-stop: '>1024';
+$site-nav-height: $logo-1x-height;
+$site-nav-height--masthead: $logo-full-1x-height;
+
+.site-nav {
+    min-height: $site-nav-height;
+    position: relative;
+
+    .page-head--masthead & {
+        min-height: $site-nav-height--masthead;
+    }
+}
+
+    .site-nav__home {
+        margin-top: ($site-nav-height - $logo-1x-height) / 2;
+        margin-right: $spacing-unit--small;
+        float: left;
+
+        &.site-nav__home--compact {
+            display: none;
+
+            .site-nav--full & {
+                display: none;
+            }
+
+            @include media-query($site-nav-burger-stop) {
+                display: block;
+            }
+        }
+
+        &.site-nav__home--full {
+            .site-nav--full & {
+                display: block;
+            }
+
+            @include media-query($site-nav-burger-stop) {
+                display: none;
+            }
+        }
+    }
+
+    .site-nav__burger,
+    .site-nav__cross {
+        @include font-size(40px, $site-nav-height);
+        @include font-weight('light');
+        float: right;
+        color: $color-white;
+    }
+
+    .site-nav__burger {
+        @include media-query($site-nav-burger-stop) {
+            display: none !important;
+        }
+
+        .site-nav--open & {
+            display: none;
+        }
+    }
+
+    .site-nav__cross {
+        display: none;
+
+        @include media-query($site-nav-burger-stop) {
+            display: none !important;
+        }
+
+        .site-nav--open & {
+            display: block;
+        }
+    }
+
+    .site-nav__account {
+        @include media-query($site-nav-burger-stop) {
+            margin-left: $spacing-unit;
+            float: right;
+        }
+    }
+        .site-nav__account__handle {
+            display: none;
+            overflow: hidden;
+
+            @include media-query($site-nav-burger-stop) {
+                display: block;
+            }
+        }
+            .site-nav__account__pic {
+                display: inline-block;
+                float: left;
+            }
+            .site-nav__account__title {
+                @include font-size(18px, $site-nav-height + 3);
+                @include font-weight('medium');
+                position: relative;
+                color: $color-white;
+                display: inline-block;
+                float: left;
+                padding-right: $spacing-unit;
+
+                &:after {
+                    content: '';
+                    border-top: 5px solid $brand-color;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 0;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -2.5px;
+                }
+            }
+
+    .site-nav__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        overflow: hidden;
+        display: none;
+        padding-top: $spacing-unit--small;
+        padding-bottom: $spacing-unit--small;
+
+        .site-nav--open & {
+            display: block;
+        }
+
+        @include media-query($site-nav-burger-stop) {
+            padding-top: 0;
+            padding-bottom: 0;
+            display: inline-block;
+            width: initial;
+        }
+    }
+
+        .site-nav__list--main {
+            padding-top: $spacing-unit--small;
+            padding-bottom: $spacing-unit--small;
+
+            @include media-query($site-nav-burger-stop) {
+                padding-top: 0;
+                padding-bottom: 0;
+                width: auto;
+            }
+        }
+
+        .site-nav__list--account {
+            border-top: 1px solid $color-white;
+
+            @include media-query($site-nav-burger-stop) {
+                border-top: 0;
+                padding: $spacing-unit--tiny 0;
+                position: absolute;
+                right: 0;
+                background: $color-white;
+                border: 1px solid $color-ui;
+                box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.025);
+                border-radius: 3px;
+                width: 200px; // Magic number
+
+                &,
+                .site-nav--open & {
+                    display: none;
+                }
+
+                .site-nav__account:hover & {
+                    display: block;
+                }
+            }
+        }
+
+        .site-nav__wrapper {
+
+            .show-mobile {
+                display: none;
+            }
+
+            @include media-query('max-tablet') {
+                display: none;
+
+                .site-nav--open & {
+                    display: block;
+                }
+
+                .show-desktop {
+                    display: none;
+                }
+
+                .show-mobile {
+                    display: block;
+                }
+
+                padding: $spacing-unit--tiny 0;
+                position: absolute;
+                top: $spacing-unit--large;
+                right: 0;
+                background: $color-white;
+                border: 1px solid $color-ui;
+                box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.025);
+                border-radius: 3px;
+                width: 200px; // Magic number
+                z-index: 5;
+
+                .field__input {
+                    width: 100% !important;
+                    margin-top: 0;
+                }
+
+                .site-nav__link {
+                    line-height: 2em;
+                    color: $brand-color--dark;
+
+                    &:hover {
+                        background: $color-alice;
+                    }
+                }
+
+                .site-nav__account {
+                    border-top: 1px solid $brand-color--dark;
+                }
+            }
+        }
+
+        .site-nav__item {
+            @include media-query($site-nav-burger-stop) {
+                width: initial;
+                float: left;
+
+                .site-nav__list--account & {
+                    width: 100%;
+                }
+            }
+        }
+            .site-nav__link {
+                @include font-size(18px, $site-nav-height + 3);
+                @include font-weight('medium');
+                display: block;
+                padding-right: $spacing-unit--small;
+                padding-left:  $spacing-unit--small;
+                margin-bottom: $spacing-unit--tiny;
+                color: $color-white ;
+
+                @include media-query($site-nav-burger-stop) {
+                    margin-bottom: 0;
+                }
+
+                &:hover {
+                    color: $brand-color--dark;
+                    background: $color-white;
+                    border-radius: $brand-round;
+
+                    @include media-query($site-nav-burger-stop) {
+                        color: $brand-color;
+                        background: none;
+                    }
+                }
+
+                .site-nav__list--account & {
+
+                    @include media-query($site-nav-burger-stop) {
+                        line-height: 2em;
+                        color: $brand-color--dark;
+
+                        &:hover {
+                            background: $color-alice;
+                        }
+                    }
+                }
+            }
+
+                @each $link in dashboard, messages, jobs, students, lessons, profile, earnings, account, tutors, students, relationships {
+                    .site-nav__link--#{$link} {
+                        .page--#{$link} & {
+                            color: $brand-color;
+                        }
+                    }
+                }
+
+                .site-nav__link--inactive {
+                    &,
+                    &:hover {
+                        cursor: not-allowed;
+                        color: $color-slate;
+                    }
+                }
+
+                .site-nav__how-it-works {
+                    width: 100%;
+
+                    @include media-query($site-nav-burger-stop) {
+                        width: 175px;
+                        margin-left: $spacing-unit;
+                    }
+                }

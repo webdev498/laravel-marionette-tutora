@@ -1,0 +1,57 @@
+.blockquote {
+    display: block;
+    @include font-weight('light');
+    margin: 0 0 $spacing-unit;
+    overflow: hidden;
+
+    &.blockquote--feature {
+        @include media-query('>tablet') {
+            width: $ten-twelfths;
+            margin: 0 auto;
+        }
+    }
+}
+    .blockquote__body {
+        @include font-size(24px, 1.4);
+        color: $brand-color--dark;
+
+        p {
+            margin-bottom: $spacing-unit--small;
+
+            &:before {
+                content: "“";
+            }
+
+            &:last-child:after {
+                content: "”";
+            }
+        }
+
+        .blockquote--feature & {
+            @include font-size(40px);
+            text-align: center;
+        }
+    }
+
+    .blockquote__meta,
+    .blockquote__cite {
+        @include font-size(22px, 1.4);
+        font-style: normal;
+        color: $color-yellow;
+
+        .blockquote--feature & {
+            @include font-size(26px);
+            float: left;
+            width: $one-half;
+        }
+    }
+
+    .blockquote--feature {
+        .blockquote__meta {
+            padding-left: $one-twelfth;
+        }
+        .blockquote__cite {
+            text-align: right;
+            padding-right: $one-twelfth;
+        }   
+    }

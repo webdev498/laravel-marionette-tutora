@@ -1,0 +1,8 @@
+.profile-aside {
+    padding-top: $spacing-unit;
+
+    @include media-query('>tablet') {
+        width: $four-twelfths;
+        float: right;
+    }
+}

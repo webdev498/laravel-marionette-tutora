@@ -1,0 +1,225 @@
+/**
+ * Whole.
+ */
+
+.one-whole,
+%one-whole { 
+    width: $one-whole !important;
+}
+
+/**
+ * Halves.
+ */
+.one-half,
+%one-half,
+.two-quarters,
+%two-quarters,
+.three-sixths,
+%three-sixths,
+.four-eighths,
+%four-eighths,
+.five-tenths,
+%five-tenths,
+.six-twelfths,
+%six-twelfths { 
+    width: $one-half !important;
+}
+
+/**
+ * Thirds.
+ */
+.one-third,
+%one-third,
+.two-sixths,
+%two-sixths,
+.three-ninths,
+%three-ninths,
+.four-twelfths,
+%four-twelfths {
+    width: $one-third !important;
+}
+
+.two-thirds,
+%two-thirds,
+.four-sixths,
+%four-sixths,
+.six-ninths,
+%six-ninths,
+.eight-twelfths,
+%eight-twelfths { 
+    width: $two-thirds !important;
+}
+
+/**
+ * Quarters.
+ */
+.one-quarter,
+%one-quarter,
+.two-eighths,
+%two-eighths,
+.three-twelfths,
+%three-twelfths {
+    width: $one-quarter !important;
+}
+
+.three-quarters,
+%three-quarters,
+.six-eighths,
+%six-eighths,
+.nine-twelfths,
+%nine-twelfths { 
+    width: $three-quarters !important;
+}
+
+/**
+ * Fifths.
+ */
+.one-fifth,
+%one-fifth,
+.two-tenths,
+%two-tenths { 
+    width: $one-fifth !important;
+}
+
+.two-fifths,
+%two-fifths,
+.four-tenths,
+%four-tenths {
+    width: $two-fifths !important;
+}
+
+.three-fifths,
+%three-fifths,
+.six-tenths,
+%six-tenths {
+    width: $three-fifths !important;
+}
+
+.four-fifths,
+%four-fifths,
+.eight-tenths,
+%eight-tenths {
+    width: $four-fifths !important;
+}
+
+/**
+ * Sixths.
+ */
+.one-sixth,
+%one-sixth,
+.two-twelfths,
+%two-twelfths {
+    width: $one-sixth !important;
+}
+
+.five-sixths,
+%five-sixths,
+.ten-twelfths,
+%ten-twelfths { 
+    width: $five-sixths !important;
+}
+
+/**
+ * Eighths.
+ */
+.one-eighth,
+%one-eighth {
+    width: $one-eighth !important;
+}
+
+.three-eighths,
+%three-eighths {
+    width: $three-eighths !important;
+}
+
+.five-eighths,
+%five-eighths {
+    width : $five-eighths !important;
+}
+
+.seven-eighths,
+%seven-eighths {
+    width: $seven-eighths !important;
+}
+
+
+/**
+ * Ninths.
+ */
+.one-ninth,
+%one-ninth {
+    width: $one-ninth;
+}
+
+.two-ninths,
+%two-ninths {
+    width: $two-ninths;
+}
+
+.four-ninths,
+%four-ninths {
+    width: $four-ninths;
+}
+
+.five-ninths,
+%five-ninths {
+    width: $five-ninths;
+}
+
+.seven-ninths,
+%seven-ninths {
+    width: $seven-ninths;
+}
+
+.eight-ninths,
+%eight-ninths {
+    width: $eight-ninths;
+}
+
+
+/**
+ * Tenths.
+ */
+.one-tenth,
+%one-tenth {
+    width: $one-tenth !important;
+}
+
+.three-tenths,
+%three-tenths {
+    width: $three-tenths !important;
+}
+
+.seven-tenths,
+%seven-tenths {
+    width: $seven-tenths !important;
+}
+
+.nine-tenths,
+%nine-tenths {
+    width: $nine-tenths !important;
+}
+
+
+/**
+ * Twelfths.
+ */
+.one-twelfth,
+%one-twelfth {
+    width: $one-twelfth !important;
+}
+
+.five-twelfths,
+%five-twelfths {
+    width: $five-twelfths !important;
+}
+
+.seven-twelfths,
+%seven-twelfths {
+    width: $seven-twelfths !important;
+}
+
+.eleven-twelfths,
+%eleven-twelfths {
+    width: $eleven-twelfths !important;
+}

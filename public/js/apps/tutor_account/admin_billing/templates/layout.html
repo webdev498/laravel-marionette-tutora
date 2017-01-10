@@ -1,0 +1,137 @@
+<h4 class="delta">Identification</h4>
+
+<!-- Introduction -->
+<% if (showIntro) { %>
+    <div class="[ box box--small box--ui ] u-mt [ js-dismissable ]" data-dismissable-id="tutor_account_identification_introduction">
+        <span class="box__close [ icon icon--cancel ] [ js-close ]"></span>
+        <p><%= _.lang('dashboard.tutor.account.identification.introduction') %></p>
+    </div>
+<% } %>
+
+<!-- Verified -->
+<% if (identity_document.status == 'verified' && showVerified) { %>
+    <div class="[ box box--small box--bordered ] u-mt [ js-dismissable ]" data-dismissable-id="tutor_account_identification_verified">
+        <span class="box__close [ icon icon--cancel ] [ js-close ]"></span>
+        <h5 class="zeta heading heading--iconed u-mb">
+            <span class="icon icon--success"></span>
+            <%= _.lang('dashboard.tutor.account.identification.verification.verified.heading') %>
+        </h5>
+        <p><%= _.lang('dashboard.tutor.account.identification.verification.verified.details') %></p>
+    </div>
+<% } else if (identity_document.status != 'verified') { %>
+    <!-- Pending -->
+    <% if (lockFields) { %>
+        <div class="[ box box--small box--bordered ] u-mt">
+            <h5 class="zeta heading heading--iconed u-mb">
+                <span class="icon icon--warn"></span>
+                <%= _.lang('dashboard.tutor.account.identification.verification.pending.heading') %>
+            </h5>
+            <p><%= _.lang('dashboard.tutor.account.identification.verification.pending.details') %></p>
+        </div>
+    <!-- Unverified -->
+    <% } else if (identity_document.status == 'unverified') { %>
+        <div class="[ box box--small box--bordered ] u-mt">
+            <h5 class="zeta heading heading--iconed u-mb">
+                <span class="icon icon--error"></span>
+                <%= _.lang('dashboard.tutor.account.identification.verification.unverified.heading') %>
+            </h5>
+            <p><%= _.lang('dashboard.tutor.account.identification.verification.unverified.details') %></p>
+            <% if (identity_document.details) { %>
+                <p>We were given the following details on why the check failed:<br>
+                    <strong>"<%= identity_document.details %></strong>"</p>
+            <% } %>
+            <p>If you're struggling, <a href="<%= laroute.route('about.contact') %>#contact-us">get in touch</a>, we're happy to help.</p>
+        </div>
+    <!-- Not attempted -->
+    <% } else if ( _.isUndefined(identity_document.status)) { %>
+        <div class="[ box box--small box--info ] u-mt">
+            <h5 class="zeta heading heading--iconed u-mb">
+                <span class="icon icon--warn"></span>
+                <%= _.lang('dashboard.tutor.account.identification.verification.not-attempted.heading') %>
+            </h5>
+            <p><%= _.lang('dashboard.tutor.account.identification.verification.not-attempted.details') %></p>
+        </div>
+    <% } %>
+<% } %>
+
+<form class="[ layout ] [ js-form ]"><!--
+    Name
+    --><div class="[ layout__item field field--label ]">
+        <label for="first_name" class="field__label">Legal name (required)</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--first-name ]">
+        <input type="text" name="first_name" id="first_name" required
+            <%= lockFields ? '' : '' %>
+            value="<%= legal_first_name %>" placeholder="First Name"
+            class="[ input input--full input--squared input--bordered <%= lockFields ? 'input' : '' %> ] field__input [ js-legal-first-name ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--last-name ]">
+        <input type="text" name="last_name" id="last_name"
+            value="<%= legal_last_name %>" placeholder="Last Name" required
+            <%= lockFields ? '' : '' %>
+            class="[ input input--full input--squared input--bordered <%= lockFields ? 'input' : '' %> ] field__input [ js-legal-last-name ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    DOB
+    --><div class="[ layout__item field field--label ]">
+        <label for="first_name" class="field__label">Date of Birth (required)</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--dob-day ]">
+        <input type="text" name="dob_day" id="dob_day"
+            value="<%= dob.day %>" placeholder="Day" required
+            <%= lockFields ? '' : '' %>
+            class="[ input input--full input--squared input--bordered <%= lockFields ? 'input' : '' %> ] field__input [ js-dob-day ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--dob-month ]">
+        <input type="text" name="dob_month" id="dob_month"
+            value="<%= dob.month %>" placeholder="Month" required
+            <%= lockFields ? '' : '' %>
+            class="[ input input--full input--squared input--bordered <%= lockFields ? 'input' : '' %> ] field__input [ js-dob-month ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--dob-year ]">
+        <input type="text" name="dob_year" id="dob_year"
+            value="<%= dob.year %>" placeholder="Year" required
+            <%= lockFields ? '' : '' %>
+            class="[ input input--full input--squared input--bordered <%= lockFields ? 'input' : '' %> ] field__input [ js-dob-year ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    ID
+    --><div class="[ layout__item field field--label ]">
+        <label for="identity_document" class="field__label">Identification Document</label>
+        <p>Please ensure that your ID matches the requirements below, otherwise the ID check will fail and this will delay your application:</p>
+        <ul>
+            <li>Upload a picture of your passport or driving license. National ID cards or residence permits will not be accepted.</li>
+            <li>Ensure that your ID is in colour, not black and white.</li>
+            <li>Files must be less than 4mb in size and in photographic format (either JPG, JPEG or PNG). If you have a scanned copy such as a PDF, convert it to a JPG using <a target="_blank" href="http://image.online-convert.com/convert-to-jpg">this free service</a>.</li>
+        </ul>
+    </div><!--
+
+    --><div class="[ layout__item ] [ field field--identity-document ]">
+        <div class="[ box box--bordered <%= lockFields ? 'box' : 'box--clickable' %> ] u-mb0 tac [ js-document ]">
+            <div class="[ js-document-preview ]">
+                <% if (identity_document.src) { %>
+                    <img src="<%= identity_document.src %>" height="150">
+                <% } else { %>
+                    <p>Drop a file here or click to upload your ID</p>
+                <% } %>
+            </div>
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+    
+        --><div class="[ layout__item ] tar u-mt u-mb">
+            <button class="btn [ js-submit ]">Upload &amp; Save</button>
+        </div><!--
+    
+--></form>

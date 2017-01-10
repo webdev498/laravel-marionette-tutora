@@ -1,0 +1,36 @@
+.quiz__introduction {
+
+  fieldset {
+
+    h4:first-child {
+      margin-top: 0 !important;
+    }
+
+  }
+
+}
+
+.quiz__questions {
+
+  .fieldset__content {
+
+    .layout__item {
+
+      padding-right: 24px;
+
+      .field__label:first-child {
+        margin-top: 25px;
+      }
+
+      .field__error {
+        &.correct {
+          background: green;
+          display: block;
+        }
+      }
+
+    }
+
+  }
+
+}

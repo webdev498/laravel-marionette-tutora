@@ -1,0 +1,67 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container dialogue__container--tiny">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.travel_policy.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross [ js-close ]"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.profile.travel_policy.edit.introduction') %></p>
+
+                <form class="layout js-form" novalidate><!--
+                    --><div class="layout__item field">
+                        <label for="travel_radius" class="field__label">Distance*</label>
+                        <div class="field__input select select--full select--squared select--bordered <%= profile.travel_radius >= 0 ? 'select--show' : '' %>">
+                            <span class="select__placeholder">Radius</span>
+                            <span class="select__value"><%= profile.travel_radius >= 0 ? policies[profile.travel_radius] : '' %></span>
+                            <select name="travel_radius" class="select__field js-travel-radius">
+                                <option value="">Please select one:</option>
+                                <% _.each(policies, function (title, key) { %>
+                                    <% if (key >= 0) { %>
+                                        <option value="<%= key %>" <%= profile.travel_radius == key ? 'selected' : '' %>>
+                                            <%= title %>
+                                        </option>
+                                    <% } %>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item field">
+                        <label for="duration" class="field__label">Address*</label>
+                        <input type="text" name="address_street" placeholder="Street" value="<%= addresses.default.line_1 %>"
+                          class="field__input input input--full input--squared input--bordered js-address-line-1">
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item field">
+                        <input type="text" name="address_town" placeholder="Town" value="<%= addresses.default.line_2 %>"
+                          class="field__input input input--full input--squared input--bordered js-address-line-2">
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item field">
+                        <input type="text" name="address_county" placeholder="County" value="<%= addresses.default.line_3 %>"
+                          class="field__input input input--full input--squared input--bordered js-address-line-3">
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item field">
+                        <input type="text" name="address_postcode" placeholder="Postcode" value="<%= addresses.default.postcode %>"
+                          class="field__input input input--full input--squared input--bordered js-address-postcode">
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item u-mt- tar">
+                        <a href="#" class="u-mr [ js-close ]">Cancel</a>
+                        <button class="btn">Save</button>
+                    </div><!--
+                --></form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay [ js-close ]"></div>

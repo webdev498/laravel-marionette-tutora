@@ -1,0 +1,163 @@
+
+.circle {
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 5px;
+    font-size: 0.8em;
+    text-align: center;
+    width: 1.6em;
+    background: grey;
+    &:before {
+            content: "G";
+        } 
+
+    &.circle--failed_payment {
+        background: red;
+        
+        &:before {
+            content: "F";
+        } 
+    }
+
+    &.circle--expired_lesson {
+        background: brown;
+        
+        &:before {
+            content: "E";
+        } 
+    }
+
+    &.circle--pending_lesson {
+        background: blue;
+        
+        &:before {
+            content: "P";
+        } 
+    }
+
+    &.circle--not_replied {
+        background: orange;
+        
+        &:before {
+            content: "NR";
+        } 
+    }
+
+
+    &.circle--mismatched_no_job {
+        background: green;
+        
+        &:before {
+            content: "MM";
+        } 
+    }
+
+    &.circle--mismatched_has_job {
+        background: purple;
+        
+        &:before {
+            content: "MJ";
+        } 
+    }
+
+    &.circle--cancelled_first_lesson {
+        background: red;
+        
+        &:before {
+            content: "CL";
+        } 
+    }
+    &.circle--rebook {
+        background: orange;
+        
+        &:before {
+            content: "R";
+        } 
+    }
+
+    &.circle--refund {
+        background: brown;
+        
+        &:before {
+            content: "RF";
+        } 
+    }
+
+    &.circle--disintermediating {
+        background: red;
+        
+        &:before {
+            content: "DIS";
+        } 
+    }
+    &.circle--first_lesson_no_rebook {
+        background: green;
+        
+        &:before {
+            content: "FL";
+        } 
+    }
+
+    &.circle--first_lesson {
+        background: black;
+        
+        &:before {
+            content: "FL";
+        } 
+    }
+
+    &.circle--first_lesson_rebook {
+        background: brown;
+        
+        &:before {
+            content: "FLR";
+        } 
+    }
+
+    &.circle--first_with_student_no_rebook {
+        background: blue;
+        
+        &:before {
+            content: "FS";
+        } 
+    }
+    &.circle--first_with_student_rebook {
+        background: red;
+        
+        &:before {
+            content: "FSR";
+        } 
+    }
+
+    &.circle--first_with_student {
+        background: black;
+        
+        &:before {
+            content: "FS";
+        } 
+    }
+
+    &.circle--lesson_count {
+        background: purple;
+        
+        &:before {
+            content: "20";
+        } 
+    }
+
+    &.circle--transgression {
+        background: blue;
+        
+        &:before {
+            content: "T";
+        } 
+    }
+
+
+
+}

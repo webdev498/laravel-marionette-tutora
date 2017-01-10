@@ -1,0 +1,127 @@
+.btn--responsive {
+
+  @include media-query('max-tablet') {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+.btn {
+    @include font-size(18px);
+    @include font-weight('medium');
+
+    &:focus {
+        outline: none;
+    }
+}
+.btn--back,
+.btn--disabled,
+[disabled] {
+    background: $color-gainsboro;
+    border-color: $color-gainsboro;
+}
+
+.btn--full {
+    width: 100%;
+}
+
+.btn--wide {
+    @include media-query('>tablet') {
+        padding-left: $spacing-unit;
+        padding-right: $spacing-unit;
+    }
+
+    @include media-query('>1024') {
+        padding-left: $spacing-unit--large;
+        padding-right: $spacing-unit--large;
+    }
+}
+
+.btn--small {
+    @include font-size(16px);
+    padding: ($spacing-unit / 4) $spacing-unit;
+}
+
+.btn--large {
+    @include font-size(22px, 1.6);
+    @include font-weight('medium');
+
+    @include media-query('>tablet') {
+        @include font-size(26px);
+        padding-left: $spacing-unit--large;
+        padding-right: $spacing-unit--large;
+    }
+
+    @include media-query('>1024') {
+        padding-left: $spacing-unit--huge;
+        padding-right: $spacing-unit--huge;
+    }
+}
+
+.btn--squared {
+    border-radius: 0;
+    border-width: 1px;
+}
+
+.btn--alt {
+    background: $brand-color--dark;
+    border-color: $brand-color--dark;
+}
+
+.btn--hollow {
+    color: $brand-color;
+
+    @include attention() {
+        color: $color-white;
+        background: $brand-color;
+    }
+}
+
+.btn--neutral {
+    color: $color-white;
+    border-color: $color-white;
+    background: $color-white;
+
+    @include attention() {
+        background: transparent;
+    }
+}
+
+.btn--error {
+    border-color: $color-red;
+    background: $color-red;
+}
+
+.btn--success {
+    border-color: $color-green;
+    background: $color-green;
+}
+
+.btn--gray {
+    border-color: $color-gray;
+    background: $color-gray;
+}
+
+.btn--dark {
+    border-color: $color-black;
+    background: $color-black;
+    color: $color-black;
+}
+
+.btn--dark:hover {
+    color: $color-white;
+    background: $color-black;
+}
+
+.btn--sm-50-percent {
+  @include media-query('phone') {
+    max-width: 44%;
+  }
+}
+
+// Must be last in the stylesheet
+// because css :(
+.btn--hollow {
+    background: transparent;
+}

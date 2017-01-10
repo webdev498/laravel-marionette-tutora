@@ -1,0 +1,164 @@
+.page-head {
+    padding-top: $spacing-unit--small;
+    padding-bottom: $spacing-unit--small;
+    background: $brand-color--dark;
+
+    .heading {
+        color: $color-white;
+        margin: 0;
+
+        @include media-query('>1024') {
+            margin-bottom: $spacing-unit--small;
+        }
+    }
+
+    .subheading {
+        color: $color-slate;
+        margin: 0;
+    }
+
+    .wb {
+        @include media-query('>1024') {
+            display: block;
+        }
+    }
+}
+    .page-head__body {
+        padding-top: $spacing-unit--small;
+        padding-bottom: 0px;
+
+
+        @include media-query('>1024') {
+            padding-top: $spacing-unit;
+            padding-bottom: $spacing-unit--small;
+        }
+
+        @include media-query('>1440') {
+            padding-top:    $spacing-unit;
+            padding-bottom: $spacing-unit--small;
+        }
+    }
+        // A simple left/right
+        .page-head__main {
+            padding-left: $one-twelfth;
+
+
+            @include media-query('>tablet') {
+                text-align: center !important;
+            }
+
+            @include media-query('>1024') {
+                text-align: left !important;
+                width: $eight-twelfths;
+            }
+
+            @include media-query('>1200') {
+                width: $seven-twelfths;
+            }
+        }
+
+        .page-head__aside {
+            @include media-query('>tablet') {
+                width: $six-twelfths;
+            }
+
+            @include media-query('>1024') {
+                width: $four-twelfths;
+                padding-top: $spacing-unit;
+            }
+
+            @include media-query('>1200') {
+                width: $three-twelfths;
+            }
+        }
+
+        // A more complex top, bottom (left/right)
+        .page-head__top {
+            text-align: center !important;
+            margin-bottom: $spacing-unit--small;
+
+            @include media-query('>1024') {
+                margin-bottom: $spacing-unit;
+            }
+        }
+
+        .page-head__bottom {
+            @include media-query('>1024') {
+                margin-left: $one-twelfth;
+                margin-right: $one-twelfth;
+            }
+        }
+            .page-head__bottom__top {
+                text-align: center !important;
+
+                @include media-query('>1024') {
+                    width: $seven-twelfths;
+                }
+            }
+
+            .page-head__bottom__bottom {
+                @include media-query('>tablet') {
+                    width: $six-twelfths;
+                }
+                
+                @include media-query('>1024') {
+                    width: $five-twelfths;
+                }
+            }
+
+    .page-head--form {
+        .page-head__main {
+            
+            padding-left: $one-twelfth;
+
+            @include media-query('>1024') {
+                width: $seven-twelfths;
+            }
+
+            @include media-query('>1200') {
+                width: $eight-twelfths;
+            }
+        }
+
+        .page-head__aside {
+
+            padding-left: $one-twelfth;
+            @include media-query('>1024') {
+                padding-left: 0px;
+                padding-top: $spacing-unit--small;
+                width: $four-twelfths;
+            }
+
+            @include media-query('>1200') {
+                padding-left: 0px;
+                padding-top: $spacing-unit;
+                width: $four-twelfths;
+            }
+        }
+    }
+
+    .page-head--student,
+    .page-head--tutor {
+        @include vendor(background-size, cover);
+        background-position: 50% 50%;
+    }
+
+    .page-head--student {
+        @include media-query('>tablet') {
+            background-image: url(/img/mastheads/students@1x.png);
+        }
+    }
+
+    .page-head--tutor {
+        @include media-query('>tablet') {
+            background-image: url(/img/mastheads/boss@1x.png);
+        }
+    }
+
+    .page-head--search {
+        .page-head__main {
+            @include media-query('>1200') {
+                width: $eight-twelfths;
+            }
+        }
+    }

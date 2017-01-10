@@ -1,0 +1,80 @@
+.profile-pic {
+    padding: 0;
+    margin: 0;
+    border-radius: 60px;
+    display: inline-block;
+    overflow: hidden;
+    // line-height: 0;
+    width: 120px;
+    max-width: 100%;
+}
+    .profile-pic--small {
+        border-radius: 20px;
+        width: 40px;
+    }
+
+    .profile-pic--medium {
+        width: 120px;
+    }
+
+    .profile-pic--large {    
+        width: 180px;
+        border-radius: 90px;
+    }
+
+    .profile-pic--edit {
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            .profile-pic__edit {
+                display: block;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: $brand-color--dark;
+                opacity: .75;
+            }
+        }
+    }
+
+        .profile-pic__preview {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .profile-pic__progress {
+            @include vendor(transform, rotate(90deg));
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            // width: 50%;
+            background: $brand-color--dark;
+            opacity: .75;
+        }
+
+        .profile-pic__edit {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            text-align: center;
+            margin-top: -7px;
+            width: 100%;
+            color: $color-white;
+            display: none;
+            z-index: 1;
+        }

@@ -1,0 +1,10 @@
+.media--responsive,
+%media--responsive {
+    .media__img {
+        display: none;
+
+        @include media-query('>tablet') {
+            display: inherit;
+        }
+    }
+}

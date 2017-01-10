@@ -1,0 +1,27 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading">Leave a review for tutor</h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p>Please, choose the tutor</p>
+
+                <% _.each(tutors, function(tutor) {
+                    if(tutor.actions.data.reviewByStudent) { %>
+
+                <a href="<%= laroute.route('review.create_for_student', {'tutor': tutor.uuid, 'student': uuid}) %>" data-js>
+                    <%- tutor.name %>
+                </a>
+                <br>
+
+                <% }}); %>
+
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

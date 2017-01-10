@@ -1,0 +1,180 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.message.create.title') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.message.create.introduction') %></p>
+
+                <form class="js-form" novalidate>
+                    <fieldset class="fieldset">
+                        <div class="layout"><!--
+
+                            --><div class="[ layout__item ] u-1/2-tablet-and-up field">
+                                <div class="autocomplete [ js-subjects-autocomplete ]">
+                                    <input type="text" name="subject" value="<%= prevSearchSubject %>" placeholder="Subject (Level)"
+                                           class="[ field__input input input--full input--squared input--bordered ] [ autocomplete__input ] [ js-subject js-autocomplete-input ]">
+                                </div>
+                                <div class="field__error"></div>
+                            </div><!--
+
+                        --><div class="[ layout__item ] u-1/2-tablet-and-up field">
+                                <input type="text" name="location" placeholder="Postcode"
+                                       value="<%= prevSearchLocation %>"
+                                       class="field__input input input--full input--squared input--bordered [ js-location ]">
+                                <div class="field__error"></div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <textarea name="body"
+                              placeholder="Write your message here...
+
+Be sure to include:
+- Where you live
+- What you want to learn
+- When you're available"
+                              class="[ input input--full input--squared input--bordered ] field__textarea [ js-body ]" ></textarea>
+                            <div class="field__error"></div>
+                        </div>
+
+                        <% if (action === 'message') { %>
+                        <div class="layout__item u-1/2-tablet-and-up field">
+                            <div class="field__checkbox checkbox checkbox--small checkbox--checked">
+                                <div class="checkbox__box">
+                                    <div class="checkbox__tick"></div>
+                                    <input type="checkbox" checked="checked" class="checkbox__input js-create-job" value="1" name="create_job">
+                                </div>
+                                <label class="checkbox__label">Allow other tutors to contact me (recommended)</label>
+                            </div>
+                            <div class="field__error"></div>
+                        </div>
+                        <% } %>
+
+                    </fieldset>
+
+                    <% if (action === 'register' || action === 'login') { %>
+                        <div class="[ tab-content tab-content--active ] js-register-form">
+                            <div class="layout"><!--
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <input type="text" name="first_name" placeholder="First Name"
+                                      class="field__input input input--full input--squared input--bordered js-register-first-name">
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <input type="text" name="last_name" placeholder="Last Name"
+                                      class="field__input input input--full input--squared input--bordered js-register-last-name">
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <input type="email" name="email" placeholder="Email"
+                                      class="field__input input input--full input--squared input--bordered js-register-email">
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <input type="tel" name="telephone" placeholder="Mobile Number"
+                                      class="field__input input input--full input--squared input--bordered js-register-telephone">
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <input type="password" name="password" placeholder="Create password"
+                                      class="field__input input input--full input--squared input--bordered js-register-password">
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                        <div class="field__checkbox checkbox checkbox--small checkbox--checked">
+                                            <div class="checkbox__box">
+                                                <div class="checkbox__tick"></div>
+                                                <input type="checkbox" checked="checked" class="checkbox__input js-register-create-job" value="1" name="register_create_job">
+                                            </div>
+                                            <label class="checkbox__label">Allow other tutors to contact me (recommended)</label>
+                                        </div>
+                                        <div class="field__error"></div>
+                                </div><!--
+
+                            --></div>
+                        </div>
+
+                        <div class="tab-content js-login-form">
+                            <div class="layout"><!--
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <input type="email" name="email" placeholder="Email"
+                                      class="field__input input input--full input--squared input--bordered js-login-email">
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <input type="password" name="password" placeholder="Password"
+                                      class="field__input input input--full input--squared input--bordered js-login-password">
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                    <div class="field__checkbox checkbox checkbox--checked">
+                                        <div class="checkbox__box">
+                                            <div class="checkbox__tick"></div>
+                                            <input type="checkbox" name="remember_me" id="remember_me" value="1" class="checkbox__input js-login-remember-me" checked="checked">
+                                        </div>
+                                        <label class="checkbox__label">Remember me</label>
+                                    </div>
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                                --><div class="layout__item u-1/2-tablet-and-up field">
+                                <div class="field__checkbox checkbox checkbox--small checkbox--checked">
+                                    <div class="checkbox__box">
+                                        <div class="checkbox__tick"></div>
+                                        <input type="checkbox" checked="checked" class="checkbox__input js-login-create-job" value="1" name="login_create_job">
+                                    </div>
+                                    <label class="checkbox__label">Allow other tutors to contact me (recommended)</label>
+                                </div>
+                                <div class="field__error"></div>
+                            </div><!--
+
+                            --></div>
+                        </div>
+                    <% } %>
+
+                    <div class="layout"><!--
+                        --><div class="layout__item u-1/3-phone u-1/3-tablet-and-up">
+                        </div><!--
+
+                        --><div class="layout__item u-2/3-phone u-2/3-tablet-and-up tar">
+                            <button class="btn js-submit">Send message</button>
+                        </div>
+
+                        <div class="layout__item u-mt- tac">
+                            <p class="tiny">By clicking this button you're agreeing to our <a href="/terms">Terms &amp; Conditions</a></p>
+                        </div>
+                    </div>
+                </form>
+
+                <nav class="dialogue__nav">
+
+                    <% if (action === 'register' || action === 'login') { %>
+                    <a href="#" data-js class="epsilon js-login-button">
+                        <%= _.lang('dialogue.auth.login.heading') %><span class="icon icon--nav-right--dark"></span>
+                    </a>
+                    <a href="#" data-js style="display: none;" class="epsilon js-register-button">
+                        <%= _.lang('dialogue.auth.sign_up.heading') %><span class="icon icon--nav-right--dark"></span>
+                    </a>
+                    <% } %>
+
+                    <a href="<%= laroute.route('register.tutor') %>" style="display: none;" data-js class="epsilon js-become-tutor-button">
+                        <%= _.lang('dialogue.register.tutor.heading') %><span class="icon icon--nav-right--dark"></span>
+                    </a>
+                </nav>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

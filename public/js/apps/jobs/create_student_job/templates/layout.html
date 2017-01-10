@@ -1,0 +1,63 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.message.create.title') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.message.create.introduction') %></p>
+
+                <form class="js-form" novalidate>
+                    <fieldset class="fieldset">
+                        <div class="layout"><!--
+
+                            --><div class="[ layout__item ] u-1/2-tablet-and-up field">
+                                <div class="autocomplete [ js-subjects-autocomplete ]">
+                                    <input type="text" name="subject" value="<%= prevSearchSubject %>" placeholder="Subject (Level)"
+                                           class="[ field__input input input--full input--squared input--bordered ] [ autocomplete__input ] [ js-subject js-autocomplete-input ]">
+                                </div>
+                                <div class="field__error"></div>
+                            </div><!--
+
+                        --><div class="[ layout__item ] u-1/2-tablet-and-up field">
+                                <input type="text" name="location" placeholder="Postcode"
+                                       value="<%= prevSearchLocation %>"
+                                       class="field__input input input--full input--squared input--bordered [ js-location ]">
+                                <div class="field__error"></div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <textarea name="message"
+                              placeholder="Write your message here...
+
+Be sure to include:
+- Where you live
+- What you want to learn
+- When you're available"
+                              class="[ input input--full input--squared input--bordered ] field__textarea [ js-message ]" ></textarea>
+                            <div class="field__error"></div>
+                        </div>
+                    </fieldset>
+
+                    <div class="layout"><!--
+                        --><div class="layout__item u-1/3-phone u-1/3-tablet-and-up">
+                        </div><!--
+
+                        --><div class="layout__item u-2/3-phone u-2/3-tablet-and-up tar">
+                            <button class="btn js-submit">Send message</button>
+                        </div>
+
+                        <div class="layout__item u-mt- tac">
+                            <p class="tiny">By clicking this button you're agreeing to our <a href="/terms">Terms &amp; Conditions</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

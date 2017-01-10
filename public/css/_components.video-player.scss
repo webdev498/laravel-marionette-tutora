@@ -1,0 +1,25 @@
+.view-player-play-label {
+  z-index : 9 !important;
+}
+.js-recorder {
+  margin : 0 auto 12px auto;
+  &-wrapper {
+    width : 100%;
+  }
+}
+.js-video {
+  &-player {
+    margin : 0 auto 12px auto;
+  }
+  &-wrapper {
+    width : 100%;
+  }
+}
+.js-edit {
+  &-video {
+    margin : 0 auto 12px auto;
+  }
+  &-wrapper {
+    width : 100%;
+  }
+}

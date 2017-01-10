@@ -1,0 +1,31 @@
+.page-foot {
+    background: $brand-color--dark;
+    padding: $spacing-unit--large 0;
+    margin-top: $spacing-unit;
+
+    &,
+    h4 {
+        color: $color-white;
+    }
+}
+
+    .page-foot__links {
+        width: $one-half;
+        margin-bottom: $spacing-unit;
+
+        @include media-query('>tablet') {
+            width: $one-quarter;
+        }
+
+        @include media-query('>1024') {
+            width: $two-twelfths;
+        }
+    }
+
+    .page-foot__social {
+        margin-bottom: $spacing-unit;
+
+        @include media-query('>1024') {
+            width: $four-twelfths;
+        }
+    }

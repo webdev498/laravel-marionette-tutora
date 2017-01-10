@@ -1,0 +1,26 @@
+$color-navy: #232f49;
+$color-cyan: #12d4d2;
+$color-slate: #6b7888;
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #8c959a;
+$color-gainsboro: #dedede;
+$color-snow: #fbfbfb;
+$color-yellow: #f5b800;
+$color-khaki: #ffea9f;
+$color-red: #FF3F54;
+$color-alice: #E4E9ED;
+$color-green: #80D125;
+
+$color-gplus: #d64837;
+$color-facebook: #3b5898;
+$color-twitter: #32cdfb;
+
+$color-text: $color-gray;
+$color-text--dark: $color-navy;
+$color-text--light: $color-slate;
+
+$color-ui: $color-gainsboro;
+
+$color-pending: $color-green;
+$color-success: darken($color-green, 20%);

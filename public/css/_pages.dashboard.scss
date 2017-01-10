@@ -1,0 +1,23 @@
+.page--dashboard {
+    .layout__item--welcome {
+        @include media-query('>1200') {
+            width: $three-twelfths;
+        }
+    }
+
+    .layout__item--lessons {
+        margin-bottom: $spacing-unit;
+
+        @include media-query('>1024') {
+            width: $seven-twelfths;
+        }
+    }
+
+    .layout__item--messages {
+        margin-bottom: $spacing-unit;
+
+        @include media-query('>1024') {
+            width: $five-twelfths;
+        }
+    }
+}

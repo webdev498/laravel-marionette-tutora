@@ -1,0 +1,34 @@
+.promo-block {
+    color: $color-text--light;
+
+    @include media-query('>tablet') {
+        width: $one-third;
+    }
+
+    @include media-query('>1024') {
+        width: $one-quarter;
+    }
+
+    .heading {
+        color: $brand-color;
+    }
+
+    .intro {
+        @include font-weight('medium');
+        color: $color-white;
+    }
+}
+    .promo-block--heading {
+        @include media-query('>tablet') {
+            width: $one-whole;
+        }
+
+        @include media-query('>1024') {
+            width: $one-quarter;
+            padding-top: 110px;
+        }
+
+        .heading {
+            color: $color-white;
+        }
+    }

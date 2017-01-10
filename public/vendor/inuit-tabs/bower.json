@@ -1,0 +1,19 @@
+{
+  "name": "inuit-tabs",
+  "version": "0.2.1",
+  "homepage": "https://github.com/inuitcss/objects.tabs",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "A simple tabs object in the inuitcss framework",
+  "main": "_objects.tabs.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "inuit-defaults": "~0.2.0"
+  }
+}

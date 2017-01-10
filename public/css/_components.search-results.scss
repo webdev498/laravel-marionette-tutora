@@ -1,0 +1,95 @@
+.search-results {
+}
+    .search-results__item  {
+        padding: 0 !important;
+        cursor: pointer;
+
+        &:hover {
+            background: $color-alice;
+        }
+    }
+        .search-results__pic {
+            position: relative;
+            width: $one-whole;
+            text-align: center;
+            margin-bottom: $spacing-unit--small;
+            margin-top: $spacing-unit--small;
+
+            .dbs {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            @include media-query('>tablet') {
+                width: $two-twelfths;
+                text-align: right;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            @include media-query('>1024') {
+                width: $two-twelfths;
+            }
+
+            @include media-query('>1200') {
+                width: $two-twelfths;
+            }
+        }
+
+        .search-results__main {
+            width: $one-whole;
+            margin-bottom: $spacing-unit;
+
+            @include media-query('>tablet') {
+                width: $nine-twelfths;
+                margin-bottom: $spacing-unit--large;
+            }
+
+            @include media-query('>1024') {
+                width: $seven-twelfths;
+                margin-bottom: 0;
+            }
+
+            @include media-query('>1200') {
+                width: $six-twelfths;
+            }
+        }
+            .search-results__header {
+                margin-bottom: $spacing-unit--small;
+
+                display: inline-block;
+
+                .small {
+                }
+            }
+
+            .search-results__location {
+                margin-left: -3px;
+            }
+
+            .search-results__footer {
+                @include font-weight('medium');
+                color: $brand-color--dark;
+            }
+
+        .search-results__meta {
+            text-align: center;
+            margin-bottom: $spacing-unit--small;
+
+            @include media-query('>tablet') {
+                width: $eight-twelfths;
+                margin-left: $two-twelfths;
+                margin-bottom: 0;
+            }
+
+            @include media-query('>1024') {
+                width: $three-twelfths;
+                margin-left: 0;
+            }
+
+            @include media-query('>1200') {
+                width: $three-twelfths;
+                padding-left: halve($one-twelfth);
+            }
+        }

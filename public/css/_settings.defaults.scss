@@ -1,0 +1,38 @@
+$inuit-base-font-size:        17px !default;
+$inuit-base-line-height:      24px !default;
+$inuit-base-text-color:       $color-text;
+$inuit-base-background-color: $color-white;
+
+$inuit-enable-layout--center: true;
+$inuit-enable-layout--auto:   true;
+$inuit-enable-layout--rev:    true;
+
+$inuit-enable-margins:                true;
+$inuit-enable-margins--tiny:          true;
+$inuit-enable-margins--small:         true;
+$inuit-enable-margins--large:         true;
+$inuit-enable-margins--huge:          true;
+$inuit-enable-margins--none:          true;
+$inuit-enable-margins--negative:      true;
+$inuit-enable-margins--negative-small: true;
+$inuit-enable-margins--negative-tiny:  true;
+
+$inuit-enable-box--large: true;
+
+$inuit-enable-pack--auto: true;
+
+$inuit-enable-list-inline--delimited: true;
+
+$inuit-enable-list-ui--small: true;
+$inuit-list-ui-border-width: 0;
+
+$inuit-enable-media--rev: true;
+$inuit-enable-media--large: true;
+
+$inuit-enable-btn--large: true;
+$inuit-enable-btn--full: true;
+$inuit-btn-border-width: 4px;
+$inuit-btn-background: $brand-color;
+$inuit-btn-radius: 1000px;
+$inuit-btn-padding: $spacing-unit--small;
+$inuit-btn-padding--large: $spacing-unit--tiny + 2;

@@ -1,0 +1,48 @@
+$list-grid-border-width: 1px;
+$list-grid-border-color: $color-ui;
+$list-grid-breakpoint: '>1024';
+
+.list-grid {
+    margin: 0 0 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    @include media-query($list-grid-breakpoint) {
+        display: block;
+        table-layout: initial;
+        margin-bottom: $spacing-unit--small;
+    }
+}
+
+    .list-grid__item {
+        display: table-cell;
+        padding: $spacing-unit--small;
+        border-right: $list-grid-border-width solid $list-grid-border-color;
+
+        &:last-child {
+            border: 0;
+        }
+
+        @include media-query($list-grid-breakpoint) {
+            display: block;
+            float: left;
+            padding: $spacing-unit;
+            border-bottom: $list-grid-border-width solid $list-grid-border-color;
+
+            .list-grid--two & {
+                width: $one-half;
+
+                &:nth-child(2n) {
+                    border-right: 0;
+                }
+
+                &:nth-last-child(-n+2) {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }

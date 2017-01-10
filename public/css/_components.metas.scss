@@ -1,0 +1,25 @@
+.meta {
+    text-align: center;
+}
+    .meta__title {
+        @include font-size(30px, 1);
+        @include font-weight('medium');
+        color: $brand-color--dark;
+        margin-bottom: .15em;
+
+        @include media-query('>tablet') {
+            @include font-size(30px, 1);
+        }
+    }
+
+    .meta__title--small {
+        @include font-size(15px, 1);
+        @include media-query('>tablet') {
+            @include font-size(20px, 1);
+        }
+    }
+
+    .meta__description {
+        @include font-size(14px, 1.25);
+        @cinlude font-weight('regular');
+    }

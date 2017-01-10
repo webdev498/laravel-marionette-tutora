@@ -1,0 +1,155 @@
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+
+/**
+ * The block object simply stacks an image on top of some text-like content.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-block-namespace:     $inuit-namespace !default;
+
+$inuit-block-gutter:            $inuit-base-spacing-unit !default;
+$inuit-block-gutter--tiny:        quarter($inuit-block-gutter) !default;
+$inuit-block-gutter--small:         halve($inuit-block-gutter) !default;
+$inuit-block-gutter--large:        double($inuit-block-gutter) !default;
+$inuit-block-gutter--huge:      quadruple($inuit-block-gutter) !default;
+
+$inuit-enable-block--flush:     false !default;
+$inuit-enable-block--tiny:      false !default;
+$inuit-enable-block--small:     false !default;
+$inuit-enable-block--large:     false !default;
+$inuit-enable-block--huge:      false !default;
+$inuit-enable-block--center:    false !default;
+$inuit-enable-block--right:     false !default;
+
+
+
+
+
+/**
+ * Stacked image-with-text object. A simple abstraction to cover a very commonly
+ * occurring design pattern.
+ */
+.#{$inuit-block-namespace}block,
+%#{$inuit-block-namespace}block {
+    display: block;
+}
+
+
+    /**
+     * 1. Eliminate whitespace around images.
+     */
+    .#{$inuit-block-namespace}block__img,
+    %#{$inuit-block-namespace}block__img {
+        vertical-align: middle; /* [1] */
+        margin-bottom: $inuit-block-gutter;
+
+        @if ($inuit-enable-block--flush == true) {
+
+            /**
+             * No space between the image and the text content.
+             */
+
+            .#{$inuit-block-namespace}block--flush > &,
+            %#{$inuit-block-namespace}block--flush > & {
+                margin-bottom: 0;
+            }
+
+        }
+
+        @if ($inuit-enable-block--tiny == true) {
+
+            /**
+             * Tiny space between the image and the text content.
+             */
+
+            .#{$inuit-block-namespace}block--tiny > &,
+            %#{$inuit-block-namespace}block--tiny > & {
+                margin-bottom: $inuit-block-gutter--tiny;
+            }
+
+        }
+
+        @if ($inuit-enable-block--small == true) {
+
+            /**
+             * Small space between the image and the text content.
+             */
+
+            .#{$inuit-block-namespace}block--small > &,
+            %#{$inuit-block-namespace}block--small > & {
+                margin-bottom: $inuit-block-gutter--small
+            }
+
+        }
+
+        @if ($inuit-enable-block--large == true) {
+
+            /**
+             * Large space between the image and the text content.
+             */
+
+            .#{$inuit-block-namespace}block--large > &,
+            %#{$inuit-block-namespace}block--large > & {
+                margin-bottom: $inuit-block-gutter--large;
+            }
+
+        }
+
+        @if ($inuit-enable-block--huge == true) {
+
+            /**
+             * Huge space between the image and the text content.
+             */
+
+            .#{$inuit-block-namespace}block--huge > &,
+            %#{$inuit-block-namespace}block--huge > & {
+                margin-bottom: $inuit-block-gutter--huge;
+            }
+
+        }
+
+    }
+
+
+
+
+
+    /**
+     * Text-content.
+     */
+    .#{$inuit-block-namespace}block__body,
+    %#{$inuit-block-namespace}block__body {
+        display: block;
+    }
+
+
+
+
+
+@if ($inuit-enable-block--right == true) {
+
+    /**
+     * Right-aligned blocks.
+     */
+
+    .#{$inuit-block-namespace}block--right,
+    %#{$inuit-block-namespace}block--right {
+        text-align: right;
+    }
+
+}
+
+@if ($inuit-enable-block--center == true) {
+
+    /**
+     * Center-aligned blocks.
+     */
+
+    .#{$inuit-block-namespace}block--center,
+    %#{$inuit-block-namespace}block--center {
+        text-align: center;
+    }
+
+}

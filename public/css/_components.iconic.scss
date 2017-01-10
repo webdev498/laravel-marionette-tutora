@@ -1,0 +1,349 @@
+.icon,
+.graphic,
+.subject {
+  display : inline-block;
+}
+button.icon {
+  margin           : 0;
+  padding          : 0;
+  outline          : 0;
+  border           : 0;
+  background-color : transparent;
+}
+//
+// Icons
+//
+
+.icon--heart {
+  @include sprite($heart-1x);
+}
+.icon--cross {
+  @include sprite($cross-1x);
+}
+.icon--burger {
+  @include sprite($menu-1x);
+}
+.icon--gplus {
+  @include sprite($gplus-1x);
+}
+.icon--line-box-tick {
+  @include sprite($line-box-tick-1x);
+}
+.icon--line-tick {
+  @include sprite($line-tick-1x);
+}
+.icon--fancy-tick {
+  @include sprite($fancy-tick-1x);
+}
+.icon--nav-left {
+  @include sprite($nav-left-1x);
+}
+.icon--nav-left--brand {
+  @include sprite($nav-left-brand-1x);
+}
+.icon--nav-right {
+  @include sprite($nav-right-1x);
+}
+.icon--nav-right--dark {
+  @include sprite($nav-right-dark-1x);
+}
+.icon--nav-right--brand {
+  @include sprite($nav-right-brand-1x);
+}
+.icon--pencil {
+  @include sprite($pencil-1x);
+}
+.icon--pencil--light {
+  @include sprite($pencil-light-1x);
+}
+.icon--thumbs-up {
+  @include sprite($thumbs-up-1x);
+}
+.icon--thumbs-down {
+  @include sprite($thumbs-down-1x);
+}
+.icon--follow {
+  @include sprite($nav-right-1x);
+
+  &:hover {
+    @include sprite($nav-right-brand-1x);
+  }
+}
+.icon--edit {
+  @include sprite($edit-1x);
+
+  &:hover {
+    @include sprite($edit-active-1x);
+  }
+}
+.icon--eye {
+  @include sprite($eye-1x);
+
+  &:hover {
+    @include sprite($eye-active-1x);
+  }
+}
+.icon--confirm {
+  @include sprite($confirm-1x);
+
+  &:hover {
+    @include sprite($confirm-active-1x);
+  }
+}
+.icon--card {
+  @include sprite($card-1x);
+
+  &:hover {
+    @include sprite($card-active-1x);
+  }
+}
+.icon--cancel {
+  @include sprite($cancel-1x);
+
+  &:hover {
+    @include sprite($cancel-active-1x);
+  }
+}
+.icon--delete {
+  @include sprite($delete-1x);
+
+  &:hover {
+    @include sprite($delete-active-1x);
+  }
+}
+.icon--message {
+  @include sprite($message-1x);
+
+  &:hover {
+    @include sprite($message-active-1x);
+  }
+
+}
+.icon--message--active {
+  @include sprite($message-active-1x);
+}
+.icon--message--large {
+  @include sprite($message-large-1x);
+}
+.icon--reply {
+  @include sprite($reply-1x);
+
+  &:hover {
+    @include sprite($reply-active-1x);
+  }
+}
+.icon--success {
+  @include sprite($success-1x);
+}
+.icon--warn {
+  @include sprite($warn-1x);
+}
+.icon--error {
+  @include sprite($error-1x);
+}
+.icon--bulb {
+  @include sprite($bulb-1x);
+}
+.icon--24h {
+  @include sprite($twentyfourhour-1x);
+}
+.icon--24h--large {
+  @include sprite($twentyfourhour-large-1x);
+}
+.icon--book {
+  @include sprite($book-1x);
+}
+.icon--book--large {
+  @include sprite($book-large-1x);
+}
+.icon--video {
+  @include sprite($video-1x);
+}
+.icon--video--large {
+  @include sprite($video-large-1x);
+}
+.icon--teacher {
+  @include sprite($teacher-1x);
+}
+.icon--teacher--large {
+  @include sprite($teacher-large-1x);
+}
+.icon--location {
+  @include sprite($location-1x);
+}
+// Disc icons
+
+$diameter : 75px;
+
+.icon--disc {
+  width         : $diameter !important;
+  height        : $diameter !important;
+  border-radius : $diameter !important;
+  position      : relative;
+  background    : $brand-color;
+
+  &:after {
+    content  : '';
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+  }
+
+  &.icon--facebook {
+    background : $color-facebook !important;
+
+    &:after {
+      @include sprite($facebook-1x);
+      margin-top  : ($facebook-1x-height / 2) * -1;
+      margin-left : ($facebook-1x-width / 2) * -1;
+    }
+  }
+
+  &.icon--twitter {
+    background : $color-twitter !important;
+
+    &:after {
+      @include sprite($twitter-1x);
+      margin-top  : ($twitter-1x-height / 2) * -1;
+      margin-left : ($twitter-1x-width / 2) * -1;
+    }
+  }
+
+  &.icon--gplus {
+    background : $color-gplus !important;
+
+    &:after {
+      @include sprite($gplus-1x);
+      margin-top  : ($gplus-1x-height / 2) * -1;
+      margin-left : ($gplus-1x-width / 2) * -1;
+    }
+  }
+
+  &.icon--telephone {
+    &:after {
+      @include sprite($telephone-1x);
+      margin-top  : ($telephone-1x-height / 2) * -1;
+      margin-left : ($telephone-1x-width / 2) * -1;
+    }
+  }
+
+  &.icon--contact {
+    &:after {
+      @include sprite($contact-1x);
+      margin-top  : ($contact-1x-height / 2) * -1;
+      margin-left : ($contact-1x-width / 2) * -1;
+    }
+  }
+
+}
+//
+// Graphics
+//
+
+.graphic--logo {
+  @include sprite($logo-1x);
+}
+.graphic--logo--full {
+  @include sprite($logo-full-1x);
+}
+.graphic--logo--dark {
+  @include sprite($logo-dark-1x);
+}
+.graphic--magnifying-glass {
+  @include sprite($magnifying-glass-1x);
+}
+.graphic--book-hiw {
+  @include sprite($book-hiw-1x);
+}
+.graphic--mortar-board {
+  @include sprite($mortar-board-1x);
+}
+.graphic--coins {
+  @include sprite($coins-1x);
+}
+.graphic--binoculars {
+  @include sprite($binoculars-1x);
+}
+.graphic--seal {
+  @include sprite($seal-1x);
+}
+.graphic--certificate {
+  @include sprite($certificate-1x);
+}
+.graphic--shield {
+  @include sprite($shield-1x);
+}
+.graphic--graph {
+  @include sprite($graph-1x);
+}
+.graphic--till {
+  @include sprite($till-1x);
+}
+.graphic--ring {
+  @include sprite($ring-1x);
+}
+.graphic--star {
+  @include sprite($star-1x);
+}
+.graphic--star--large {
+  @include sprite($star-1x);
+
+  @include media-query('>tablet') {
+    @include sprite($star-large-1x);
+  }
+}
+.graphic--stars {
+  @include sprite($stars-1x);
+  width : $stars-1x-width * 0.2;
+}
+.graphic--stars-5 {
+  width : $stars-1x-width;
+}
+.graphic--stars-4 {
+  width : $stars-1x-width * 0.8;
+}
+.graphic--stars-3 {
+  width : $stars-1x-width * 0.6;
+}
+.graphic--stars-2 {
+  width : $stars-1x-width * 0.4;
+}
+.graphic--stars-1 {
+  width : $stars-1x-width * 0.2;
+}
+.graphic--line-book {
+  @include sprite($line-book-1x);
+}
+.graphic--line-mountains {
+  @include sprite($line-mountains-1x);
+}
+.graphic--line-computer {
+  @include sprite($line-computer-1x);
+}
+//
+// Subjects
+//
+.subject--english {
+  @include sprite($english-1x);
+}
+.subject--sport {
+  @include sprite($sport-1x);
+}
+.subject--maths {
+  @include sprite($maths-1x);
+}
+.subject--other {
+  @include sprite($other-1x);
+}
+.subject--physics {
+  @include sprite($physics-1x);
+}
+.subject--biology {
+  @include sprite($biology-1x);
+}
+.subject--chemistry {
+  @include sprite($chemistry-1x);
+}
+.subject--humanities {
+  @include sprite($humanities-1x);
+}

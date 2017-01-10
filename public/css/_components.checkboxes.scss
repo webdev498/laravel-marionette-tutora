@@ -1,0 +1,98 @@
+$checkbox-size: 30px;
+
+.checkbox {
+    position: relative;
+
+    &.checkbox--pill {
+        display: inline-block;
+    }
+
+    &.checkbox--disabled {
+        cursor: not-allowed;
+    }
+
+    &.checkbox--small {
+        @include font-size(12px, 1.25);
+
+        .checkbox__box {
+            height: $checkbox-size;
+            width: $checkbox-size;
+        }
+    }
+}
+    .checkbox__box {
+        height: $checkbox-size;
+        width: $checkbox-size;
+        position: relative;
+        border: 1px solid $color-ui;
+        display: inline-block;
+        margin-right: $spacing-unit--small;
+        cursor: pointer;
+
+        .checkbox--checked & {
+            background: $brand-color--dark;
+            border: $brand-color--dark;
+        }
+
+        .checkbox--pill & {
+            display: none;
+        }
+
+        .checkbox--disabled & {
+            cursor: not-allowed;
+        }
+        .checkbox--disabled.checkbox--checked & {
+            background: $color-snow;
+            border: 1px solid $color-ui;
+        }
+    }
+        .checkbox__tick  {
+            @extend .icon;
+            @extend .icon--line-tick;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: ($line-tick-1x-height / 2) * -1;
+            margin-left: ($line-tick-1x-width / 2) * -1;
+        }
+
+        .checkbox__input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+
+    .checkbox__label {
+        position: absolute;
+        line-height: $checkbox-size;
+        cursor: pointer;
+
+        .checkbox--pill & {
+            position: relative;
+            @extend .pill;
+            @extend .pill--small;
+            @extend .pill--neutral;
+        }
+
+        .checkbox--checked.checkbox--pill & {
+            background-color: $pill-background;
+            color: $pill-color;
+        }
+
+        .checkbox--pill.checkbox--disabled & {
+            color: $color-text--light;
+            background: $color-white;
+        }
+
+        .checkbox--pill.checkbox--disabled.checkbox--checked & {
+            color: $color-text--light;
+            background: $color-snow;      
+        }
+
+        .checkbox--disabled & {
+            color: $color-text--light;
+            cursor: not-allowed;
+        }
+    }

@@ -1,0 +1,24 @@
+.profile-meta {
+    padding-top: $spacing-unit;
+
+    @include media-query('>tablet') {
+        width: $three-twelfths;
+    }
+
+    @include media-query('>1024') {
+        margin-top: -40px;
+        padding-top: 0;
+    }
+
+    @include media-query('>1200') {
+        width: $two-twelfths;
+    }
+
+    header {
+        margin-top: $spacing-unit--small;
+    }
+        .heading {
+            @include font-size(16px);
+            @include font-weight('medium');
+        }
+}

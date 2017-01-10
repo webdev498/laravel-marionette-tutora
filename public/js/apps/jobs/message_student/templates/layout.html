@@ -1,0 +1,64 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+        <div class="dialogue__window message--view">
+            <header class="dialogue__header">
+                <h4 class="heading"><%= job.student.name %></h4> <h5 class="second--heading"><%= job.subject.title %></h5>
+                <a href="#" class="close icon icon--cross js-close"></a>
+            </header>
+
+            <p><%= job.message %></p>
+
+            <form class="js-form" novalidate>
+                <fieldset class="fieldset">
+
+                    <div class="field">
+                            <textarea name="message"
+                                      placeholder="<%= _.lang('jobs.message.create.placeholder') %>"
+                                      class="[ input input--full input--squared input--bordered ] field__textarea [ js-message ]" ></textarea>
+                        <div class="field__error"></div>
+                    </div>
+                </fieldset>
+
+                <div class="layout"><!--
+                        --><div class="layout__item u-1/3-phone u-1/3-tablet-and-up">
+                </div><!--
+
+                        --><div class="layout__item u-2/3-phone u-2/3-tablet-and-up tar">
+                    <button class="btn js-next"><%= _.lang('jobs.message.create.submit') %></button>
+                </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="dialogue__window hidden message--confirmation">
+            <header class="dialogue__header">
+                <h4 class="heading"><%= _.lang('jobs.message.confirmation.title') %></h4>
+                <a href="#" class="close icon icon--cross js-close"></a>
+            </header>
+
+            <p><%= _.lang('jobs.message.confirmation.introduction') %></p>
+
+            <div class="layout">
+
+                <div class="layout__item tar">
+                    <a class="u-mr [ js-back ]" href="#"><%= _.lang('jobs.message.confirmation.back') %></a>
+                    <button class="btn [ js-submit ]"><%= _.lang('jobs.message.create.submit') %></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialogue__window hidden message--sent">
+            <header class="dialogue__header">
+                <h4 class="heading"><%= _.lang('jobs.message.sent.title') %></h4>
+                <a href="#" class="close icon icon--cross js-close"></a>
+            </header>
+
+            <p><%= _.lang('jobs.message.sent.content') %></p>
+            <p><%= _.lang('jobs.message.sent.summation') %></p>
+        </div>
+    </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

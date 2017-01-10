@@ -1,0 +1,98 @@
+.profile-details {
+    overflow: hidden;
+
+    @include media-query('>tablet') {
+        width: $one-whole;
+        display: table;
+        table-layout: auto;
+        float: right;
+    }
+
+    @include media-query('>1024') {
+        width: $nine-twelfths;
+    }
+
+   @include media-query('>1200') {
+        width: $ten-twelfths;
+    }
+}
+    .profile-details__item {
+        width: $one-half;
+        float: left;
+        border-bottom: 1px solid $color-ui;
+        border-right: 1px solid $color-ui;
+        padding: $spacing-unit--small;
+        text-align: center;
+
+        &:nth-child(2n) {
+            border-right-width: 0;
+        }
+
+        &:nth-last-child(-n+2) {
+            border-bottom-width: 0;
+        }
+
+        .profile-details--compact & {
+            border-bottom-width: 1px;
+
+            &:last-child {
+                width: 100%;
+                border-bottom-width: 0;
+
+                @include media-query('>tablet') {
+                    width: auto;
+                    width: initial;
+                }
+            }
+        }
+
+        @include media-query('>tablet') {
+            width: initial;
+            display: table-cell;
+            table-layout: auto;
+            float: none;
+            border-bottom: 0;
+            padding-top: $spacing-unit;
+            padding-bottom: $spacing-unit;
+
+            &:nth-child(2n) {
+                border-right-width: 1px;
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+
+        @include media-query('>1024') {
+            padding-top: $spacing-unit--large;
+            padding-bottom: $spacing-unit--large;
+        }
+    }
+        .profile-details__title,
+        .profile-details__description {
+            color: $brand-color--dark;
+            display: block;
+
+            @include media-query('>tablet') {
+                display: inline-block;
+            }
+        }
+    
+        .profile-details__title {
+            @include font-size(24px, 1.1);
+            @include font-weight('medium');
+
+            @include media-query('>tablet') {
+                @include font-size(34px, 1.1);
+            }
+        }
+
+        .profile-details__description {
+            @include font-size(14px);
+            @include font-weight('regular');
+
+            @include media-query('>tablet') {
+                @include font-size(16px);
+            }
+        }

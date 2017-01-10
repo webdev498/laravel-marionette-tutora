@@ -1,0 +1,26 @@
+.faqs {
+    margin-top: $spacing-unit;
+
+    @include media-query('>1024') {
+        margin-top: $spacing-unit--large;
+    } 
+}
+    .faqs__links {
+        @include media-query('>1024') {
+            width: $four-twelfths;
+        } 
+
+        @include media-query('>1200') {
+            width: $three-twelfths;
+        } 
+    }
+
+    .faqs__content {
+        @include media-query('>1024') {
+            width: $eight-twelfths;
+        } 
+
+        @include media-query('>1200') {
+            width: $seven-twelfths;
+        } 
+    }

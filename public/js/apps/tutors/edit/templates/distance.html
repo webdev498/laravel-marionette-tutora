@@ -1,0 +1,7 @@
+<span class="profile-details__title"><%= profile.travel_radius === null ? '-' : 0 %></span>
+<div>
+    <a href="<%= laroute.route('tutor.profile.show', {
+        'uuid'    : uuid,
+        'section' : 'travel_policy'
+    }) %>" data-js class="edit-link">Edit</a> 
+</div>

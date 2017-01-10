@@ -1,0 +1,8 @@
+.clickable {
+        cursor: pointer;
+        padding: 0 !important;
+
+        &:hover {
+            background: $color-alice;
+        }
+}

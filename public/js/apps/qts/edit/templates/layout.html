@@ -1,0 +1,40 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container dialogue__container--tiny">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.qts.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross [ js-close ]"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.profile.qts.edit.introduction') %></p>
+
+                <form class="[ layout ] [ js-form ]" novalidate><!--
+                    --><div class="[ layout__item ] field">
+                        <div class="field__input [ select select--full select--squared select--bordered <%= qts.level ? 'select--show' : '' %> ]">
+                            <span class="select__placeholder">Level*</span>
+                            <span class="select__value"><%= _.lang('qualifications.teacher_status.levels.' + qts.level) %></span>
+                            <select name="student" class="select__field [ js-qts ]">
+                                <option value="">Please select one:</option>
+                                <% _.each(_.lang('qualifications.teacher_status.levels'), function (title, value) { %>
+                                    <option value="<%= value %>" <%= qts.level === value ? 'selected' : '' %>>
+                                        <%= title %>
+                                    </option>
+                                <% }) %>
+                            </select>
+                        </div>
+
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item tar">
+                        <a href="#" class="u-mr [ js-close ]">Cancel</a>
+                        <button class="btn">Save</button>
+                    </div><!--
+                --></form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay [ js-close ]"></div>

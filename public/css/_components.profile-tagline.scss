@@ -1,0 +1,40 @@
+.profile-tagline {
+
+}
+    .profile-tagline__text {
+        text-align: center;
+
+        .heading {
+            @include font-weight('light');
+            display: inline;
+            color: $color-text--dark;
+            margin: 0;
+        }
+
+        @include media-query('>tablet') {
+            width: $nine-twelfths;
+            line-height: 50px;
+        }
+
+        @include media-query('>1024') {
+            width: $ten-twelfths;
+        }
+
+        @include media-query('>1200') {
+            width: $eight-twelfths;
+            margin-left: $two-twelfths;
+        }
+    }
+
+    .profile-tagline__action {
+        display: none;
+
+        @include media-query('>tablet') {
+            display: inline-table;
+            width: $three-twelfths;
+        }
+
+        @include media-query('>1024') {
+            width: $two-twelfths;
+        }
+    }

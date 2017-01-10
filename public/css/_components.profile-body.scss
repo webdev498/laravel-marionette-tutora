@@ -1,0 +1,13 @@
+.profile-body {
+    padding-top: $spacing-unit;
+
+    @include media-query('>tablet') {
+        width: $five-twelfths;
+    }
+
+    @include media-query('>1200') {
+        width: $six-twelfths;
+        padding-left: $spacing-unit--huge;
+        padding-right: $spacing-unit;
+    }
+}

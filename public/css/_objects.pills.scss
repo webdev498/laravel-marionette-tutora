@@ -1,0 +1,47 @@
+$pill-padding:         halve($spacing-unit) !default;
+$pill-padding--small:  halve($spacing-unit--small) !default;
+$pill-padding--large:  double($pill-padding) !default;
+$pill-background:      #4a8ec2 !default;
+$pill-color:           #fff !default;
+$pill-border-width:    0px !default;
+$pill-border-style:    solid !default;
+$pill-border-color:    $pill-background !default;
+
+$enable-pill--small:   false !default;
+
+.pill,
+%pill {
+    display: inline-block;
+    vertical-align: baseline;
+    overflow: visible;
+    font: inherit;
+    line-height: 1;
+    text-align: center;
+    min-width: 10px;
+    background-color: $pill-background;
+    color: $pill-color;
+    border-radius: 200px;
+    margin:  0 $spacing-unit--tiny 0 0;
+    padding: ($pill-padding - $pill-border-width) (double($pill-padding) - $pill-border-width);
+
+    @if($pill-border-width != 0) {
+        border: $pill-border-width $pill-border-style $pill-border-color;
+    } @else {
+        border: none;
+    }
+}
+
+
+@if ($enable-pill--small == true) {
+
+    .pill--small,
+    %pill--small {
+        padding: ($pill-padding--small - $pill-border-width) (double($pill-padding--small) - $pill-border-width);
+    }
+
+}
+
+.pill--neutral {
+    background: $color-ui;
+    color: $color-text--light;
+}

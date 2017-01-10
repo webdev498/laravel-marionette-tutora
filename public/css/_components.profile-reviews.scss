@@ -1,0 +1,80 @@
+$_three-twelfths: 37.5%;
+$_two-twelfths:   31%;
+
+.profile-reviews {
+    padding-top: $spacing-unit--large;
+
+    @include media-query('>tablet') {
+        width: $eight-twelfths;
+    }
+}
+    .profile-reviews__header {
+        margin-bottom: $spacing-unit--small;
+
+        .layout__item {
+            @include media-query('>tablet') {
+                margin-left: $_three-twelfths;
+                width: 100% - $_three-twelfths;
+            }
+
+            @include media-query('>1200') {
+                margin-left: $_two-twelfths;
+                width: 100% - $_two-twelfths;
+            }
+        }
+    }
+        .profile-reviews__rating {
+            @include font-size(20px);
+            color: $color-yellow;
+        }
+
+    .profile-review {
+        padding-bottom: $spacing-unit--small;
+        margin-bottom: $spacing-unit--small;
+        border-bottom: 1px solid $color-ui;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+        .profile-review__meta {
+            @include media-query('>tablet') {
+                width: $_three-twelfths;
+            }
+
+            @include media-query('>1200') {
+                width: $_two-twelfths;
+            }
+        }
+
+            .profile-review__img {
+                display: none;
+
+                @include media-query('>1024') {
+                    display: table-cell;
+                }
+
+                .profile-pic {
+                    width: 60px;
+                }
+            }
+
+            .profile-review__name {
+                color: $color-text--dark;
+                margin-bottom: $spacing-unit--tiny;
+
+                @include media-query('>1024') {
+                    @include font-size(18px);
+                }
+            }
+
+        .profile-review__body {
+            @include media-query('>tablet') {
+                padding-top: $spacing-unit--tiny;
+                width: 100% - $_three-twelfths;
+            }
+
+            @include media-query('>1200') {
+                width: 100% - $_two-twelfths;
+            }
+        }

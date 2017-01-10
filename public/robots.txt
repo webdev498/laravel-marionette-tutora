@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://tutora.co.uk/sitemap.xml
+Noindex: /message/
+Disallow: /message/

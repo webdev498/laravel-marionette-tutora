@@ -1,0 +1,4 @@
+<p>Very few cities can boast a heritage as rich as London's when it comes to producing literature greats. From Dickens to Virginia Woolf, London has consistantly produced some of the leading writers in the world. We can't promise that you too will be able to replicate them, but below are some useful resources for learning english.</p>
+<h5>Useful Resources for Learning English in London</h5>
+<p>The first port of call should be a visit to <a href="http://www.londonlibrary.co.uk/">London Library</a>, one of the UK's leading literary institutions. It's got one of the widest selection of books in the UK, so if you are looking for that rare text that you can't find online, it should be your first port of call.</p>
+<p>If you are looking to learn English as a Foreign Language, then we highly recommend checking out some London's language schools. We recommend the <a href="http://www.londonschool.com/">London School of English.</a></p>

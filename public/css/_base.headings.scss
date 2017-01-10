@@ -1,0 +1,125 @@
+$heading-size-1:  70px !default; // 90pt
+$heading-size-2:  50px !default; // 50pt
+$heading-size-3:  36px !default; // 36pt
+$heading-size-4:  24px !default; // 24pt
+$heading-size-5:  22px !default; // 22pt
+$heading-size-6:  20px !default; // 20pt
+
+.alpha,
+%alpha {
+    @include font-size($heading-size-1 * 0.5);
+
+    @include media-query('>1024') {
+        @include font-size($heading-size-1 * 0.75, 1.1);
+    }
+
+    @include media-query('>1200') {
+        @include font-size($heading-size-1, 1);   
+    }
+}
+
+.beta,
+%beta {
+    @include font-size($heading-size-2 * 0.55);
+
+    @include media-query('>1024') {
+        @include font-size($heading-size-2 * 0.75, 1.1);
+    }
+
+    @include media-query('>1200') {
+        @include font-size($heading-size-2, 1.1);   
+    }
+}
+
+.gamma,
+%gamma {
+    @include font-size($heading-size-3 * 0.6);
+
+    @include media-query('>1024') {
+        @include font-size($heading-size-3 * 0.85);
+    }
+
+    @include media-query('>1200') {
+        @include font-size($heading-size-3, 1.25);   
+    }
+}
+
+.delta,
+%delta {
+    @include font-size($heading-size-6);
+
+    @include media-query('>1024') {
+        @include font-size($heading-size-5);
+    }
+
+    @include media-query('>1200') {
+        @include font-size($heading-size-4, 1.25);   
+    }
+}
+
+.epsilon,
+%epsilon {
+    @include font-size($heading-size-6 * 0.8, 1.5);
+
+    @include media-query('>1024') {
+        @include font-size($heading-size-6);
+    }
+}
+
+.zeta,
+%zeta {
+    @include font-size($heading-size-6 * 0.8, 1.5);
+
+    @include media-query('>1024') {
+        @include font-size($heading-size-6);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-weight('medium');
+}
+
+h1 {
+    @extend %alpha;
+    color: $brand-color--dark;
+}
+
+h2 {
+    @extend %beta;
+    color: $brand-color;
+    margin: $spacing-unit--tiny 0 $spacing-unit--large;
+    margin: remcalc($spacing-unit--tiny) 0 remcalc($spacing-unit);
+}
+
+h3 {
+    @extend %gamma;
+    color: $brand-color--dark;
+    margin: 0 0 $spacing-unit--small;
+    margin: 0 0 remcalc($spacing-unit--small);
+}
+
+h4 {
+    @extend %delta;
+    color: $brand-color--dark;
+    margin: 0 0 $spacing-unit--small;
+    margin: 0 0 remcalc($spacing-unit--small);
+}
+
+h5 {
+    @extend %epsilon;
+    margin: 0 0 $spacing-unit--tiny;
+    margin: 0 0 remcalc($spacing-unit--tiny);
+}
+
+h6 {
+    @extend %zeta;
+    @include font-weight('light');
+    color: $brand-color--dark;
+    margin: 0 0 $spacing-unit--tiny;
+    margin: 0 0 remcalc($spacing-unit--tiny);
+}

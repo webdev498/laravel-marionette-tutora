@@ -1,0 +1,97 @@
+$inuit-input-padding:         halve($inuit-base-spacing-unit) !default;
+$inuit-input-padding--small:  halve($inuit-input-padding) !default;
+$inuit-input-padding--large:  $spacing-unit--small + 6 !default;
+$inuit-input-background:      #fff !default;
+$inuit-input-color:           $color-text--dark !default;
+$inuit-input-border-width:    1px !default;
+$inuit-input-border-style:    solid !default;
+$inuit-input-border-color:    $color-ui !default;
+$inuit-input-radius:          1000px !default;
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {  
+    color: $color-gray;  
+}
+
+.input,
+%input {
+    display: inline-block;
+    vertical-align: middle;
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: $inuit-input-padding--small - $inuit-input-border-width double($inuit-input-padding--small) - $inuit-input-border-width;
+    background-color: $inuit-input-background;
+    border: 0;
+
+    @include media-query('>tablet') {
+        padding: $inuit-input-padding - $inuit-input-border-width double($inuit-input-padding) - $inuit-input-border-width;
+    }
+
+    @if($inuit-input-radius != 0) {
+        border-radius: $inuit-input-radius;
+    }
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: $inuit-input-color;
+    }
+
+    &,
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+
+    &.highlight {
+      background-color: rgb(255, 249, 170);
+      -moz-transition: all 0.1s ease-in;
+      -webkit-transition: all 0.1s ease-in;
+      -o-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
+    }
+}
+
+    .input--invisible {
+        background: none;
+        border: none;
+    }
+
+    .input--small {
+        padding: 0 $spacing-unit--tiny;
+    }
+
+    .input--large,
+    %input--large {
+        @include font-size(20px);
+        padding: $inuit-input-padding - $inuit-input-border-width double($inuit-input-padding) - $inuit-input-border-width;
+
+        @include media-query('>tablet') {
+            padding: $inuit-input-padding--large - $inuit-input-border-width  double($inuit-input-padding--large) - $inuit-input-border-width;
+        }
+    }
+
+    .input--full,
+    %input--full {
+        width: 100%;
+    }
+
+    .input--squared,
+    %input--squared {
+        border-radius: 0;
+    }
+
+    .input--bordered,
+    %input--bordered {
+        border: $inuit-input-border-width $inuit-input-border-style $inuit-input-border-color;
+    }
+
+    .input--disabled,
+    %input--disabled {
+        background: $color-snow;
+    }

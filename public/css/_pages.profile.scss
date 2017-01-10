@@ -1,0 +1,26 @@
+.page--profile {
+    .edit-link {
+        @include font-size(16px, 1em);
+        @include font-weight('normal');
+        color: $color-yellow;
+
+        &:before {
+            content: '';
+            @extend .icon;
+            @extend .icon--pencil;
+            margin-right: $spacing-unit--tiny;
+        }
+    }
+        .edit-link--light {
+            color: $color-white;
+
+            &:before {
+                @extend .icon--pencil--light;
+            }
+        }
+
+    .unset {
+        font-style: normal;
+        color: $color-slate;
+    }
+}

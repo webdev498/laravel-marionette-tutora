@@ -1,0 +1,24 @@
+.list-collapsible {
+    margin: 0;
+    padding: 0;
+}
+
+    .list-collapsible__term {
+        @include font-size(24px);
+        margin: 0 0 $spacing-unit;
+        padding: 0;
+        color: $brand-color;
+    }
+        .list-collapsible__term--active {
+            color: $brand-color--dark;
+        }
+
+    .list-collapsible__def {
+        margin: 0 0 $spacing-unit;
+        padding: 0;
+        display: none;
+
+        .list-collapsible__term--active + & {
+            display: block;
+        }
+    }

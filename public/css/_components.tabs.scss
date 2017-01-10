@@ -1,0 +1,124 @@
+$tab-height: 49px;
+$arrow-width: 35px;
+
+.tabs {
+}
+
+    .scrollable--arrows--wrapper {
+
+        position: relative;
+
+        .tabs--scrollable {
+            margin: 0 $arrow-width 0;
+
+            .tabs__list {
+                left: 0;
+            }
+        }
+
+        .arrow {
+            position: absolute;
+            display: block;
+            width: $arrow-width;
+            height: $tab-height;
+            background: white center no-repeat;
+            float: left;
+            z-index: 100;
+            border: 1px solid #dedede;
+            border-bottom: none;
+            cursor: pointer;
+            background-size: 65%;
+        }
+
+        .arrow--left {
+            content: attr(data-left);
+            left: 0;
+            top: 0;
+            background-image: url("/img/icon/arrow-left.png");
+        }
+
+        .arrow--right {
+            content: attr(data-right);
+            top: 0;
+            right: 0;
+            background-image: url("/img/icon/arrow-right.png");
+        }
+    }
+
+    .tabs--scrollable {
+        position: relative;
+        height: $tab-height;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .tabs__list {
+        margin:  0;
+        padding: 0;
+        list-style: none;
+        display: table;
+        table-layout: auto;
+        text-align: center;
+
+        .tabs--scrollable & {
+            position: absolute;
+        }
+
+        .tabs--full & {
+            width: 100%;
+            table-layout: auto;
+
+            @include media-query('>tablet') {
+                .tabs--full & {
+                    table-layout: fixed;
+                }
+            }
+        }
+    }
+
+        .tabs__item {
+            display: table-cell;
+
+            .tabs--bordered & {
+                &:last-child {
+                    .tabs__link {
+                        border-right: 1px solid $color-ui;
+                    }
+                }
+            }
+        }
+
+            .tabs__link {
+                display: block;
+                padding: $spacing-unit--small $spacing-unit--tiny;
+                color: $brand-color--dark;
+
+                @include media-query('>tablet') {
+                    padding: $spacing-unit--small $spacing-unit--large;
+                }
+
+                .tabs--bordered & {
+                    border: 1px solid $color-ui;
+                    border-right: none;
+                }
+            }
+            .tabs__link--active {
+                background: $brand-color--dark;
+                color: $color-white;
+            }
+
+            .tabs__link--compact {
+                padding:$spacing-unit--small $spacing-unit--tiny;
+                
+                @include media-query('>tablet') {
+                    padding: $spacing-unit--small $spacing-unit--small;
+                }
+
+            }
+
+.tab-content {
+    display: none;
+}
+    .tab-content--active {
+        display: block;
+    }

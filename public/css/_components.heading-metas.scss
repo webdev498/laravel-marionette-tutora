@@ -1,0 +1,18 @@
+.heading-meta {
+
+}
+    .heading-meta__heading {
+        display: inline-block;
+
+        .heading {
+            display: inline;
+        }
+    }
+
+    .heading-meta__meta {
+        float: right;
+
+        span {
+        	vertical-align: middle;
+        }
+    }

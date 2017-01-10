@@ -1,0 +1,110 @@
+.page--jobs {
+
+    .search-header__filter {
+        .select::after {
+            right: 10px;
+            top: 45%;
+        }
+        .select--small {
+            padding-left: 15px;
+            padding-right: 25px;
+        }
+    }
+
+    .search-results__pic {
+        text-align: center;
+
+        .subject--icon {
+            margin-bottom: $spacing-unit;
+        }
+
+        @include media-query('>tablet') {
+            .media__img {
+                display: none;
+            }
+        }
+
+        @include media-query('>1024') {
+            .media__img {
+                display: inline-block;
+            }
+        }
+    }
+
+    .search-results__main {
+        padding-left: 40px;
+        /*
+        width: $one-whole;
+        margin-bottom: $spacing-unit;
+
+        @include media-query('>tablet') {
+            width: $one-half;
+            margin-bottom: $spacing-unit--large;
+        }
+
+        @include media-query('>1024') {
+            width: $one-half;
+            margin-bottom: 0;
+        }
+
+        @include media-query('>1200') {
+            width: $one-half;
+        }
+        */
+    }
+
+    .search-results__meta {
+        text-align: center;
+        margin-bottom: $spacing-unit--small;
+
+        .icon {
+            -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+            filter: grayscale(100%);
+
+            &.icon--heart {
+                opacity: 0.3;
+            }
+        }
+
+        .active {
+            .icon {
+                -webkit-filter: none; /* Chrome, Safari, Opera */
+                filter: none;
+                opacity: 1;
+            }
+        }
+
+        /*
+        @include media-query('>tablet') {
+            width: $one-quarter;
+            margin-left: $two-twelfths;
+            margin-bottom: 0;
+        }
+
+        @include media-query('>1024') {
+            width: $one-quarter;
+            margin-left: 0;
+        }
+
+        @include media-query('>1200') {
+            width: $one-quarter;
+            padding-left: halve($one-twelfth);
+        }
+        */
+
+        .favourite {
+            cursor: pointer;
+        }
+    }
+
+    .action--button {
+        margin-top: $spacing-unit;
+    }
+
+    .js-job-initial-message-region {
+        table {
+            margin-bottom: $spacing-unit--large;
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+.list-checked {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        position: relative;
+        padding-left: $fancy-tick-1x-width + $spacing-unit--small;
+        margin-bottom: $spacing-unit--small;
+
+        &:before {
+            @extend .icon--fancy-tick;   
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+    }
+}

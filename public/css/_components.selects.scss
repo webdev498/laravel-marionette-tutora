@@ -1,0 +1,71 @@
+/*
+.select {
+    // @include font-size(16px, $field-height);
+    @include font-weight('regular');
+    display: block;
+    width: 100%;
+    padding: 0 $spacing-unit;
+    margin: 0 0 $spacing-unit--small;
+    border: 1px solid $color-ui;
+    resize: none;
+    position: relative;
+
+    &.select--disabled {
+        background: $color-snow;
+        cursor: not-allowed;
+    }
+
+    &:after {
+        content: '';
+        border: {
+            top: 5px solid $color-ui;
+            right: 5px solid transparent;
+            bottom: none;
+            left: 5px solid transparent;
+        }
+        position: absolute;
+        top: 50%;
+        right: $spacing-unit;
+    }
+}
+
+    .select__value,
+    .select__placeholder,
+    .select__field {
+        cursor: pointer;
+    }
+
+    .select__value {
+        color: $brand-color--dark;
+        display: none;
+
+        .select--show-value & {
+            display: block;
+        }
+
+        .select--disabled & {
+            color: $color-text--light;
+        }
+    }
+
+    .select__placeholder {
+        left: $spacing-unit;
+        color: $color-gray;
+
+        .select--show-value & {
+            display: none;
+        }
+    }
+
+    .select__field {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+        padding: 0;
+        width: 100%;
+        // height: $field-height;
+        // line-height: $field-height;
+        opacity: 0;
+    }
+*/

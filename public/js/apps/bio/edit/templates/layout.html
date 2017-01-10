@@ -1,0 +1,51 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.bio.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross [ js-close ]"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.profile.bio.edit.introduction') %></p>
+
+                <form class="js-form" novalidate>
+                    <fieldset class="fieldset">
+                        <div class="[ tabs tabs--bordered ] fieldset__tabs">
+                            <ul class="tabs__list">
+                                <li class="tabs__item">
+                                    <a href="#" data-tab-group="bio" data-tab-name="bio" class="tabs__link tabs__link--active">Bio</a>
+                                </li>
+                                <li class="tabs__item">
+                                    <a href="#" data-tab-group="bio" data-tab-name="short_bio" class="tabs__link">Short Bio</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="fieldset__content">
+                            <div class="tab-content tab-content--active" data-tab-group="bio" data-tab-name="bio">
+                                <div class="field">
+                                    <textarea rows="10" class="field__textarea input input--full input--squared js-bio" name="bio" placeholder="Bio"><%= profile.bio %></textarea>
+                                    <div class="field__error"></div>
+                                </div>
+                            </div>
+                            <div class="tab-content" data-tab-group="bio" data-tab-name="short_bio">
+                                <div class="field">
+                                    <textarea class="field__textarea input input--full input--squared js-short-bio" name="short-bio" placeholder="The short bio is what clients will see on the search results. If you leave it blank, we'll use the first few lines from your main bio."><%= profile.short_bio %></textarea>
+                                    <div class="field__error"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="tar">
+                        <a href="#" class="u-mr [ js-close ]">Cancel</a>
+                        <button class="btn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay [ js-close ]"></div>

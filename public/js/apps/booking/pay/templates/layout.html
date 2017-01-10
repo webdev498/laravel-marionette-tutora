@@ -1,0 +1,124 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.booking.pay.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.booking.pay.introduction') %></p>
+
+                <form class="js-form">
+                    <div class="dialogue__body box box--fill box--bordered">
+                        <div class="layout"><!--    
+                            <% if (last_four) { %>
+                                --><div class="layout__item">
+                                    <div class="flag flag--small u-mb--">
+                                        <div class="flag__img">
+                                            <span class="icon icon--fancy-tick"></span>
+                                        </div>
+                                        <div class="flag__body">
+                                            <p class="brand">Card already exists.</p>
+                                        </div>
+                                    </div>
+
+                                    <p class="u-m0">You can update your card or retry with the existing one</p>
+                                </div><!--
+                            <% } %>
+
+                            Name
+                            --><div class="[ layout__item ][ field field--label ]">
+                                <label for="card_number" class="field__label">Card</label>
+                            </div><!--
+
+                            --><div class="[ layout__item ][ field field--card-number]">
+                                <input type="text" id="card_number"
+                                  placeholder="<%= last_four ? 'XXXX XXXX XXXX ' + last_four : 'Card Number' %>"
+                                  class="[ input input--full input--squared input--bordered ] field__input [ js-card-number ]">
+                                <div class="field__error"></div>
+                            </div><!--
+
+                            --><div class="[ layout__item ][ field field--card-cvc ]">
+                                <input type="text" id="card_cvc"
+                                  placeholder="<%= last_four ? 'XXX' : 'CVC' %>"
+                                  class="[ input input--full input--squared input--bordered ] field__input [ js-card-cvc ]">
+                                <div class="field__error"></div>
+                            </div><!--
+
+                            --><div class="[ layout__item ][ field field--card-exp-month ]">
+                                <div class="[ field__select ][ select select--full select--squared select--bordered ]">
+                                    <span class="select__placeholder"><%= last_four ? 'XX' : 'Exp month' %></span>
+                                    <span class="select__value"></span>
+                                    <select class="select__field [ js-card-exp-month ]">
+                                        <option value="">Please select one:</option>
+                                        <% _.each(months, function (title, value) { %>
+                                            <option value="<%= _.pad(value, 2, "0") %>"><%= _.pad(value, 2, "0") %> - <%= title %></option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                                <div class="field__error"></div>
+                            </div><!--
+
+                            --><div class="[ layout__item ][ field field--card-exp-year ]">
+                                <div class="[ field__select ][ select select--full select--squared select--bordered ]">
+                                    <span class="select__placeholder"><%= last_four ? 'XX' : 'Exp year' %></span>
+                                    <span class="select__value"></span>
+                                    <select class="select__field [ js-card-exp-year ]">
+                                        <option value="">Please select one:</option>
+                                        <% _.each(years, function (value) { %>
+                                            <option value="<%= value %>"><%= value %></option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                                <div class="field__error"></div>
+                            </div><!--
+
+                                    Billing Address
+                                    --><div class="[ layout__item field field--label ]">
+                                        <label for="address_street" class="field__label">Billing Address</label>
+                                    </div><!--
+
+                                    --><div class="[ layout__item field field--address-street ]">
+                                        <input type="text" name="address_street" id="address_street"
+                                          value="<%= addresses.billing.line_1 %>" placeholder="Street"
+                                          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-1 ]">
+                                        <div class="field__error"></div>
+                                    </div><!--
+
+                                    --><div class="[ layout__item field field--address-town ]">
+                                        <input type="text" name="address_town" id="address_town"
+                                          value="<%= addresses.billing.line_2 %>" placeholder="Town"
+                                          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-2 ]">
+                                        <div class="field__error"></div>
+                                    </div><!--
+
+                                    --><div class="[ layout__item field field--address-city ]">
+                                        <input type="text" name="address_city" id="address_city"
+                                          value="<%= addresses.billing.line_3 %>" placeholder="County"
+                                          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-3 ]">
+                                        <div class="field__error"></div>
+                                    </div><!--
+
+                                    --><div class="[ layout__item field field--postcode ]">
+                                        <input type="text" name="address_postcode" id="address_postcode"
+                                          value="<%= addresses.billing.postcode %>" placeholder="Postcode"
+                                          class="[ input input--full input--squared input--bordered ] field__input [ js-address-postcode ]">
+                                        <div class="field__error"></div>
+                                    </div><!--
+                        --></div>
+                    </div>
+
+                    <div class="layout"><!--
+                        --><div class="layout__item layout__item--actions tar">
+                            <a href="#" class="u-mr js-close">Cancel</a>
+                            <button class="btn [ js-submit ]">Retry payment</button>
+                        </div><!--
+                    --></div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

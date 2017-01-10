@@ -1,0 +1,141 @@
+.timeline {
+    @include media-query('>1024') {
+        padding-left: $one-twelfth;
+        padding-right: $one-twelfth;
+    }
+}
+
+    .timeline__item {
+        $blob-diameter: 15px;
+        $blob-heading-diameter: $blob-diameter * 1.25;
+        $padding-top: $spacing-unit;
+        $padding-left: $blob-diameter + $spacing-unit;
+
+        overflow: hidden; // Stop margin leak
+        position: relative;
+        padding-top: $padding-top;
+        padding-left: $padding-left;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: halve($padding-left);
+            width: 1px;
+            background: $brand-color;
+        }
+        
+        &:last-child {
+            &:before {
+                $colour-from: $brand-color;
+                $colour-to: transparent;
+                $colour-at: 75%;
+
+                background: -moz-linear-gradient(top,  $colour-from 0%, $colour-to $colour-at);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $colour-from), color-stop($colour-at, $colour-to));
+                background: -webkit-linear-gradient(top,  $colour-from 0%, $colour-to $colour-at);
+                background: -o-linear-gradient(top,  $colour-from 0%, $colour-to $colour-at);
+                background: -ms-linear-gradient(top,  $colour-from 0%, $colour-to $colour-at);
+                background: linear-gradient(to bottom,  $colour-from 0%, $colour-to $colour-at);
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: $padding-top + 4px;
+            left: halve($padding-left);
+            width: $blob-diameter;
+            height: $blob-diameter;
+            border-radius: $blob-diameter;
+            margin-left: negative(halve($blob-diameter));
+            background: $brand-color;
+        }
+
+        &.timeline__item--heading {
+            .heading {
+                margin: $spacing-unit--tiny 0;
+            }
+
+            &:after {
+                top: $padding-top + $spacing-unit--tiny + 2px;
+                width: $blob-heading-diameter;
+                height: $blob-heading-diameter;
+                border-radius: $blob-heading-diameter;
+                margin-left: negative(halve($blob-heading-diameter));
+            }
+        }
+
+        @include media-query('>tablet') {
+            $blob-diameter: 20px;
+            $blob-heading-diameter: $blob-diameter * 1.5;
+            $padding-top: $spacing-unit;
+            $padding-left: $one-twelfth;
+
+            padding-left: $padding-left;
+
+            &:before {
+                left: halve($padding-left);
+            }
+
+            &:after {
+                left: halve($padding-left);
+                width: $blob-diameter;
+                height: $blob-diameter;
+                border-radius: $blob-diameter;
+                margin-left: negative(halve($blob-diameter));
+            }
+
+            &.timeline__item--heading {
+                .heading {
+                    min-height: $blob-heading-diameter;
+                    display: inline-block;
+                }
+
+                &:after {
+                    top: $padding-top + 4px;
+                    width: $blob-heading-diameter;
+                    height: $blob-heading-diameter;
+                    border-radius: $blob-heading-diameter;
+                    margin-left: negative(halve($blob-heading-diameter));
+                }
+            }
+        }
+
+        @include media-query('>1024') {
+            $blob-heading-diameter: $blob-diameter * 2;
+
+            &.timeline__item--heading {
+                .heading {
+                    min-height: $blob-heading-diameter;
+                }
+
+                &:after {
+                    top: $padding-top + 12px;
+                    width: $blob-heading-diameter;
+                    height: $blob-heading-diameter;
+                    border-radius: $blob-heading-diameter;
+                    margin-left: negative(halve($blob-heading-diameter));
+                }
+            }
+        }
+
+        @include media-query('>1200') {
+            $blob-heading-diameter: 75px;
+
+            &.timeline__item--heading {
+                .heading {
+                    min-height: $blob-heading-diameter;
+                }
+
+                &:after {
+                    top: $padding-top - 2px;
+                    width: $blob-heading-diameter;
+                    height: $blob-heading-diameter;
+                    border-radius: $blob-heading-diameter;
+                    margin-left: negative(halve($blob-heading-diameter));
+                }
+            }
+        }
+    }

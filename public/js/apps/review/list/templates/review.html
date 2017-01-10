@@ -1,0 +1,13 @@
+<td><a href="/admin/students/<%= reviewer_uuid %>"><%= reviewer_name %></a></td>
+<td><%= body %></td>
+<td><%= rating %></td>
+<td class="u-vam tar">
+    <% if (!deleted) { %>
+    <a class="edit-review" href='javascript:void(0)' data-id="<%= id %>">
+        <span title="Edit review" class="icon icon--edit"></span>
+    </a>
+    <a class="cancel-review" href='javascript:void(0)' data-id="<%= id %>">
+        <span title="Cancel review" class="icon icon--delete"></span>
+    </a>
+    <% } %>
+</td>

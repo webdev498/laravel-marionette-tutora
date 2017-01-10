@@ -1,0 +1,13 @@
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: halve($spacing-unit--small) $spacing-unit--small;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background: $brand-color;
+    color: $color-white;
+    border-radius: $heading-size-1;
+    margin-right: $spacing-unit--tiny;
+}

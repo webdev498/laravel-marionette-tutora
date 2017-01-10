@@ -1,0 +1,127 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.booking.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.booking.edit.introduction') %></p>
+
+                <form class="js-form">
+                    <div class="dialogue__body box box--fill box--bordered u-mb-">
+                        <div class="layout"><!--
+                            --><div class="layout__item layout__item--student field">
+                                <div class="field__input select select--full select--squared select--bordered select--show select--disabled">
+                                    <span class="select__value"><%= student.first_name + ' ' + student.last_name %></span>
+                                </div>
+                            </div><!--
+
+                            --><div class="layout__item layout__item--subject field">
+                                <div class="field__input select select--full select--squared select--bordered select--show select--disabled">
+                                    <span class="select__value"><%= subject.title %></span>
+                                </div>
+                            </div><!--
+
+                            --><div class="layout__item layout__item--location field">
+                                <input type="text" name="location" placeholder="Location*" value="<%= location %>" class="field__input input input--full input--squared input--bordered js-location">
+                                <div class="field__error"></div>
+                            </div><!--
+
+
+                            --><div>
+                                    <div class="layout__item layout__item--start l">
+                                        <div class="layout"><!--
+                                            --><div class="layout__item layout__item--date field">
+                                                <label for="date" class="field__label">Date*</label>
+                                                <input type="text" name="date" value="<%= date %>" placeholder="d/m/y" class="field__input input input--full input--squared input--bordered js-date">
+                                                <div class="field__error"></div>
+                                            </div><!--
+
+                                            --><div class="layout__item layout__item--time field">
+                                                <label for="time" class="field__label">Start time*</label>
+                                                <div class="field__input select select--full select--squared select--bordered <%= time ? 'select--show' : '' %>">
+                                                    <span class="select__placeholder">00:00*</span>
+                                                    <span class="select__value"><%= time %></span>
+                                                    <select  name="time" class="select__field js-time">
+                                                        <option value="">Please select one:</option>
+                                                        <% for (var hour = 0; hour < 24; hour++) { %>
+                                                            <% for (var minute = 0; minute < 60; minute = minute + 30) { %>
+                                                                <% var value = _.lpad(hour, 2, '0') + ':' + _.lpad(minute, 2, '0'); %>
+                                                                <option <%= value === time ? 'selected="selected"' : '' %>><%= value %></option>
+                                                            <% } %>
+                                                        <% } %>
+                                                    </select>
+                                                </div>
+                                                <div class="field__error"></div>
+                                            </div><!--
+                                            --><div class="layout__item layout__item--duration field">
+                                                    <label for="time" class="field__label">Duration</label>
+                                                    <div class="field__input select select--full select--squared select--bordered select--show">
+                                                        <span class="select__value"><%= duration %></span>
+                                                        <select name="duration" class="select__field js-duration">
+                                                            <option value="">Please select one:</option>
+                                                            <% for (var hour = 0; hour < 4; hour++) { %>
+                                                            <% for (var minute = 0; minute < 60; minute = minute + 15) { %>
+                                                            <% var value = _.lpad(hour, 2, '0') + ':' + _.lpad(minute, 2, '0'); %>
+                                                            <option <%= value === duration ? 'selected="selected"' : '' %>><%= value %></option>
+                                                            <% } %>
+                                                            <% } %>
+                                                        </select>
+                                                    </div>
+                                                    <div class="field__error"></div>
+                                                </div><!--
+
+                                                --><div class="layout__item layout__item--rate field">
+                                            <label for="rate" class="field__label">Rate (&pound;<%= tutor_rate %>)</label>
+                                            <input type="text" name="rate" value="<%= rate %>" placeholder="" class="field__input input input--full input--squared input--bordered js-rate">
+                                            <div class="field__error"></div>
+                                        </div><!--
+                                        --></div>
+
+                                    <div class="field">
+                                        <div class="field__error js-start"></div>
+                                    </div>
+                                </div>
+
+                                <div class="layout__item--total-price r">
+                                    <div class="layout__item layout__item--price field">
+                                        <label for="rate" class="field__label">Lesson Price</label>
+                                        <div class="box box--fill box--bordered">
+                                            £<span class="total-price"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--
+
+                            <% if (schedule.repeat === 'weekly' || schedule.repeat === 'fortnightly') { %>
+                                --><div class="layout__item field layout__item--future">
+                                    <label class="field__label">This lesson repeats <strong><%= schedule.repeat %></strong>. Would you like to edit <strong>this and future</strong> bookings?</label>
+                                    <div class="field__checkbox checkbox">
+                                        <div class="checkbox__box">
+                                            <div class="checkbox__tick"></div>
+                                            <input type="checkbox" name="future" id="future" value="1" class="checkbox__input js-future">
+                                        </div>
+                                        <label class="checkbox__label">Yes, edit <strong>this and future</strong> bookings.</label>
+                                    </div>
+                                    <div class="field__error"></div>
+                                </div><!--
+
+                            <% } %>
+                        --></div>
+                    </div>
+
+                    <div class="layout"><!--
+                        --><div class="layout__item layout__item--actions tar">
+                            <a href="#" class="u-mr js-close">Cancel</a>
+                        <button class="btn btn js-submit">Save changes</button>
+                        </div><!--
+                    --></div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

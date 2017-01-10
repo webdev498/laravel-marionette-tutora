@@ -1,0 +1,101 @@
+<h4 class="delta">Payment Details</h4>
+
+<% if (showIntro) { %>
+    <div class="[ box box--small box--ui ] u-mt [ js-dismissable ]" data-dismissable-id="student_account_payment_introduction">
+        <span class="box__close [ icon icon--cancel ] [ js-close ]"></span>
+        <p><%= _.lang('dashboard.student.account.payment.introduction') %></p>
+    </div>
+<% } %>
+
+<form class="[ layout ] [ js-form ]"><!--
+    
+    --><div class="[ layout__item ][ field field--label ]">
+        <label for="card_number" class="field__label">Card Number</label>
+    </div><!--
+
+    --><div class="[ layout__item ][ field field--card-number]">
+        <input type="text" id="card_number"
+          placeholder="<%= last_four ? 'XXXX XXXX XXXX ' + last_four : 'Card Number' %>"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-card-number ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item ][ field field--label ]">
+        <label for="card_number" class="field__label">CVC Number</label>
+    </div><!--
+    --><div class="[ layout__item ][ field field--card-cvc ]">
+        <input type="text" id="card_cvc"
+          placeholder="<%= last_four ? 'XXX' : '3 Digit Security Code' %>"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-card-cvc ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item ][ field field--label ]">
+        <label for="card_number" class="field__label">Expiry Date</label>
+    </div><!--
+
+    --><div class="[ layout__item ][ field field--card-exp-month ]">
+        <div class="[ field__select ][ select select--full select--squared select--bordered ]">
+            <span class="select__placeholder">Month</span>
+            <span class="select__value"></span>
+            <select class="select__field [ js-card-exp-month ]">
+                <option value="">Please select one:</option>
+                <% _.each(months, function (title, value) { %>
+                    <option value="<%= _.pad(value, 2, "0") %>"><%= _.pad(value, 2, "0") %> - <%= title %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item ][ field field--card-exp-year ]">
+        <div class="[ field__select ][ select select--full select--squared select--bordered ]">
+            <span class="select__placeholder">Year</span>
+            <span class="select__value"></span>
+            <select class="select__field [ js-card-exp-year ]">
+                <option value="">Please select one:</option>
+                <% _.each(years, function (value) { %>
+                    <option value="<%= value %>"><%= value %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+    Billing Address
+    --><div class="[ layout__item field field--label ]">
+        <label for="address_street" class="field__label">Billing Address</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--address-street ]">
+        <input type="text" name="address_street" id="address_street"
+          value="<%= addresses.billing.line_1 %>" placeholder="Street"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-1 ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--address-town ]">
+        <input type="text" name="address_town" id="address_town"
+          value="<%= addresses.billing.line_2 %>" placeholder="Town"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-2 ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--address-city ]">
+        <input type="text" name="address_city" id="address_city"
+          value="<%= addresses.billing.line_3 %>" placeholder="County"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-3 ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--postcode ]">
+        <input type="text" name="address_postcode" id="address_postcode"
+          value="<%= addresses.billing.postcode %>" placeholder="Postcode"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-postcode ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item ] tar u-mt u-mb">
+        <button class="btn [ js-submit ]">Save</button>
+    </div><!--
+--></form>

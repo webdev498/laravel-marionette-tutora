@@ -1,0 +1,57 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.booking.review.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.booking.review.introduction') %></p>
+
+                <form class="js-form" no-validate>
+                    <div class="field">
+                        <div class="field__rating"><!--
+                            --><span class="field__rating__item <% if (rating == 1) { %> field__rating__item--checked <%} %>">
+                                <input type="radio" name="rating" value="1" class="field__rating__input js-rating">
+                                <span class="graphic graphic--stars"></span>
+                            </span><!--
+                            --><span class="field__rating__item <% if (rating == 2) { %> field__rating__item--checked <%} %>">
+                                <input type="radio" name="rating" value="2" class="field__rating__input js-rating" checked="checked">
+                                <span class="graphic graphic--stars"></span>
+                            </span><!--
+                            --><span class="field__rating__item <% if (rating == 3) { %> field__rating__item--checked <%} %>">
+                                <input type="radio" name="rating" value="3" class="field__rating__input js-rating">
+                                <span class="graphic graphic--stars"></span>
+                            </span><!--
+                            --><span class="field__rating__item <% if (rating == 4) { %> field__rating__item--checked <%} %>">
+                                <input type="radio" name="rating" value="4" class="field__rating__input js-rating">
+                                <span class="graphic graphic--stars"></span>
+                            </span><!--
+                            --><span class="field__rating__item <% if (rating == 5) { %> field__rating__item--checked <%} %>">
+                                <input type="radio" name="rating" value="5" class="field__rating__input js-rating">
+                                <span class="graphic graphic--stars"></span>
+                            </span><!--
+                        --></div>
+                    </div>
+
+
+                    <div class="field">
+                        <textarea name="body" placeholder="Write your review here..."
+                          class="[ input input--full input--squared input--bordered ] field__textarea [ js-body ]" ><%= body %></textarea>
+                        <div class="field__error"></div>
+                    </div>
+
+                    <div class="layout"><!--
+                        --><div class="layout__item layout__item--actions tar">
+                            <a href="#" class="u-mr js-close">Cancel</a>
+                            <button class="btn btn js-submit">Update review</button>
+                        </div><!--
+                    --></div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

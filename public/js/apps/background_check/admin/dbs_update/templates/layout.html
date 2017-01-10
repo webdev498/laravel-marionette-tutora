@@ -1,0 +1,113 @@
+<h4 class="delta">DBS Update</h4><!--
+
+--><form class="[ layout ] [ js-form ]"><!--
+
+    Status
+    -->
+    <% if(issued_at && status === 'expired') { %>
+    <div class="[ layout__item field field--label ]">
+        <label class="field__label has--error">Expired</label>
+    </div>
+    <% } %>
+    <!--
+
+    Issued_at
+    --><div class="[ layout__item field field--label ]">
+        <label for="issued_at" class="field__label">Issued at</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--issued_at ]">
+        <input type="text" name="issued_at" id="issued_at"
+               value="<%= issued_at %>" placeholder="Issued at" required
+               class="[ input input--full input--squared input--bordered ] field__input [ js-issued_at ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    Admin Status
+--><div class="layout__item layout__item--admin_status field">
+        <label for="admin_status" class="field__label">Admin status</label>
+        <div class="field__input select select--full select--squared select--bordered <%= admin_status ? 'select--show' : '' %>">
+            <span class="select__placeholder">Please select one</span>
+        <span class="select__value">
+            <% if(admin_status) { %>
+                <%= _.lang('background_check.dbs_admin_statuses')[admin_status.toString()] %>
+            <% } %>
+        </span>
+            <select name="admin_status" id="admin_status" class="select__field js-admin_status">
+                <option value="">Please select one:</option>
+                <% _.each(_.lang('background_check.dbs_admin_statuses'), function (title, value) { %>
+                <option value="<%= value %>" <%= admin_status === parseInt(value) ? 'selected' : '' %>>
+                <%= title %>
+                </option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+    Reject reason
+--><div class="layout__item layout__item--rejected_for hidden field">
+        <label for="rejected_for" class="field__label">Reject reason</label>
+        <div class="field__input select select--full select--squared select--bordered <%= rejected_for ? 'select--show' : '' %>">
+            <span class="select__placeholder">Please select one</span>
+        <span class="select__value">
+            <% if(rejected_for) { %>
+                <%= _.lang('background_check.dbs_update_reject_reasons')[rejected_for.toString()] %>
+            <% } %>
+        </span>
+            <select name="rejected_for" id="rejected_for" class="select__field js-rejected_for">
+                <option value="">Please select one:</option>
+                <% _.each(_.lang('background_check.dbs_update_reject_reasons'), function (title, value) { %>
+                <option value="<%= value %>" <%= rejected_for === parseInt(value) ? 'selected' : '' %>>
+                <%= title %>
+                </option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+    Certificate Number
+    --><div class="[ layout__item field field--label ]">
+        <label for="certificate_number" class="field__label">Certificate Number</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--certificate_number ]">
+        <input type="text" name="certificate_number" id="certificate_number"
+               value="<%= certificate_number %>" placeholder="Certificate Number"
+               class="[ input input--full input--squared input--bordered ] field__input [ js-certificate_number ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    Name
+    --><div class="[ layout__item field field--label ]">
+        <label for="last_name" class="field__label">Legal surname (required)</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--last_name ]">
+        <input type="text" name="last_name" id="last_name"
+               value="<%= last_name  %>" placeholder="Last Name"
+               class="[ input input--full input--squared input--bordered ] field__input [ js-last_name ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    DOB
+    --><div class="[ layout__item field field--label ]">
+        <label for="dob" class="field__label">Date of Birth</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--dob ]">
+        <input type="text" name="dob" id="dob"
+               value="<%= dob %>" placeholder="Date of Birth"
+               class="[ input input--full input--squared input--bordered ] field__input [ js-dob ]">
+        <div class="field__error"></div>
+    </div><!--
+
+        --><div class="[ layout__item ] tar u-mt u-mb">
+        <button class="btn [ js-submit ]">Save</button>
+        <% if (uuid) { %>
+        <a href="<%= laroute.route('admin.tutors.background_check.delete', {uuid:userUuid, type: 'dbs_update'}) %>" class="btn btn--error" data-js>Delete</a>
+        <% } %>
+    </div><!--
+
+--></form>

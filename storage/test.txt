@@ -1,0 +1,165 @@
+{
+    "object": {
+        "bank_accounts": {
+            "data": [
+                {
+                    "account": "acct_15mgdTKTtEzFTcpb",
+                    "bank_name": "HSBC BANK PLC",
+                    "country": "GB",
+                    "currency": "gbp",
+                    "default_for_currency": true,
+                    "fingerprint": "IDhig3Fv0qZ3sCFY",
+                    "id": "ba_15tlpvKTtEzFTcpbUWVZ2VnB",
+                    "last4": "5030",
+                    "metadata": [],
+                    "object": "bank_account",
+                    "routing_number": "40-41-18",
+                    "status": "new"
+                }
+            ],
+            "has_more": false,
+            "object": "list",
+            "total_count": 1,
+            "url": "/v1/accounts/acct_15mgdTKTtEzFTcpb/bank_accounts"
+        },
+        "business_logo": "https://s3.amazonaws.com/stripe-uploads/acct_15mgdTKTtEzFTcpbmerchant-icon-1429120434257-tutora.png",
+        "business_name": "Tutora",
+        "business_primary_color": "#232f49",
+        "business_url": "http://tutora.com/",
+        "charges_enabled": true,
+        "country": "GB",
+        "currencies_supported": [
+            "usd",
+            "aed",
+            "afn",
+            "..."
+        ],
+        "debit_negative_balances": true,
+        "decline_charge_on": {
+            "avs_failure": false,
+            "cvc_failure": true
+        },
+        "default_currency": "gbp",
+        "details_submitted": true,
+        "display_name": "Tutora",
+        "email": "test@stripe.com",
+        "external_accounts": {
+            "data": [
+                {
+                    "account": "acct_15mgdTKTtEzFTcpb",
+                    "bank_name": "HSBC BANK PLC",
+                    "country": "GB",
+                    "currency": "gbp",
+                    "default_for_currency": true,
+                    "fingerprint": "IDhig3Fv0qZ3sCFY",
+                    "id": "ba_15tlpvKTtEzFTcpbUWVZ2VnB",
+                    "last4": "5030",
+                    "metadata": [],
+                    "object": "bank_account",
+                    "routing_number": "40-41-18",
+                    "status": "new"
+                }
+            ],
+            "has_more": false,
+            "object": "list",
+            "total_count": 1,
+            "url": "/v1/accounts/acct_15mgdTKTtEzFTcpb/external_accounts"
+        },
+        "id": "acct_00000000000000",
+        "legal_entity": {
+            "additional_owners": [
+                {
+                    "address": {
+                        "city": "Sheffield",
+                        "country": "GB",
+                        "line1": "52 Joshua Road",
+                        "line2": null,
+                        "postal_code": "S7 1GY",
+                        "state": null
+                    },
+                    "dob": {
+                        "day": 28,
+                        "month": 4,
+                        "year": 1985
+                    },
+                    "first_name": "Scott",
+                    "last_name": "Woodley",
+                    "verification": {
+                        "details": null,
+                        "document": null,
+                        "status": "verified"
+                    }
+                }
+            ],
+            "address": {
+                "city": "Sheffield",
+                "country": "GB",
+                "line1": "52 Joshua Road",
+                "line2": null,
+                "postal_code": "S7 1gy",
+                "state": null
+            },
+            "business_name": "Tutora Ltd",
+            "dob": {
+                "day": 7,
+                "month": 7,
+                "year": 1985
+            },
+            "first_name": "Mark",
+            "last_name": "Hughes",
+            "personal_address": {
+                "city": "Edinburgh",
+                "country": "GB",
+                "line1": "11/1 Dunedin street",
+                "line2": null,
+                "postal_code": "EH7 4jd",
+                "state": null
+            },
+            "type": "corporation",
+            "verification": {
+                "details": null,
+                "document": null,
+                "status": "verified"
+            }
+        },
+        "managed": false,
+        "object": "account",
+        "product_description": "We are a tutoring marketplace.  We connect qualified, vetted tutors with parents and students to learn in their own homes. Booking and paying for lessons occurs entirely online.",
+        "statement_descriptor": "TEST",
+        "support_address": {
+            "city": null,
+            "country": "GB",
+            "line1": null,
+            "line2": null,
+            "postal_code": null,
+            "state": null
+        },
+        "support_email": "support@tutora.co.uk",
+        "support_phone": "+441143830989",
+        "support_url": "http://tutora.com/contact",
+        "timezone": "Europe/London",
+        "tos_acceptance": {
+            "date": 1429562986,
+            "ip": "95.149.233.47",
+            "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36"
+        },
+        "transfer_schedule": {
+            "delay_days": 7,
+            "interval": "daily"
+        },
+        "transfers_enabled": true,
+        "verification": {
+            "disabled_reason": null,
+            "due_by": 1437997053,
+            "fields_needed": [
+                "legal_entity.verification.document"
+            ]
+        }
+    },
+    "previous_attributes": {
+        "verification": {
+            "due_by": null,
+            "fields_needed": []
+        }
+    }
+}

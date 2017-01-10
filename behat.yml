@@ -1,0 +1,17 @@
+default:
+    autoload:
+        '' : %paths.base%/tests/behat/features/bootstrap
+    suites:
+        default:
+            paths:
+                - %paths.base%/tests/behat/features
+            contexts:
+                - FeatureContext:
+                    parameters:
+                        base_url: http://tutora.local
+    extensions:
+        Laracasts\Behat: ~
+        Behat\MinkExtension:
+            default_session: laravel
+            laravel: ~
+            base_url: http://tutora.local

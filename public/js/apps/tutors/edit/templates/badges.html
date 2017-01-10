@@ -1,0 +1,16 @@
+<% _.each(badges, function (badge) { %>
+    <div class="tutor-stats__stat tutor-stats__stat--large">
+        <span class="icon icon--fancy-tick u-vam"></span><span class="text-aligned"><%= badge %></span>
+    </div>        
+<% }) %>
+
+
+<a href="<%= laroute.route('tutor.profile.show', {
+    'uuid'    : uuid,
+    'section' : 'qts'
+}) %>" data-js class="edit-link">Edit Qualified Teacher Status</a>
+<br>
+<a href="<%= laroute.route('tutor.profile.show', {
+    'uuid'    : uuid,
+    'section' : 'background_check'
+}) %>" data-js class="edit-link">Have a DBS Check? Upload it here</a>

@@ -1,0 +1,422 @@
+
+/* ==========================================================================
+$BASE-PICKER
+========================================================================== */
+/**
+* Note: the root picker element should *NOT* be styled more than what’s here.
+*/
+.picker {
+	// font-size: 16px;
+	text-align: left;
+	// line-height: 1.2;
+	color: $color-text--dark;
+	position: absolute;
+	z-index: 10000;
+	@include vendor(user-select, none);
+}
+/**
+* The picker input element.
+*/
+.picker__input {
+	cursor: default;
+}
+
+/**
+* The holder is the only “scrollable” top-level container element.
+*/
+.picker__holder {
+	width: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/*!
+* Classic picker styling for pickadate.js
+* Demo: http://amsul.github.io/pickadate.js
+*/
+/**
+* Note: the root picker element should *NOT* be styled more than what’s here.
+*/
+.picker {
+	width: 100%;
+}
+/**
+* The holder is the base of the picker.
+*/
+.picker__holder {
+	position: absolute;
+	background: $color-white;
+	border: 1px solid $color-ui;
+	border-top-width: 0;
+	border-bottom-width: 0;
+	// border-radius: 0 0 5px 5px;
+	box-sizing: border-box;
+	min-width: 176px;
+	max-width: 466px;
+	max-height: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+}
+/**
+* The frame and wrap work together to ensure that
+* clicks within the picker don’t reach the holder.
+*/
+.picker__frame {
+	padding: 1px;
+}
+
+.picker__wrap {
+	margin: -1px;
+}
+
+/**
+* When the picker opens...
+*/
+.picker--opened .picker__holder {
+	max-height: 25em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+}
+
+/* ==========================================================================
+$BASE-DATE-PICKER
+========================================================================== */
+/**
+* The picker box.
+*/
+.picker__box {
+	padding: 0 $spacing-unit--small;
+}
+/**
+* The header containing the month and year stuff.
+*/
+.picker__header {
+	text-align: center;
+	position: relative;
+	margin-top: $spacing-unit--small;
+}
+/**
+* The month and year labels.
+*/
+.picker__month,
+.picker__year {
+	@include font-weight('normal');
+	display: inline-block;
+	margin-left: .25em;
+	margin-right: .25em;
+}
+
+/**
+* The month and year selectors.
+*/
+.picker__select--month,
+.picker__select--year {
+	border: 1px solid $brand-color--dark;
+	height: 2.5em;
+	padding: .5em;
+	margin-left: .25em;
+	margin-right: .25em;
+}
+
+@media (min-width: 24.5em) {
+	.picker__select--month,
+	.picker__select--year {
+		margin-top: -0.5em;
+	}
+}
+
+.picker__select--month {
+	width: 35%;
+}
+
+.picker__select--year {
+	width: 22.5%;
+}
+
+.picker__select--month:focus,
+.picker__select--year:focus {
+	border-color: red;
+}
+/**
+* The month navigation buttons.
+*/
+.picker__nav--prev,
+.picker__nav--next {
+	position: absolute;
+	padding: .5em 1.25em;
+	width: 1em;
+	height: 1em;
+	box-sizing: content-box;
+	top: -0.25em;
+}
+
+@media (min-width: 24.5em) {
+	.picker__nav--prev,
+	.picker__nav--next {
+		top: -0.33em;
+	}
+}
+
+.picker__nav--prev {
+	left: -1em;
+	padding-right: 1.25em;
+}
+
+@media (min-width: 24.5em) {
+	.picker__nav--prev {
+		padding-right: 1.5em;
+	}
+}
+
+.picker__nav--next {
+	right: -1em;
+	padding-left: 1.25em;
+}
+
+@media (min-width: 24.5em) {
+	.picker__nav--next {
+		padding-left: 1.5em;
+	}
+}
+
+.picker__nav--prev:before,
+.picker__nav--next:before {
+	content: " ";
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid $color-ui;
+	width: 0;
+	height: 0;
+	display: block;
+	margin: 0 auto;
+}
+
+.picker__nav--next:before {
+	border-right: 0;
+	border-left: 5px solid $color-ui;
+}
+
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+	cursor: pointer;
+}
+
+.picker__nav--disabled,
+.picker__nav--disabled:hover,
+.picker__nav--disabled:before,
+.picker__nav--disabled:before:hover {
+	cursor: default;
+	background: none;
+	border-right-color: blue;
+	border-left-color: blue;
+}
+
+/**
+* The calendar table of dates
+*/
+.picker__table {
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	font-size: inherit;
+	width: 100%;
+	margin-top: .75em;
+	margin-bottom: .5em;
+}
+
+@media (min-height: 33.875em) {
+	.picker__table {
+		margin-bottom: .75em;
+	}
+}
+.picker__table td {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+* The weekday labels
+*/
+.picker__weekday {
+	width: 14.285714286%;
+	@include font-weight('normal');
+	@include font-size(14px);
+	padding-bottom: .25em;
+	color: $color-text--dark;
+	/* Increase the spacing a tad */
+}
+
+@media (min-height: 33.875em) {
+	.picker__weekday {
+		padding-bottom: .5em;
+	}
+}
+
+/**
+* The days on the calendar
+*/
+.picker__day {
+	@include font-weight('normal');
+	@include font-size(14px);
+	padding: .3125em 0;
+	border: 1px solid transparent;
+}
+
+.picker__day--today {
+	position: relative;
+}
+
+.picker__day--today:before {
+	content: " ";
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 0;
+	height: 0;
+	border-top: 0.5em solid $brand-color--dark;
+	border-left: .5em solid transparent;
+}
+
+.picker__day--disabled:before {
+	border-top-color: #aaaaaa;
+}
+
+.picker__day--outfocus {
+	color: $color-text--light;
+}
+
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover {
+	cursor: pointer;
+	// color: $color-white;
+	background: $color-alice;
+}
+
+.picker__day--highlighted {
+	border-color: $brand-color;
+}
+
+.picker__day--highlighted:hover,
+.picker--focused .picker__day--highlighted {
+	cursor: pointer;
+	// color: $color-white;
+	background: $color-alice;
+}
+
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected {
+	@include font-weight('medium');
+	background: $brand-color;
+	color: #ffffff;
+}
+
+.picker__day--disabled,
+.picker__day--disabled:hover,
+.picker--focused .picker__day--disabled {
+	background: blue;
+	border-color: blue;
+	color: #dddddd;
+	cursor: default;
+}
+
+.picker__day--highlighted.picker__day--disabled,
+.picker__day--highlighted.picker__day--disabled:hover {
+	background: #bbbbbb;
+}
+
+/**
+* The footer containing the "today", "clear", and "close" buttons.
+*/
+.picker__footer {
+	text-align: center;
+}
+
+.picker__button--today,
+.picker__button--clear,
+.picker__button--close {
+	border: 1px solid #ffffff;
+	background: #ffffff;
+	font-size: .8em;
+	padding: .66em 0;
+	font-weight: bold;
+	width: 33%;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.picker__button--today:hover,
+.picker__button--clear:hover,
+.picker__button--close:hover {
+	cursor: pointer;
+	// color: $color-white;
+	background: $color-alice;
+	border-bottom-color: $color-alice;
+}
+
+.picker__button--today:focus,
+.picker__button--clear:focus,
+.picker__button--close:focus {
+	background: $color-alice;
+	border-color: red;
+	outline: none;
+}
+
+.picker__button--today:before,
+.picker__button--clear:before,
+.picker__button--close:before {
+	position: relative;
+	display: inline-block;
+	height: 0;
+}
+
+.picker__button--today:before,
+.picker__button--clear:before {
+	content: " ";
+	margin-right: .45em;
+}
+
+.picker__button--today:before {
+	top: -0.05em;
+	width: 0;
+	border-top: 0.66em solid $brand-color--dark;
+	border-left: .66em solid transparent;
+}
+
+.picker__button--clear:before {
+	top: -0.25em;
+	width: .66em;
+	border-top: 3px solid $color-red;;
+}
+
+.picker__button--close:before {
+	content: "\D7";
+	top: -0.1em;
+	vertical-align: top;
+	font-size: 1.1em;
+	margin-right: .35em;
+	color: #777777;
+}
+
+.picker__button--today[disabled],
+.picker__button--today[disabled]:hover {
+	background: blue;
+	border-color: blue;
+	color: #dddddd;
+	cursor: default;
+}
+
+.picker__button--today[disabled]:before {
+border-top-color: #aaaaaa;
+}
+
+/* ==========================================================================
+$CLASSIC-DATE-PICKER
+========================================================================== */

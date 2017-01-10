@@ -1,0 +1,47 @@
+.real-people {
+    @include media-query('>tablet') {
+        min-height: 250px;
+    }
+
+    @include media-query('>1200') {
+        min-height: 275px;
+    }
+}
+
+.founder-pic {
+    position: absolute;
+    bottom: $spacing-unit;
+    left: 50%;
+    display: none;
+
+    @include media-query('>tablet') {
+        display: block;
+    }
+}
+    .founder-pic--left {
+        $width: 225px;
+        $height: 225px;
+
+        background: url('/img/mark@225x225.png');
+        width: $width;
+        height: $height;
+        margin-left: negative(halve($width)) - 250px;
+
+        @include media-query('>1200') {
+            margin-left: negative(halve($width)) - 300px;
+        }
+    }
+
+    .founder-pic--right {
+        $width: 225px;
+        $height: 225px;
+
+        background: url('/img/scott@225x225.png');
+        width: $width;
+        height: $height;
+        margin-left: negative(halve($width)) + 250px;
+
+        @include media-query('>1200') {
+            margin-left: negative(halve($width)) + 300px;
+        }
+    }

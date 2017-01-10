@@ -1,0 +1,28 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container dialogue__container--tiny">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.tagline.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross [ js-close ]"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.profile.tagline.edit.introduction') %></p>
+
+                <form class="layout js-form" novalidate><!--
+                    --><div class="layout__item field">
+                        <input type="text" class="field__input input input--full input--squared input--bordered js-tagline" name="tagline" placeholder="Tagline" value="<%= profile.tagline %>">
+                        <div class="field__error"></div>
+                    </div><!--
+
+                    --><div class="layout__item tar">
+                        <a href="#" class="u-mr [ js-close ]">Cancel</a>
+                        <button class="btn">Save</button>
+                    </div><!--
+                --></form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay [ js-close ]"></div>

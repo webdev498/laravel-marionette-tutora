@@ -1,0 +1,29 @@
+.media-cascade {}
+
+    .media-cascade__item {
+        margin-bottom: $spacing-unit;
+    }
+
+        .media-cascade__item--odd {
+            @include media-query('>1024') {
+                width: $nine-twelfths;
+                margin-left: $two-twelfths;
+            }
+
+            @include media-query('>1200') {
+                width: $eight-twelfths;
+                margin-left: $two-twelfths;
+            }
+        }
+
+        .media-cascade__item--even {
+            @include media-query('>1024') {
+                width: $nine-twelfths;
+                margin-left: $one-twelfth;
+            }
+
+            @include media-query('>1200') {
+                width: $eight-twelfths;
+                margin-left: $two-twelfths;
+            }
+        }

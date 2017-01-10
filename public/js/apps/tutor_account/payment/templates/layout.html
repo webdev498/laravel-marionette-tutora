@@ -1,0 +1,70 @@
+<h4 class="delta">Payment Details</h4>
+
+<% if (showIntro) { %>
+    <div class="[ box box--small box--ui ] u-mt [ js-dismissable ]" data-dismissable-id="tutor_account_payment_introduction">
+        <span class="box__close [ icon icon--cancel ] [ js-close ]"></span>
+        <p><%= _.lang('dashboard.tutor.account.payment.introduction') %></p>
+    </div>
+<% } %>
+
+<form class="[ layout ] [ js-form ]"><!--
+    Bank Account
+    -
+--><div class="[ layout__item field field--label ]">
+        <label for="bank_account_number" class="field__label">Bank Account</label>
+    </div><!--
+    --><div class="[ layout__item field field--half ]">
+        <input type="text" id="bank_account_number"
+          placeholder="Account Number: <%= last_four ? 'XXXX ' + last_four : 'Account Number' %>"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-bank-account-number ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--half ]">
+        <input type="text" id="bank_sort_code"
+          placeholder="Sort Code: <%= last_four ? 'XXX' : 'Sort Code' %>"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-bank-sort-code ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field ] u--mt-">
+        <div class="field__error js-bank"></div>
+    </div><!--
+
+    Billing Address
+    --><div class="[ layout__item field field--label ]">
+        <label for="address_street" class="field__label">Billing Address</label>
+    </div><!--
+
+    --><div class="[ layout__item field field--address-street ]">
+        <input type="text" name="address_street" id="address_street"
+          value="<%= addresses.billing.line_1 %>" placeholder="Street"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-1 ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--address-town ]">
+        <input type="text" name="address_town" id="address_town"
+          value="<%= addresses.billing.line_2 %>" placeholder="Town"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-2 ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--address-city ]">
+        <input type="text" name="address_city" id="address_city"
+          value="<%= addresses.billing.line_3 %>" placeholder="County"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-line-3 ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item field field--postcode ]">
+        <input type="text" name="address_postcode" id="address_postcode"
+          value="<%= addresses.billing.postcode %>" placeholder="Postcode"
+          class="[ input input--full input--squared input--bordered ] field__input [ js-address-postcode ]">
+        <div class="field__error"></div>
+    </div><!--
+
+    --><div class="[ layout__item ] tar u-mt u-mb">
+        <button class="btn [ js-submit ]">Save</button>
+    </div><!--
+--></form>

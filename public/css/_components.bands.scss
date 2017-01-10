@@ -1,0 +1,59 @@
+.band {
+    padding: $spacing-unit 0;
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+    .band--large {
+        padding: $spacing-unit--small 0;
+
+        @include media-query('>tablet') {
+            padding: $spacing-unit 0;
+        }
+
+        @include media-query('>1024') {
+            padding: $spacing-unit--large 0;
+        }
+    }
+
+    .band--huge {
+        padding: $spacing-unit 0;
+
+        @include media-query('>tablet') {
+            padding: $spacing-unit--large 0;
+        }
+
+        @include media-query('>1024') {
+            padding: $spacing-unit--huge 0;
+        }
+    }
+
+    .band--bottom {
+        padding: 0 0 $spacing-unit;
+    }
+
+    .band--ui {
+        background: lighten($color-gainsboro, 7.5%);
+    }
+
+    .band--flush {
+        padding: 0;
+    }
+
+    .band--ruled {
+        border-bottom: 1px solid $color-ui;
+    }
+
+    .band--danger {
+      background-color: #FB8282;
+      color: #fff;
+    }
+
+    .band__close {
+        float: right;
+        margin-top: $spacing-unit--tiny;
+        margin-left: $spacing-unit;
+        margin-bottom: $spacing-unit--tiny;
+        cursor: pointer;
+    }

@@ -1,0 +1,92 @@
+<form class="[ layout ] [ js-form ]"><!--
+
+        Student name
+
+    --><div class="[ layout__item ][ field ] one-sixth">
+        <label class="[ field__input input input--full ]"><a href="<%= studentLink %>"><%= student.first_name %> <%= student.last_name %></a></label>
+    </div><!--
+
+        By request
+
+    --><div class="[ layout__item ][ field field--by_request ] input one-sixth">
+        <input type="checkbox" <% if (by_request) { %>checked<% } %> name="location" class="[ field__input field__checkbox input input--squared input--bordered ] [ js-by_request ]" />
+        <label class="[ field__input input]">Phone request</label>
+    </div><!--
+
+        Subject
+
+    --><div class="[ layout__item ][ field field--subject] one-third">
+        <div class="autocomplete [ js-subjects-autocomplete ]">
+            <input type="text" value="<%= subject.title %>" placeholder="Subject (Level)" name="subject" class="[ field__input input input--full input--squared input--bordered ] [ autocomplete__input ] [ js-subject js-autocomplete-input ]">
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+        Location
+
+    --><div class="[ layout__item ][ field field--location] one-third">
+        <input type="text" value="<%= location.postcode %>" placeholder="Postcode" name="location" class="[ field__input input input--full input--squared input--bordered ] [ js-location ]">
+        <div class="field__error"></div>
+    </div><!--
+
+        Message
+
+    --><div class="layout__item field">
+        <textarea name="message" placeholder="Job message" class="[ input input--full input--squared input--bordered ] field__textarea [ js-message ]" ><%= message %></textarea>
+        <div class="field__error"></div>
+    </div><!--
+
+        Closed for
+
+    --><div class="[ layout__item ][ layout__item--closed-for field ] two-thirds">
+        <div class="radios">
+            <div class="radios__item js-closed-for-expiration">
+                +14 days
+                <input type="radio" name="closed-for" value="expiration" class="radios__input js-closed-for">
+            </div>
+            <div class="radios__item js-closed-for-applications">
+                6 applications
+                <input type="radio" name="closed-for" value="applications" class="radios__input js-closed-for">
+            </div>
+            <div class="radios__item js-closed-for-confirmation">
+                Lesson Confirmed
+                <input type="radio" name="closed-for" value="confirmation" class="radios__input js-closed-for">
+            </div>
+            <div class="radios__item js-closed-for-manual">
+                Manual
+                <input type="radio" name="closed-for" value="manual" class="radios__input js-closed-for">
+            </div>
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+        Closed for
+
+    --><div class="[ layout__item ][ layout__item--status field ] one-third">
+        <div class="radios">
+            <div class="radios__item js-status-pending">
+                Pending
+                <input type="radio" name="status" value="1" class="radios__input js-status">
+            </div>
+            <div class="radios__item js-status-live">
+                Live
+                <input type="radio" name="status" value="2" class="radios__input js-status">
+            </div>
+            <div class="radios__item js-status-closed">
+                Closed
+                <input type="radio" name="status" value="3" class="radios__input js-status">
+            </div>
+            <div class="radios__item js-status-reserved">
+                Reserved
+                <input type="radio" name="status" value="6" class="radios__input js-status">
+            </div>
+        </div>
+        <div class="field__error"></div>
+    </div><!--
+
+
+    --><div class="[ layout__item ] tar u-mt u-mb">
+    <button class="btn [ js-submit ]">Save</button>
+    <button class="btn btn--error [ js-delete ]">Delete Job</button>
+</div><!--
+--></form>

@@ -1,0 +1,48 @@
+.page--become-a-tutor {
+    $promo-blocks-overhang: 250px;
+    
+    .promo-blocks {
+        padding-bottom: $promo-blocks-overhang;
+    }
+
+    .vs-container {
+        margin-top: negative($promo-blocks-overhang);
+        padding-top: $spacing-unit;
+        padding-bottom: $spacing-unit;
+        
+
+        @include media-query('>tablet') {
+            width: $ten-twelfths;
+            padding-top: $spacing-unit--large;
+            padding-bottom: $spacing-unit--large;
+        }
+
+        @include media-query('>1024') {
+            width: $eight-twelfths;
+            padding-top: $spacing-unit--huge;
+            padding-bottom: $spacing-unit--huge;
+        }
+    }
+
+    .quotes,
+    .faqs {
+        @include media-query('>tablet') {
+            width: $one-half; 
+        }
+    }
+        .quotes__tutors {
+            margin-bottom: $spacing-unit--large;
+        }
+
+        .quotes__tutora {
+            .heading {
+                color: $color-slate;
+            }
+        }
+
+    .faqs {
+        .heading {
+            color: $brand-color--dark;
+        }
+    }
+}

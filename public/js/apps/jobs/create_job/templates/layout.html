@@ -1,0 +1,74 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+        <div class="dialogue__window">
+            <header class="dialogue__header">
+                <h4 class="heading">
+                    <%= _.lang('dialogue.register.student.heading.default') %>
+                </h4>
+                <a href="#" class="close icon icon--cross js-close"></a>
+            </header>
+
+            <form class="layout js-form"><!--
+
+                    -->
+                <div class="[ layout__item ] u-1/2-tablet-and-up field">
+                    <div class="autocomplete [ js-subjects-autocomplete ]">
+                        <input type="text" value="<%= prevSearchSubject %>" placeholder="Subject (Level)" name="subject" class="[ field__input input input--full input--squared input--bordered ] [ autocomplete__input ] [ js-subject js-autocomplete-input ]">
+                    </div>
+                    <div class="field__error"></div>
+                </div><!--
+
+                    --><div class="layout__item  u-1/2-tablet-and-up field">
+                    <input type="text" value="<%= prevSearchLocation %>" name="location" placeholder="Postcode" class="field__input input input--full input--squared input--bordered js-location">
+                    <div class="field__error"></div>
+                </div>
+                <div class="layout__item field">
+                    <textarea name="message" placeholder="Tell us more about what you are looking for" class="[ input input--full input--squared input--bordered ] field__textarea [ js-message ]" ></textarea>
+                    <div class="field__error"></div>
+                </div><!--
+
+
+                    --><div class="layout__item  u-1/2-tablet-and-up field">
+                    <input type="text" name="first_name" placeholder="First Name"
+                           class="field__input input input--full input--squared input--bordered js-first-name">
+                    <div class="field__error"></div>
+                </div><!--
+
+                    --><div class="layout__item  u-1/2-tablet-and-up field">
+                    <input type="text" name="last_name" placeholder="Last Name"
+                           class="field__input input input--full input--squared input--bordered js-last-name">
+                    <div class="field__error"></div>
+                </div><!--
+
+                    --><div class="layout__item  u-1/2-tablet-and-up field">
+                    <input type="email" name="email" placeholder="Email"
+                           class="field__input input input--full input--squared input--bordered js-email">
+                    <div class="field__error"></div>
+                </div><!--
+
+                    --><div class="layout__item  u-1/2-tablet-and-up field">
+                    <input type="tel" name="telephone" placeholder="Telephone" class="field__input input input--full input--squared input--bordered js-telephone">
+                    <div class="field__error"></div>
+                </div><!--
+
+
+                    -->
+                <div class="layout__item  u-1/2-tablet-and-up field">
+                    <input type="password" name="password"
+                           placeholder="<%= _.lang('dialogue.register.student.placeholder.password.default') %>"
+                           class="field__input input input--full input--squared input--bordered js-password">
+                    <div class="field__error"></div>
+                </div><!--
+
+                    --><div class="layout__item  u-1/2-tablet-and-up">
+                    <button class="btn btn--full js-submit"><%= _.lang('jobs.create') %></button>
+                </div><!--
+
+                --></form>
+        </div>
+    </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

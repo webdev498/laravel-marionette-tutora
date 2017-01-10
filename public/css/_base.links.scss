@@ -1,0 +1,14 @@
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &.tiny {
+        @include font-size(16px);
+        @include font-weight('medium');
+        color: $color-slate;
+    }
+
+    &.bare {
+        color: inherit;
+    }
+}

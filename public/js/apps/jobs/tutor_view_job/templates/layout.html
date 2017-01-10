@@ -1,0 +1,51 @@
+<div class="bare">
+    <div class="wrapper">
+        <div class="search-results__body band band--ruled band--large">
+            <div class="layout">
+                <div class="layout__item search-results__pic">
+                    <div class="subject--icon subject--<%- subject.iconName %>"></div>
+                </div>
+
+                <div class="layout__item search-results__main">
+                    <header class="search-results__header">
+                        <h4 class="heading"><%- student.name %> <small>(<%- distance %> miles away)</small></h4>
+                    </header>
+
+                    <p><strong><%- subject.title %></strong></p>
+
+                    <p><%- message %></p>
+
+                    <footer class="search-results__footer">
+                    </footer>
+                </div>
+
+                <div class="layout__item search-results__meta">
+                    <ul class="list-grid list-grid--two">
+                        <li class="list-grid__item">
+                            <div class="favourite <% if(tutor.favourite) { %>active<% } %>">
+                                <span class="icon icon--heart u-vam"></span>
+                                <br>
+                                Favourite
+                            </div>
+                        </li>
+                        <li class="list-grid__item">
+                            <div class="application <% if(tutor.applied) { %>active<% } %>">
+                                <span class="icon icon--fancy-tick u-vam"></span>
+                                <br>
+                                Applied
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="action--button">
+                        <% if(tutor.related) { %>
+                        <a href="<%= laroute.route('tutor.messages.show', {'id' : tutor.relMessageUuid}) %>" type="button" class="btn btn--full"><%= _.lang('jobs.message_student') %></a>
+                        <% } else { %>
+                        <a href="" type="button" class="view_message <% if(!tutor.applied) print('hidden') %> btn btn--full"><%= _.lang('jobs.view_message') %></a>
+                        <a href="" type="button" class="message_student <% if(tutor.applied) print('hidden') %> btn btn--full"><%= _.lang('jobs.message_student') %></a>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.list-inline--breadcrumbs {
+    > li {
+        margin-right: $spacing-unit--small;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    > li + li {
+        &:before {
+            font-size: 0.75em;
+            color: $color-ui;
+            content: '>\00A0';
+            position: relative;
+            top: -2px;
+            left: -4px;
+        }
+
+    }
+}

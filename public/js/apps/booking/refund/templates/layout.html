@@ -1,0 +1,47 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.booking.refund.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.booking.refund.introduction') %></p>
+
+                <form class="js-form">
+
+                    <div class="layout">
+
+                        <div class="layout__item field layout__item--reverse_transfer">
+                            
+                            <div class="field__checkbox checkbox checkbox--checked">
+                                <div class="checkbox__box">
+                                    <div class="checkbox__tick"></div>
+                                    <input type="checkbox" name="reverse_transfer" id="reverse_transfer" value="1" class="checkbox__input js-reverse_transfer" checked="checked">
+                                </div>
+                                <label class="checkbox__label">Take Funds From Tutor?</label>
+                            </div>
+                            <div class="field__error"></div>
+                        </div>
+
+                        <div class="layout__item layout__item--amount field field--group">
+                            <label for="amount" class="field__label">Refund Amount (Leave blank for full amount)</label>
+                            <span class="field__prefix input input--squared input--bordered input--disabled">&pound;</span>
+                            <input type="text" name="amount" placeholder="" class="field__input input input--full input--squared input--bordered js-amount">
+                            <div class="field__error"></div>
+                        </div>
+
+                        <div class="layout__item layout__item--actions tar">
+                            <a href="#" class="u-mr js-close">Cancel</a>
+                            <button class="btn btn js-submit">Refund booking</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

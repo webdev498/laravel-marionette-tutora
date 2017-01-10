@@ -1,0 +1,70 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window box">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.background_check.dbs_check.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                    <% if(background_checks.background_status === 'pending') { %>
+                        <h6 class="zeta heading heading--iconed u-mb">
+                            <span class="icon icon--warn"></span>
+                            <%= _.lang('dialogue.profile.background_check.dbs_check.edit.pending_status') %>
+                        </h6>
+                    <% } %>
+                    <% if(background_checks.background_status === 'approved') { %>
+                        <h6 class="zeta heading heading--iconed u-mb">
+                            <span class="icon icon--success"></span>
+                            <%= _.lang('dialogue.profile.background_check.dbs_check.edit.approved_status') %>
+                        </h6>
+                    <% } %>
+
+                    <p><%= _.lang('dialogue.profile.background_check.dbs_check.edit.introduction') %></p>
+
+                    <form class="js-form" novalidate>
+                        <div class="field">
+                            <fieldset class="fieldset u-mb0">
+                                <div class="[ tabs tabs--bordered ] fieldset__tabs">
+                                    <ul class="tabs__list">
+                                        <li class="tabs__item">
+                                            <a href="<%= laroute.route('tutor.profile.show', { 'uuid' : uuid , 'section' : 'background_check', 'tab' : 'dbs' }) %>" class="tabs__link js-tab-dbs" data-tab-group="background_check" data-tab-name="dbs">
+                                                Upload a DBS
+                                            </a>
+                                        </li>
+                                        <li class="tabs__item">
+                                            <a href="<%= laroute.route('tutor.profile.show', { 'uuid' : uuid , 'section' : 'background_check', 'tab' : 'dbs_update' }) %>" class="tabs__link js-tab-dbs_update" data-tab-group="background_check" data-tab-name="dbs_update">
+                                                Provide a DBS Update
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="[ box box--fill box--bordered ] dialogue__body u-mb0">
+                                    <div class="tab-content" data-tab-group="background_check" data-tab-name="dbs">
+                                        <div class="js-dbs-region"></div>
+                                    </div>
+
+                                    <div class="tab-content" data-tab-group="background_check" data-tab-name="dbs_update">
+                                        <div class="js-dbs-update-region"></div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="field__error [ js-dbs-update-error ]"></div>
+                        </div>
+
+                        <h5 class="heading"><%= _.lang('dialogue.profile.background_check.dbs_check.edit.note') %></h5>
+                        <p><%= _.lang('dialogue.profile.background_check.dbs_check.edit.note_text') %></p>
+
+                        <div class="tar">
+                            <a href="#" class="u-mr [ js-close ]">Cancel</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </form>
+
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay js-close"></div>

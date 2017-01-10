@@ -1,0 +1,90 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.subjects.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.profile.subjects.edit.introduction') %></p>
+
+                <form class="js-form" novalidate>
+                    <% if (collection.length > 0) { %>
+                        <div class="field">
+                            <fieldset class="fieldset field__input">
+                                <div class="scrollable--arrows--wrapper">
+                                    <div class="arrow arrow--left"></div>
+                                    <div class="arrow arrow--right"></div>
+                                    <div class="[ tabs tabs--bordered tabs--scrollable tabs--scrollable-right ] fieldset__tabs">
+                                        <ul class="tabs__list" style="width: 2400px;">
+                                            <% _.each(collection, function (model) { %>
+                                            <li class="tabs__item">
+                                                <a href="#" data-tab-group="subjects" data-tab-name="<%= model.id %>" class="tabs__link [ js-tab ]">
+                                                    <%= model.name %>
+                                                </a>
+                                            </li>
+                                            <% }) %>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                <div class="fieldset__content [ js-subjects ]">
+                                    <% _.each(collection, function (model) { %>
+                                        <div class="tab-content" data-tab-group="subjects" data-tab-name="<%= model.id %>">
+                                            <%
+                                                var r = function (subjects) {
+                                                    return _.reduce(subjects, function (memo, subject) {
+                                                        if (_.has(subject, 'children')  === true &&
+                                                            _.isArray(subject.children) === true &&
+                                                            _.isEmpty(subject.children) === false
+                                                        ) {
+                                                            return memo +
+                                                                '<h4 class="zeta u-mb--">' +
+                                                                    subject.name +
+                                                                '</h4>' +
+                                                                '<div class="fields u-mb-">' +
+                                                                    r(subject.children) +
+                                                                '</div>';
+                                                        }
+
+                                                        return memo + 
+                                                            '<div class="field field--inline u-mb--">' +
+                                                                '<div class="checkbox checkbox--pill ' + (userHasSubject(subject.id) ? 'checkbox--checked' : '') + '">' +
+                                                                    '<div class="checkbox__box">' +
+                                                                        '<div class="checkbox__tick"></div>' +
+                                                                        '<input type="checkbox" name="subjects" id="_subject_' + subject.id + '" value="' + subject.id + '" class="checkbox__input js-subject" ' + (userHasSubject(subject.id) ? 'checked="checked"' : '') + '>' +
+                                                                    '</div>' +
+                                                                    '<label class="checkbox__label" for="_subject_' + subject.id + '">' + subject.name + '</label>' +
+                                                                '</div>' +
+                                                            '</div>';
+                                                    }, '');
+                                                }
+                                            %>
+
+                                            <div class="box u-mb0">
+                                                <%= r(model.children) %>
+                                            </div>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                                <div class="field__error"></div>
+                            </fieldset>
+                            
+                        </div>
+                    <% } else { %>
+                        <strong>Loading...</strong>
+                    <% } %>
+
+                    <div class="tar">
+                        <a href="#" class="u-mr js-close">Cancel</a>
+                        <button class="btn js-save" disabled>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay js-close"></div>

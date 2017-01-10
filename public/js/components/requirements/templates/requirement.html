@@ -1,0 +1,12 @@
+<<%= url ? 'a href="' + url + '"' : 'span' %>
+  <%= is_js ? 'data-js' : '' %>
+  class="
+    requirements__title
+    <%= is_completed ? 'requirements__title--completed' : '' %>
+    <%= is_pending   ? 'requirements__title'   : '' %>
+  "
+>
+    <%= title %>
+<!--<%= is_optional ? '*' : '' %>-->
+
+</<%= url ? 'a' : 'span'%>>

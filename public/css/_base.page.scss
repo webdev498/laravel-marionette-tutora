@@ -1,0 +1,24 @@
+html {
+    @include font-size(14px);
+    font-family: "Roboto", sans-serif;
+    min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+
+    @include media-query('>tablet') {
+        @include font-size($inuit-base-font-size);
+    }
+}
+
+.page {
+    margin-bottom: 260px;
+}
+    .page__body {
+        overflow: hidden;
+    }
+
+    .page__footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }

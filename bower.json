@@ -1,0 +1,61 @@
+{
+  "name": "tutora.com",
+  "version": "0.0.1",
+  "authors": [
+    "hire@aaron.codes"
+  ],
+  "homepage": "http://tutora.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "almond": "latest",
+    "backbone-validation": "latest",
+    "cocktail": "~0.5.10",
+    "inuit-block": "~0.1.2",
+    "inuit-box": "~0.4.4",
+    "inuit-buttons": "~0.4.2",
+    "inuit-clearfix": "~0.2.1",
+    "inuit-flag": "latest",
+    "inuit-images": "latest",
+    "inuit-layout": "latest",
+    "inuit-list-bare": "latest",
+    "inuit-list-inline": "latest",
+    "inuit-list-ui": "~0.4.1",
+    "inuit-media": "~0.4.2",
+    "inuit-pack": "latest",
+    "inuit-responsive-tools": "latest",
+    "inuit-spacing": "latest",
+    "inuit-starter-kit": "latest",
+    "inuit-tables": "~0.2.1",
+    "inuit-tabs": "latest",
+    "inuit-tools-widths": "~0.1.4",
+    "inuit-widths-responsive": "~0.2.2",
+    "marionette": "latest",
+    "modernizr": "latest",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "underscore.string": "latest",
+    "devbridge-autocomplete": "~1.2.24"
+  },
+  "dependencies": {
+    "jquery": "^2.0.0",
+    "nprogress": "~0.1.6",
+    "dropzone": "~4.0.1",
+    "pusher": "~3.0.0",
+    "medium-editor-insert-plugin": "^2.3.2",
+    "mailcheck": "^1.1.2",
+    "google-maps": "^3.2.1"
+  },
+  "resolutions": {
+    "medium-editor-insert-plugin": "^2.3.2",
+    "medium-editor": "^5.15.0"
+  }
+}

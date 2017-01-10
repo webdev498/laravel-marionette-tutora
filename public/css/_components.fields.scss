@@ -1,0 +1,93 @@
+.field {
+    margin-bottom: $spacing-unit--small;
+
+    &.field--inline {
+        display: inline-block;
+    }
+
+    &.field--group {
+        display: table;
+    }
+
+    &.field--half {
+        @include media-query('>tablet') {
+            width: $one-half;
+        }
+    }
+}
+    .field--date {
+
+    }
+
+    .field__label {
+        color: $brand-color--dark;
+        display: block;
+        margin-bottom: $spacing-unit--tiny;
+
+        &.has--error {
+            color: $color-red;
+        }
+    }
+
+    .field__prefix,
+    .field__label {
+        .field--group & {
+            display: table-cell;
+        }
+    }
+
+    .field__prefix {
+        padding-left: $spacing-unit--small !important;
+        padding-right: $spacing-unit--small !important;
+        text-align: center;
+        border-right: none;
+    }
+
+    .field__input,
+    .field__select {
+        .field--has-error & {
+            color: $color-red;
+            border-color: $color-red;
+            margin-bottom: 0;
+        }
+    }
+
+    .field__textarea {
+        resize: none;
+        height: 200px;
+
+        .field--has-error & {
+            color: $color-red;
+            border-color: $color-red;
+            margin-bottom: 0;
+        }
+    }
+
+    .field__radios {
+        .field--has-error & {
+            margin-bottom: 0;
+            border: 1px solid $color-red;
+        }
+    }
+
+    .field__checkbox {
+        padding-top: $spacing-unit--tiny;
+
+        .field--has-error & {
+            margin-bottom: 0;
+            border: 1px solid $color-red;
+            padding: 5px 5px 0 5px;
+        }
+    }
+
+    .field__error {
+        @include font-size(14px);
+        display: none;
+        background: $color-red;
+        color: $color-white;
+        padding: 0 $spacing-unit--small;
+
+        .field--has-error & {
+            display: block;
+        }
+    }

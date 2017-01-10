@@ -1,0 +1,72 @@
+$vs-header-height: 130px;
+$vs-section-padding: $spacing-unit;
+$vs-vs-diameter: 60px;
+
+.vs {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+    .vs__item {
+        border: 1px solid $color-ui;
+        display: table-cell;
+        vertical-align: top;
+        color: $brand-color--dark;
+        background: $color-white;
+    }
+        .vs__item--best {
+            background: $brand-color;
+            border-color: $brand-color;
+        }
+
+        .vs__section {
+            padding: $vs-section-padding ;
+
+            @include media-query('>1024') {
+                padding-left: double($vs-section-padding);
+                padding-right: double($vs-section-padding);
+            }
+        }
+            .vs__section--ruled {
+                border-bottom: 1px solid $color-ui;
+
+                .vs__item--best & {
+                    border-color: $brand-color--dark;
+                }
+            }
+
+            .vs__section--header {
+                height: $vs-header-height;
+
+                .graphic {
+                    margin: (($vs-header-height - ($vs-section-padding * 2) - $logo-dark-1x-height) / 2) 0;
+                }
+
+                .heading {
+                    line-height: $vs-header-height - ($vs-section-padding * 2);
+                    margin: 0;
+                }
+            }
+
+            .vs__section--point {
+                position: relative;
+
+                &:after {
+                    @include font-size(18px);
+                    content: 'VS';
+                    position: absolute;
+                    right: negative(halve($vs-vs-diameter));
+                    top: 50%;
+                    margin-top: negative(halve($vs-vs-diameter));
+                    color: $color-white;
+                    line-height: $vs-vs-diameter;
+                    width: $vs-vs-diameter;
+                    height: $vs-vs-diameter;
+                    border-radius: $vs-vs-diameter;
+                    background: $brand-color--dark;
+
+                    .vs__item:last-child & {
+                        display: none;
+                    }
+                }
+            }

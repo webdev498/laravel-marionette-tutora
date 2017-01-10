@@ -1,0 +1,12 @@
+.picture-upload {
+    width: 100%;
+    margin: 0;
+    padding: $spacing-unit--large;
+    border: 2px dashed $brand-color--dark;
+    text-align: center;
+
+    &:hover {
+        border-color: $brand-color;
+        cursor: pointer;
+    }
+}

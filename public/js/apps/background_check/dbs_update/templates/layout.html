@@ -1,0 +1,36 @@
+<!--
+    Name
+    --><div class="[ layout__item field field--label ]">
+    <label for="certificate_number" class="field__label">Certificate Number (required)</label>
+</div><!--
+
+    --><div class="[ layout__item field field--certificate_number ]">
+    <input type="text" name="certificate_number" id="certificate_number" required
+    value="<%= certificate_number %>" placeholder="Certificate Number"
+    class="[ input input--full input--squared input--bordered ] field__input [ js-certificate_number ]">
+    <div class="field__error"></div>
+</div><!--
+
+    Name
+    --><div class="[ layout__item field field--label ]">
+    <label for="last_name" class="field__label">Legal surname (required)</label>
+</div><!--
+
+    --><div class="[ layout__item field field--last_name ]">
+    <input type="text" name="last_name" id="last_name"
+           value="<%= last_name %>" placeholder="Last Name" required
+    class="[ input input--full input--squared input--bordered ] field__input [ js-last_name ]">
+    <div class="field__error"></div>
+</div><!--
+
+    DOB
+    --><div class="[ layout__item field field--label ]">
+    <label for="dob" class="field__label">Date of Birth</label>
+</div><!--
+
+    --><div class="[ layout__item field field--dob ]">
+    <input type="text" name="dob" id="dob"
+           value="<%= dob %>" placeholder="Date of Birth"
+           class="[ input input--full input--squared input--bordered ] field__input [ js-dob ]">
+    <div class="field__error"></div>
+</div><!--

@@ -1,0 +1,81 @@
+.table {
+    min-width: 700px; // Magic number ;)
+    
+    &.table--fixed {
+        table-layout: fixed;
+    }
+
+    @include media-query('>tablet') {
+        min-width: initial;
+    }
+    
+    // thead { }
+        th,
+        .table__header-cell {
+            @include font-weight('medium');
+            text-align: left;
+        }
+
+    tbody,
+    .table__body {
+        tr,
+        .table__row {
+            &:nth-child(2n-1) {
+                background: $color-alice;
+            }
+
+            &.table__row--strike {
+                text-decoration: line-through;
+                color: lighten($color-text, 20%);
+
+                &:nth-child(2n-1) {
+                    background: lighten($color-gainsboro, 7.5%);
+                    color: lighten($color-text, 15%);
+                }
+            }
+
+            &.table__row--warn {
+                background: $color-khaki;
+            }
+            &.table__row--unread {
+                background: $color-khaki;
+            }
+        }
+    }
+
+    tr,
+    .table__row {
+        width: 100%;
+    }
+
+        td,
+        th,
+        .table__cell,
+        .table__header-cell {
+            vertical-align: top;
+            padding: $inuit-list-ui-padding--tiny $inuit-list-ui-padding--small;
+
+            @include media-query('>tablet') {
+                padding: $inuit-list-ui-padding--small;
+
+                &:first-child {
+                    padding-left: $inuit-list-ui-padding;
+                }
+                &:last-child {
+                    padding-right: $inuit-list-ui-padding;
+                }
+            }
+
+
+            &.u-vam {
+                .action__icon {
+                    &:hover, &.active {
+                        cursor: pointer;
+                        color: $color-cyan;
+                    }
+                }
+            }
+
+        }
+}
+

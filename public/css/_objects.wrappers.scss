@@ -1,0 +1,14 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: $spacing-unit--small;
+    padding-left:  $spacing-unit--small;
+
+    @include media-query('>tablet') {
+        padding-right: $spacing-unit;
+        padding-left:  $spacing-unit;
+    }
+}
+    .wrapper--fill {
+        padding: 0;
+    }

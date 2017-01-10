@@ -1,0 +1,33 @@
+.list-pros-cons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+    .list__item--pro,
+    .list__item--con {
+        position: relative;
+        margin-bottom: $spacing-unit--small;
+
+        &:before { 
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .list__item--pro {        
+        padding-left: $thumbs-up-1x-width + $spacing-unit--small;
+
+        &:before {
+            @extend .icon--thumbs-up;
+        }
+    }
+
+    .list__item--con {        
+        padding-left: $thumbs-down-1x-width + $spacing-unit--small;
+
+        &:before {
+            @extend .icon--thumbs-down;
+        }
+    }

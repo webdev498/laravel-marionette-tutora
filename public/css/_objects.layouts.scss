@@ -1,0 +1,19 @@
+.layout__item--main {
+    width: $eleven-twelfths;
+    margin-left: $one-twelfth;
+
+    @include media-query('>1024'){
+        width: $ten-twelfths;
+        margin-left: $one-twelfth;
+    }
+}
+
+.layout__item--narrow {
+    width: $ten-twelfths;
+    margin-left: $one-twelfth;
+
+    @include media-query('>1024'){
+        width: $eight-twelfths;
+        margin-left: $two-twelfths;
+    }
+}

@@ -1,0 +1,82 @@
+.messages {
+    height: 250px; // Magic
+    border-top: 1px solid $color-ui;
+    overflow-y: scroll;
+
+    &.messages--bare {
+        border: none;
+    }
+}
+    .messages__list {
+
+        &,
+        > li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        > li {
+            @extend .messages__item;
+        }
+    }
+        .messages__item {
+            border: 1px solid $color-ui;
+            margin-top: $spacing-unit--small;
+            padding: $spacing-unit--small;
+
+            p {
+                margin: 0;
+            }
+
+            &.messages__item--me,
+            &.messages__item--you,
+            &.messages__item--system {
+                width: $eleven-twelfths;
+
+                @include media-query('>1024') {
+                    width: $ten-twelfths;
+                }
+            }
+
+            &.messages__item--me {
+                margin-right: $one-twelfth;
+
+                @include media-query('>1024') {
+                    margin-right: $two-twelfths;
+                }
+            }
+
+            &.messages__item--you {
+                background: $color-alice;
+                border-color: $color-alice;
+                margin-left: $one-twelfth;
+
+                @include media-query('>1024') {
+                    margin-left: $two-twelfths;
+                }
+            }
+
+            &.messages__item--system {
+                background: $color-gainsboro;
+                border-color: $color-gainsboro;
+                margin-left: $one-twelfth / 2;
+                margin-right: $one-twelfth / 2;
+
+                @include media-query('>1024') {
+                    margin-left: $one-twelfth;
+                    margin-right: $one-twelfth;
+                }
+            }
+
+        }
+            .messages__body {
+            }
+            .messages__timestamp {
+                @include font-size(12px);
+
+                @include media-query('>tablet') {
+                    float: right;
+                    margin-left: $spacing-unit;
+                }
+            }

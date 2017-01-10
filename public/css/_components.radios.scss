@@ -1,0 +1,44 @@
+.radios {
+    @extend .pack;
+    margin: 0 0 $spacing-unit--small;
+    width: 100%;
+}
+    .radios__item {
+        @extend .pack__item;
+        border: 1px solid $color-ui;
+        border-right-width: 0;
+        text-align: center;
+        cursor: pointer;
+        padding: $spacing-unit--tiny;
+
+        &:last-child {
+            border-right-width: 1px;
+        }
+
+        @include media-query('>tablet') {
+            padding: $spacing-unit--small;
+        }
+
+        &.full-width {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        &.rounded {
+            border-radius: 25px;
+        }
+    }
+
+        .radios__item--checked {
+            background: $brand-color--dark;
+            border-color: $brand-color--dark;
+            color: $color-white;
+        }
+
+    .radios__input {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }

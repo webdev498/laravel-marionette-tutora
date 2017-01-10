@@ -1,0 +1,47 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.booking.cancel.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.booking.cancel.introduction') %></p>
+
+                <% if(shouldBePartiallyCharged) { %>
+                <p class="warning"><%= _.lang('dialogue.booking.cancel.charge_warning') %></p>
+                <% } %>
+
+                <form class="js-form">
+                    <% if (schedule.repeat === 'weekly' || schedule.repeat === 'fortnightly') { %>
+                        <div class="dialogue__body box box--fill box--bordered">
+                            <div class="layout"><!--
+                                --><div class="layout__item field layout__item--future">
+                                    <label class="field__label">This lesson repeats <strong><%= schedule.repeat %></strong>. Would you like to cancel <strong>this and future</strong> lessons? </label>
+                                    <div class="field__checkbox checkbox">
+                                        <div class="checkbox__box">
+                                            <div class="checkbox__tick"></div>
+                                            <input type="checkbox" name="future" id="future" value="1" class="checkbox__input js-future">
+                                        </div>
+                                        <label class="checkbox__label">Yes, cancel <strong>this and future</strong> lessons</label>
+                                    </div>
+                                    <div class="field__error"></div>
+                                </div><!--
+                            --></div>
+                        </div>
+                    <% } %>
+
+                    <div class="layout"><!--
+                        --><div class="layout__item layout__item--actions tar">
+                            <a href="#" class="u-mr js-close">Cancel</a>
+                            <button class="btn btn js-submit">Cancel booking</button>
+                        </div><!--
+                    --></div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

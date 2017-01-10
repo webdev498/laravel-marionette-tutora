@@ -1,0 +1,20 @@
+<div class="[ layout__item field field--label ]">
+    <p>Upload a copy of your DBS certificate</p>
+</div><!--
+
+--><div class="[ layout__item ] [ field field--dbs-document ]">
+    <div class="[ box box--bordered box--clickable ] u-mb0 tac [ js-image-upload ]">
+        <div class="[ js-image-upload-preview ]">
+            <% if (0 && dbs.src) { %>
+            <img src="<%= identity_document.src %>" height="150">
+            <% } else { %>
+            <p>Drop a file here or click to upload your DBS</p>
+            <% } %>
+        </div>
+    </div>
+    <div class="field__error"></div>
+</div>
+
+<div class="[ layout__item field field--label ]">
+    <p>Your certificate must have been issued last within the last 2 years</p>
+</div><!--

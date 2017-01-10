@@ -1,0 +1,100 @@
+p {
+  margin : 0 0 remcalc($spacing-unit--small);
+
+  &.tiny {
+    @include font-size(11px, 1.25);
+    @include font-weight('regular');
+    color  : $color-slate;
+    margin : 0;
+  }
+
+  &.large {
+    @include font-size(20px, 1.5);
+  }
+
+}
+.brand {
+  color : $brand-color;
+
+  &.brand--dark {
+    color : $brand-color--dark;
+  }
+}
+.dl {
+}
+.dl__dt,
+.dl__dd {
+  margin  : 0;
+  padding : 0;
+}
+.dl__dt {
+  @include font-size(18px, 1em);
+  color         : $color-text--dark;
+  margin-bottom : $spacing-unit--tiny;
+
+  .dl--brand & {
+    color : $brand-color;
+  }
+
+  .dl--detailed & {
+    margin-bottom : $spacing-unit--tiny;
+  }
+}
+.dl__dd {
+  margin-bottom : $spacing-unit;
+
+  &:last-child {
+    margin-bottom : 0;
+  }
+
+  .dl--detailed & {
+    @include font-weight('medium');
+  }
+}
+.dl__meta {
+  @include font-size(14px);
+  @include font-weight('regular');
+  overflow : hidden;
+}
+.dl__meta__left {
+  float : left;
+}
+.dl__meta__right {
+  float : right;
+}
+.tal {
+  text-align : left !important;
+}
+.tar {
+  text-align : right !important;
+}
+.block-25,
+.block-50,
+.block-75 {
+  display : inline-block !important;
+}
+.block-25 {
+  width : 24% !important;
+}
+.block-50 {
+  width : 49% !important;
+}
+.block-75 {
+  width : 74% !important;
+}
+.dialog-buttons-top-padding-1 {
+  padding-top : 17px;
+}
+.tac {
+  text-align : center !important;
+}
+.success {
+  color       : $color-success;
+  font-weight : bold;
+}
+.pending {
+  color : $color-pending;
+}
+.hidden {
+  display : none !important;
+}

@@ -1,0 +1,46 @@
+<div class="[ layout__item layout__item--location ] field">
+    <input type="text" name="college" placeholder="College*" value="<%= college %>" class="[ input input--full input--squared input--bordered ] field__input  [ js-college ]">
+    <div class="field__error"></div>
+</div><!--
+
+--><div class="[ layout__item layout__item--level ] field">
+    <div class="field__input select select--full select--squared select--bordered <%= grade ? 'select--show' : '' %>">
+        <span class="select__placeholder">Grade*</span>
+        <span class="select__value"><%= grade ? _grade(grade) : '' %></span>
+        <select name="grade" class="select__field js-grade">
+            <option value="">Please select one:</option>
+            <% _.each(_grades, function (value, key) { %>
+                <option value="<%= key %>" <%= grade === key ? 'selected' : '' %>>
+                    <%= value %>
+                </option>
+            <% }) %>
+        </select>
+    </div>
+
+    <div class="field__error"></div>
+</div><!--
+
+--><div class="[ layout__item layout__item--subject ] field">
+    <input type="text" name="subject" placeholder="Subject*" value="<%= subject %>" class="[ input input--full input--squared input--bordered ] field__input  [ js-subject ]">
+    <div class="field__error"></div>
+</div><!--
+
+
+--><div class="[ layout__item layout__item--still-studying ] field">
+    <div class="field__checkbox checkbox">
+        <div class="checkbox__box">
+            <div class="checkbox__tick"></div>
+            <input type="checkbox" name="still_studying" id="still_studying" value="1" class="checkbox__input [ js-still-studying ]">
+        </div>
+        <label class="checkbox__label">Still studying</label>
+    </div>
+    <div class="field__error"></div>
+</div><!--
+
+--><div class="[ layout__item ] tar">
+    <a href="#" class="js-remove">Remove</a>
+</div><!--
+
+--><div class="[ layout__item ]">
+    <hr class="hr u-mt-">
+</div>

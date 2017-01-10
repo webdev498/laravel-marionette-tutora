@@ -1,0 +1,62 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+            <div class="dialogue__window">
+                <header class="dialogue__header">
+                    <h4 class="heading"><%= _.lang('dialogue.profile.qualifications.edit.heading') %></h4>
+                    <a href="#" class="close icon icon--cross js-close"></a>
+                </header>
+
+                <p><%= _.lang('dialogue.profile.qualifications.edit.introduction') %></p>
+
+                <form class="js-form" novalidate>
+                    <div class="field">
+                        <fieldset class="fieldset u-mb0">
+                            <div class="[ tabs tabs--bordered tabs--scrollable tabs--scrollable-right ] fieldset__tabs">
+                                <ul class="tabs__list">
+                                    <li class="tabs__item">
+                                        <a href="<%= laroute.route('tutor.profile.show', { 'uuid' : uuid , 'section' : 'qualifications', 'tab' : 'university' }) %>" class="tabs__link js-tab-university" data-tab-group="qualifications" data-tab-name="university">
+                                            University
+                                        </a>
+                                    </li>
+                                    <li class="tabs__item">
+                                        <a href="<%= laroute.route('tutor.profile.show', { 'uuid' : uuid , 'section' : 'qualifications', 'tab' : 'college' }) %>" class="tabs__link js-tab-college" data-tab-group="qualifications" data-tab-name="alevels">
+                                            College
+                                        </a>
+                                    </li>
+                                    <li class="tabs__item">
+                                        <a href="<%= laroute.route('tutor.profile.show', { 'uuid' : uuid , 'section' : 'qualifications', 'tab' : 'other' }) %>" class="tabs__link js-tab-other" data-tab-group="qualifications" data-tab-name="other">
+                                            Other
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="[ box box--fill box--bordered ] dialogue__body u-mb0">
+                                <div class="tab-content" data-tab-group="qualifications" data-tab-name="university">
+                                    <div class="js-universities"></div>
+                                </div>
+
+                                <div class="tab-content" data-tab-group="qualifications" data-tab-name="alevels">
+                                    <div class="js-alevels"></div>
+                                </div>
+
+                                <div class="tab-content" data-tab-group="qualifications" data-tab-name="other">
+                                    <div class="js-others"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="field__error [ js-qualifications-error ]"></div>
+                    </div>
+
+                    <div class="tar">
+                        <a href="#" class="u-mr [ js-close ]">Cancel</a>
+                        <button class="btn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay js-close"></div>

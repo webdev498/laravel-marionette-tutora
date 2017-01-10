@@ -1,0 +1,25 @@
+.progress-bar {
+    width: 100%;
+    height: $spacing-unit--small;
+    border: 1px solid $color-ui;
+    border-radius: $spacing-unit--small;
+    overflow: hidden;
+    margin-bottom: $spacing-unit--small;
+}
+    .progress-bar__bar {
+        @include vendor(transition, width 0.5s ease-in-out);
+        width: 0;
+        height: 100%;
+        background: $brand-color;
+
+        @for $i from 0 through 100 {
+            .progress-bar--#{$i} & {
+                width: $i * 1%;
+            }
+        }
+    }
+
+.progress-bar-section-margin-bottom
+{
+    margin-bottom: 25px;
+}

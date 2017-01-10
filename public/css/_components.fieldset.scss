@@ -1,0 +1,17 @@
+.fieldset {
+    margin: $spacing-unit--small 0;
+    padding: 0;
+    border: none;
+}
+    .fieldset__tabs {
+        .tabs__link {
+            border-bottom: none;
+        }
+    }
+
+    .fieldset__content {
+        border: 1px solid $color-ui;
+        max-height: 350px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }

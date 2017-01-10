@@ -1,0 +1,43 @@
+.page-drawer {
+    @include vendor(transition, all .5s ease-in);
+    max-height: 0;
+    overflow: hidden;
+}
+    .page-drawer--open {
+        max-height: 1000px;
+    }
+
+    .page-drawer__body {
+        padding-top: $spacing-unit;
+        padding-bottom: $spacing-unit--tiny;
+        position: relative;
+
+        @include media-query('>tablet') {
+            padding-bottom: $spacing-unit;
+        }
+
+        @include media-query('>1024') {
+            padding-top: $spacing-unit--large;
+            padding-bottom: $spacing-unit--large;
+        }
+
+        .close {
+            position: absolute;
+            top: $spacing-unit--small;
+            right: $spacing-unit--small;
+
+            @include media-query('>1024') {
+                top: $spacing-unit;
+            }
+        }
+
+        .layout__item {
+            @include media-query('>tablet') {
+                width: $one-half;
+            }
+
+            @include media-query('>1024') {
+                width: $one-quarter;
+            }
+        }
+    }

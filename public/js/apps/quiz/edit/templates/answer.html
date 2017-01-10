@@ -1,0 +1,4 @@
+<div class="radios__item full-width rounded js-<%= parentKey %>-<%= key %><% if (checked) { %> radios__item--checked<% } %>">
+    <%= title %>
+    <input type="radio" name="<%= parentKey %>-answer" value="<%= key %>" class="radios__input js-answer js-<%= parentKey %>"<% if (checked) { %> checked="checked"<% } %>>
+</div>

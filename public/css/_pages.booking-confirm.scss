@@ -1,0 +1,87 @@
+.page--booking-confirm {
+    .lesson {
+
+    }
+        .lesson__details,
+        .lesson__payment,
+        .lesson__price {
+            padding: $spacing-unit;
+        }
+
+        .lesson__details {
+            border-bottom: 1px solid $color-ui;
+            color: $color-text--dark;
+
+            @include media-query('>1024') {
+                width: $five-twelfths;
+                border-right: 1px solid $color-ui;
+            }
+        }
+            .lesson__details__subject {
+                @include font-size(18px);
+                margin: $spacing-unit 0 $spacing-unit--small;
+
+                @include media-query('>1024') {
+                    margin-top: $spacing-unit + $spacing-unit--small;
+                }
+            }
+
+            .lesson__details__date {
+                @include font-size(40px);
+                @include font-weight('bold');
+                color: $brand-color;
+                margin-bottom: $spacing-unit--small;
+
+                sup {
+                    top: -0.25em;
+                }
+            }
+            
+            .lesson__details__time {
+                @include font-size(24px, 1em);
+                @include font-weight('bold');
+                margin: 0;
+
+                em {
+                    font-style: normal;
+                    border-bottom: 2px solid $brand-color--dark;
+                }
+            }
+
+            .lesson__details__repeat {
+                margin-top: $spacing-unit + $spacing-unit--small;
+            }
+
+
+        .lesson__price {
+            @include media-query('>1024') {
+                width: $five-twelfths;
+                border-right: 1px solid $color-ui;
+            }
+        }
+
+        .lesson__payment {
+            border-bottom: 1px solid $color-ui;
+
+            @include media-query('>1024') {
+                width: $seven-twelfths;
+                float: right;
+                border-bottom: none;
+            }
+
+            .field--cvc {
+                @include media-query('>tablet') {
+                    width: $one-third;
+                    margin-right: $two-thirds;
+                }
+            }
+
+            .field--exp-month,
+            .field--exp-year {
+                @include media-query('>tablet') {
+                    width: $one-third;
+                }
+            }
+        }
+
+}

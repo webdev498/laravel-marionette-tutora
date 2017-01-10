@@ -1,0 +1,9 @@
+.block__img {
+    .block--responsive & {
+        display: none;
+
+        @include media-query('>tablet') {
+            display: inherit;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<div class="dialogue__wrapper wrapper">
+    <div class="layout layout--center"><!--
+        --><div class="layout__item dialogue__container">
+        <div class="dialogue__window message--view">
+            <header class="dialogue__header">
+                <h4 class="heading"><%= student.name %></h4> <h5 class="second--heading"><%= subject.name %></h5>
+                <a href="#" class="close icon icon--cross js-close"></a>
+            </header>
+
+            <p><%= message %></p>
+
+            <header class="dialogue__header">
+                <h4 class="heading"><%= _.lang('jobs.message.view.title') %></h4>
+            </header>
+
+            <p><%= tutor.applicationMessage %></p>
+
+        </div>
+    </div><!--
+    --></div>
+</div>
+
+<div class="dialogue__overlay"></div>

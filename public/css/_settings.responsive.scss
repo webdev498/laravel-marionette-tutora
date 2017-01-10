@@ -1,0 +1,19 @@
+$breakpoints: (
+    "phone"   : "screen and (max-width: 719px)",
+    "max-tablet" : "screen and (max-width: 1023px)",
+    "tablet"  : "screen and (min-width: 720px) and (max-width: 1023px)",
+    ">tablet" : "screen and (min-width: 719px)",
+    "tablet-and-up" : "screen and (min-width: 719px)",
+    ">1024"   : "screen and (min-width: 1023px)",
+    ">1200"   : "screen and (min-width: 1199px)",
+    ">1280"   : "screen and (min-width: 1279px)",
+    ">1366"   : "screen and (min-width: 1365px)",
+    ">1440"   : "screen and (min-width: 1439px)",
+    ">1600"   : "screen and (min-width: 1599px)",
+    ">1920"   : "screen and (min-width: 1919px)",
+    ">2560"   : "screen and (min-width: 2559px)",
+
+    "retina"  : "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+) !default;
+
+$inuit-responsive-settings: true;

@@ -1,0 +1,172 @@
+/*------------------------------------*\
+    #PACK
+\*------------------------------------*/
+
+/**
+ * The pack object simply causes any number of elements pack up horizontally to
+ * automatically fill an equal, fluid width of their parent.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-pack-namespace:      $inuit-namespace !default;
+
+$inuit-pack-gutter:         $inuit-base-spacing-unit !default;
+$inuit-pack-gutter--tiny:     quarter($inuit-pack-gutter) !default;
+$inuit-pack-gutter--small:      halve($inuit-pack-gutter) !default;
+$inuit-pack-gutter--large:     double($inuit-pack-gutter) !default;
+$inuit-pack-gutter--huge:   quadruple($inuit-pack-gutter) !default;
+
+$inuit-enable-pack--auto:   false !default;
+$inuit-enable-pack--tiny:   false !default;
+$inuit-enable-pack--small:  false !default;
+$inuit-enable-pack--large:  false !default;
+$inuit-enable-pack--huge:   false !default;
+$inuit-enable-pack--rev:    false !default;
+$inuit-enable-pack--middle: false !default;
+$inuit-enable-pack--bottom: false !default;
+
+
+
+
+
+/**
+ * 1. Fill all available space.
+ * 2. Cause children to be automatically equally sized.
+ */
+.#{$inuit-pack-namespace}pack,
+%#{$inuit-pack-namespace}pack {
+    width: 100%; /* [1] */
+    display: table;
+    table-layout: fixed; /* [2] */
+}
+
+    /**
+     * Cause children to adopt table-like structure.
+     */
+    .#{$inuit-pack-namespace}pack__item,
+    %#{$inuit-pack-namespace}pack__item {
+        display: table-cell;
+
+        @if ($inuit-enable-pack--middle == true) {
+
+            /**
+             * All items are aligned to the middles of each other.
+             */
+
+            .#{$inuit-pack-namespace}pack--middle > &,
+            %#{$inuit-pack-namespace}pack--middle > & {
+                vertical-align: middle;
+            }
+
+        }
+
+        @if ($inuit-enable-pack--bottom == true) {
+
+            /**
+             * All items are aligned to the bottoms of each other.
+             */
+
+            .#{$inuit-pack-namespace}pack--bottom > &,
+            %#{$inuit-pack-namespace}pack--bottom > & {
+                vertical-align: bottom;
+            }
+
+        }
+
+    }
+
+
+
+
+
+@if ($inuit-enable-pack--auto == true) {
+
+    /**
+     * Cause children to pack up into available space, but not equally sized.
+     */
+
+    .#{$inuit-pack-namespace}pack--auto,
+    %#{$inuit-pack-namespace}pack--auto {
+        table-layout: auto;
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-pack--tiny == true) {
+
+    /**
+     * Tiny gutters between items.
+     */
+
+    .#{$inuit-pack-namespace}pack--tiny,
+    %#{$inuit-pack-namespace}pack--tiny {
+        border-spacing: $inuit-pack-gutter--tiny;
+    }
+
+}
+
+@if ($inuit-enable-pack--small == true) {
+
+    /**
+     * Small gutters between items.
+     */
+
+    .#{$inuit-pack-namespace}pack--small,
+    %#{$inuit-pack-namespace}pack--small {
+        border-spacing: $inuit-pack-gutter--small;
+    }
+
+}
+
+@if ($inuit-enable-pack--large == true) {
+
+    /**
+     * Large gutters between items.
+     */
+
+    .#{$inuit-pack-namespace}pack--large,
+    %#{$inuit-pack-namespace}pack--large {
+        border-spacing: $inuit-pack-gutter--large;
+    }
+
+}
+
+@if ($inuit-enable-pack--huge == true) {
+
+    /**
+     * Huge gutters between items.
+     */
+
+    .#{$inuit-pack-namespace}pack--huge,
+    %#{$inuit-pack-namespace}pack--huge {
+        border-spacing: $inuit-pack-gutter--huge;
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-pack--rev == true) {
+
+    /**
+     * Reversed order packs.
+     */
+    
+    .#{$inuit-pack-namespace}pack--rev,
+    %#{$inuit-pack-namespace}pack--rev {
+        direction: rtl;
+    
+        > .#{$inuit-pack-namespace}pack__item,
+        > %#{$inuit-pack-namespace}pack__item {
+            direction: ltr;
+        }
+    
+    }
+
+}
